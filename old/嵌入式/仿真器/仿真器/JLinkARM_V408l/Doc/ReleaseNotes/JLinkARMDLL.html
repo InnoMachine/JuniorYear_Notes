@@ -1,0 +1,1589 @@
+<html>
+<head>
+<title>Release notes</title>
+</head>
+
+<style>
+  H2, H3, H4 { color: blue }
+  H1, H2, H3, H4, H5 { font-family: Arial, Helvetica, sans-serif;}
+  PRE {  color: black;  margin-left: 2%; }
+  BODY { color: black;  margin-left: 2%; font-family: Verdana, Arial, Helvetica, sans-serif; font-size=75%}
+  table{ color: black;  font-family: Verdana; font-size=100%}
+  .maintext {
+    font-size: 10px;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  h1.newsbox {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 10px;
+    background: #526194 no-repeat right;
+    border: thin solid #000000;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .heading2 {
+    color: #336699;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 25px;
+  }
+</style>
+
+<body bgcolor="#FFFFFF">
+  <!--  Modifiable information starts here ----------------------------------------->
+  <h2>Release notes for J-Link ARM DLL V4.08a</h2>
+  <ol class="maintext">
+    <li><a href=#features>New features</a></li>
+    <li><a href=#improvements>Improvements</a></li>
+    <li><a href=#pcorr>Program corrections</a></li>
+    <li><a href=#problems>Known problems</a></li>
+    <li><a href=#history>Release history</a></li>
+    <li><a href=#misc>Miscellaneous</a></li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- NEW FEATURES                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="features">New features</a></h1>
+  <h2 class="heading2">Version 4.08a</h2>
+  <ol class="maintext">
+    <li>Full support for watchpoints on Cortex-M3.</li>
+  </ol>
+  <h2 class="heading2">Version 4.06</h2>
+  <ol class="maintext">
+    <li>Breakpoint behaviour during execution can be configured in the J-Link control panel.</li>
+  </ol>
+  <h2 class="heading2">Version 4.04</h2>
+  <ol class="maintext">
+    <li>Watchpoint handling for Cortex-M3 cores added.</li>
+    <li>Dialog added to allow setting of break-/watchpoints via the J-Link control panel.</li>
+    <li>Dialog added to select from a list of emulators connected via TCP/IP.</li>
+  </ol>
+  <h2 class="heading2">Version 4.02</h2>
+  <ol class="maintext">
+    <li>Flasher ARM support for big endian targets.</li>
+  </ol>
+  <h2 class="heading2">Version 4.00</h2>
+  <ol class="maintext">
+    <li>Flash programming for Toshiba TMPM330.</li>
+    <li>Support for J-Link ARM Pro added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.96a</h2>
+  <ol class="maintext">
+    <li>Flasher ARM supports ASCII protocol for remote communication.</li>
+  </ol>
+  <h2 class="heading2">Version 3.96</h2>
+  <ol class="maintext">
+    <li>Flasher ARM support for CM3 devices added.</li>
+    <li>Flasher ARM supports init sequence command "Reset".</li>
+  </ol>
+  <h2 class="heading2">Version 3.92</h2>
+  <ol class="maintext">
+    <li>Support for Flasher ARM added.</li>
+    <li>Support for ARM1156 and ARM1176 added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.90</h2>
+  <ol class="maintext">
+    <li>Support for some new flash devices added.</li>
+    <li>Support for Analog Devices ADuC7038 added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.88</h2>
+  <ol class="maintext">
+    <li>Ability to power down target system on Cortex-M3 cores.</li>
+  </ol>
+  <h2 class="heading2">Version 3.86</h2>
+  <ol class="maintext">
+    <li>J-Link status window added which shows varios information.</li>
+  </ol>
+  <h2 class="heading2">Version 3.84</h2>
+  <ol class="maintext">
+    <li>Support for Flasher ARM added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.82</h2>
+  <ol class="maintext">
+    <li>Support for serial wire output (SWO) added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.80</h2>
+  <ol class="maintext">
+    <li>Support for flash download and flash breakpoints for various microcontrollers.</li>
+  </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+  <ol class="maintext">
+    <li>Support for ARM11 devices added.</li>
+    <li>Support for Cortex-M1 devices added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74e</h2>
+  <ol class="maintext">
+    <li>Support for Atmel AT91CAP9 and AT91SAM9RL64 added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.72a</h2>
+  <ol class="maintext">
+    <li>Serial wire debug (SWD) support for Cortex-M3 added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.70a</h2>
+  <ol class="maintext">
+    <li>Support for CP15 access on ARM926EJ-S.</li>
+  </ol>
+  <h2 class="heading2">Version 3.68a</h2>
+  <ol class="maintext">
+    <li>Support for accessing the ETB (Embedded Trace Buffer) added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+  <ol class="maintext">
+    <li>Instructions may be emulated if they can not be simulated.</li>
+    <li>Automatically CPU clock frequency detection also works with J-Link-OC-LPC.</li>
+  </ol>
+  <h2 class="heading2">Version 3.58a</h2>
+  <ol class="maintext">
+    <li>CPU clock frequency detection also works with adaptive clocking.</li>
+  </ol>
+  <h2 class="heading2">Version 3.36a</h2>
+  <ol class="maintext">
+    <li>Flash DLL support for some new MCU devices.</li>
+  </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+  <ol class="maintext">
+    <li>Support for Cortex M3 devices added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10a</h2>
+  <ol class="maintext">
+    <li>Support for J-Link-OC-LPC added.</li>
+    <li>Support for J-Trace added.</li>
+  </ol>
+  <h2 class="heading2">Version 2.74a</h2>
+  <ol class="maintext">
+    <li>Support of multiple J-Link on one PC added.</li>
+    <li>Support for multi core debugging added.</li>
+  </ol>
+  <h2 class="heading2">Version 2.72a</h2>
+  <ol class="maintext">
+    <li>Support for adaptive clocking added.</li>
+    <li>Signal check for TCK, RESET and TRST added.</li>
+    <li>Supply voltage check added (Warning if supply voltage is to high).</li>
+  </ol>
+  <h2 class="heading2">Version 2.70a</h2>
+  <ol class="maintext">
+    <li>Flash DLL support for Philips LPC 2xxx series.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68a</h2>
+  <ol class="maintext">
+    <li>Allows to disable the CPSR check after read.</li>
+  </ol>
+  <h2 class="heading2">Version 2.66a</h2>
+  <ol class="maintext">
+    <li>Flash DLL supports Atmel AT91SAM7S 32/64/128/256.</li>
+  </ol>
+  <h2 class="heading2">Version 2.64a</h2>
+  <ol class="maintext">
+    <li>Add new function JLINKARM_ResetNoHalt().</li>
+  </ol>
+  <h2 class="heading2">Version 2.62a</h2>
+  <ol class="maintext">
+    <li>Support for Atmel SAM-ICE.</li>
+  </ol>
+  <h2 class="heading2">Version 2.58a</h2>
+  <ol class="maintext">
+    <li>Added API-functions to connect to J-Link via TCP/IP.</li>
+  </ol>
+  <h2 class="heading2">Version 2.56a</h2>
+  <ol class="maintext">
+    <li>Caching of flash memory.</li>
+  </ol>
+  <h2 class="heading2">Version 2.54a</h2>
+  <ol class="maintext">
+    <li>Additional functions for watchpoint handling (JLINKARM_SetWP / JLINKARM_ClrWP).</li>
+  </ol>
+  <h2 class="heading2">Version 2.52a</h2>
+  <ol class="maintext">
+    <li>Additional functions for breakpoint handling (enable SoftBPs / enable flash cache).</li>
+  </ol>
+  <h2 class="heading2">Version 2.46b</h2>
+  <ol class="maintext">
+    <li>DLL has new API function: JLINKARM_MeasureSCLen</li>
+  </ol>
+  <h2 class="heading2">Version 2.46a</h2>
+  <ol class="maintext">
+    <li>DLL has new API function: JLINKARM_SimulateInstruction</li>
+    <li>New USB driver is automatically copied to Driver directory.</li>
+  </ol>
+  <h2 class="heading2">Version 2.42a</h2>
+  <ol class="maintext">
+    <li>Support for writing and reading ETM registers.</li>
+    <li>Breakpoint management.</li>
+  </ol>
+  <h2 class="heading2">Version 2.40a</h2>
+  <ol class="maintext">
+    <li>Additional functions for RDI (Remote Debug Interface) handling.</li>
+  </ol>
+  <h2 class="heading2">Version 2.32a</h2>
+  <ol class="maintext">
+    <li>JTAG instruction and data registers can now be directly accessed</li>
+  </ol>
+  <h2 class="heading2">Version 2.20b</h2>
+  <ol class="maintext">
+    <li>TDI, TMS can now be controlled individually</li>
+    <li>JTAG clocks can now be given manually</li>
+    <li>Status of TAP interface, including target voltage is now available</li>
+  </ol>
+  <h2 class="heading2">Version 2.14</h2>
+  <ol class="maintext">
+  <li>Support for ARM7-TDMI-S Rev. 3 added and tested with Sharp LH75401 "BlueStreak"</li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Improvements                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="improvements">Improvements</a></h1>
+  <h2 class="heading2">Version 4.08a</h2>
+  <ol class="maintext">
+    <li>Log file can be configured via J-Link control panel.</li>
+  </ol>
+  <h2 class="heading2">Version 4.06</h2>
+  <ol class="maintext">
+    <li>Target interface speed can be changed via the J-Link control panel.</li>
+  </ol>
+  <h2 class="heading2">Version 4.04</h2>
+  <ol class="maintext">
+    <li>Performance with Cortex-M3 cores improved.</li>
+  </ol>
+  <h2 class="heading2">Version 4.02</h2>
+  <ol class="maintext">
+    <li>Performance with Cortex-M3 cores and SWD improved.</li>
+  </ol>
+  <h2 class="heading2">Version 4.00</h2>
+  <ol class="maintext">
+    <li>Performance of memory accesses with ARM11 cores.</li>
+  </ol>
+  <h2 class="heading2">Version 3.96d</h2>
+  <ol class="maintext">
+    <li>SWD performance improved.</li>
+  </ol>
+  <h2 class="heading2">Version 3.96a</h2>
+  <ol class="maintext">
+    <li>Performance of memory accesses with Cortex-M3 cores via SWD improved.</li>
+  </ol>
+  <h2 class="heading2">Version 3.94</h2>
+  <ol class="maintext">
+    <li>Flasher ARM supports adaptive clocking.</li>
+  </ol>
+  <h2 class="heading2">Version 3.86</h2>
+  <ol class="maintext">
+    <li>New license dialog with real time update added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.82</h2>
+  <ol class="maintext">
+    <li>WAIT handling on SWD connections added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+  <ol class="maintext">
+    <li>New reset type (JLINKARM_CM3_RESET_TYPE_CORE) for Cortex-M3.</li>
+    <li>Disassembly cache added to improve performance.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74c</h2>
+  <ol class="maintext">
+    <li>Installer can detect any installed IAR EWARM and update the JLinkARM.dll.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+  <ol class="maintext">
+    <li>Using BKPT instruction on ARM9 cores with architecture version 5 to save a watchpoint unit.</li>
+    <li>Allow single stepping on breakpointed instructions.</li>
+  </ol>
+  <h2 class="heading2">Version 3.70a</h2>
+  <ol class="maintext">
+    <li>New reset strategy for AT91SAM7 MCU's.</li>
+  </ol>
+  <h2 class="heading2">Version 3.68a</h2>
+  <ol class="maintext">
+    <li>Performance of trace data capture improved.</li>
+  </ol>
+  <h2 class="heading2">Version 3.62a</h2>
+  <ol class="maintext">
+    <li>Auto speed recognition also detects adaptive clocking.</li>
+    <li>Reset behavior for reset strategy normal improved.</li>
+    <li>Improved performance on indirect memory reads.</li>
+  </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+  <ol class="maintext">
+    <li>Better performance on memory write/read with adaptive clocking.</li>
+  </ol>
+  <h2 class="heading2">Version 3.58c</h2>
+  <ol class="maintext">
+    <li>Certified J-Link USB driver.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56e</h2>
+  <ol class="maintext">
+    <li>Auto detection of scan chain configuration changed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56e</h2>
+  <ol class="maintext">
+    <li>Support for J-Link CE.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56b</h2>
+  <ol class="maintext">
+    <li>Allow higher voltage range up to 3.6 volts for older J-Links.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+  <ol class="maintext">
+    <li>Reset behavior for reset strategy BP@0 improved.</li>
+  </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+  <ol class="maintext">
+    <li>Reset handling improved.</li>
+    <li>Set speed on J-Link-OC-LPC improved.</li>
+  </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+  <ol class="maintext">
+    <li>Improved general performance of J-Link.</li>
+  </ol>
+  <h2 class="heading2">Version 3.30b</h2>
+  <ol class="maintext">
+    <li>Support for CM3 rev.1 silicon (different Ids).</li>
+  </ol>
+  <h2 class="heading2">Version 3.24a</h2>
+  <ol class="maintext">
+    <li>Download speed for ARM9 cores improved.</li>
+    <li>General speed improvements.</li>
+    <li>Instruction set simulation improved.</li>
+  </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+  <ol class="maintext">
+    <li>Improved auto speed recognition.</li>
+    <li>Minor improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 3.14a</h2>
+  <ol class="maintext">
+    <li>Breakpoint handling improved.</li>
+    <li>Minor improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 3.12a</h2>
+  <ol class="maintext">
+    <li>Improved breakpoint handling.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10e</h2>
+  <ol class="maintext">
+    <li>Improved memory access.</li>
+    <li>Improved JTAG handling.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10c</h2>
+  <ol class="maintext">
+    <li>New reset strategies added.</li>
+    <li>Improved support for J-Link-OC-LPC.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10b</h2>
+  <ol class="maintext">
+    <li>Improved reset behaviour.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10a</h2>
+  <ol class="maintext">
+    <li>Improved reset behaviour.</li>
+  </ol>
+  <h2 class="heading2">Version 3.00h</h2>
+  <ol class="maintext">
+    <li>Improved handling of 16-bit and 32-bit read operations.</li>
+  </ol>
+  <h2 class="heading2">Version 3.00d</h2>
+  <ol class="maintext">
+    <li>Some performance improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 2.74c</h2>
+  <ol class="maintext">
+    <li>Memory read and write functions has been improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.72d</h2>
+  <ol class="maintext">
+    <li>Signal check for RESET and TRST removed.</li>
+    <li>Breakpoint handling improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.72b</h2>
+  <ol class="maintext">
+    <li>Reset handling improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.72a</h2>
+  <ol class="maintext">
+    <li>Auto speed recognition improved.</li>
+    <li>DCC communication improved.</li>
+    <li>Some minor improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 2.70b</h2>
+  <ol class="maintext">
+    <li>Instruction set simulation improved.</li>
+    <li>Auto speed recognition improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.70a</h2>
+  <ol class="maintext">
+    <li>Improved cache handling for ARM9 devices.</li>
+    <li>Performance of DCC communication improved (for J-Link Rev.5).</li>
+  </ol>
+  <h2 class="heading2">Version 2.68h</h2>
+  <ol class="maintext">
+    <li>Added command "SetResetPulseLen" to JLINKARM_ExecCommand() to affect the length of the reset pulse.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68e</h2>
+  <ol class="maintext">
+    <li>Clear breakpoints and restart CPU in JLINKARM_Close().</li>
+  </ol>
+  <h2 class="heading2">Version 2.68d</h2>
+  <ol class="maintext">
+    <li>SAM-ICE support for new chips added.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68b</h2>
+  <ol class="maintext">
+    <li>Cache handling for ARM 9 devices.</li>
+  </ol>
+  <h2 class="heading2">Version 2.66c</h2>
+  <ol class="maintext">
+    <li>Allow JTAG speeds down to 1 kHz.</li>
+  </ol>
+  <h2 class="heading2">Version 2.66b</h2>
+  <ol class="maintext">
+    <li>Support for ARM 926EJ-S devices.</li>
+  </ol>
+  <h2 class="heading2">Version 2.66a</h2>
+  <ol class="maintext">
+    <li>New J-Link ARM firmware, which allows using J-Link in VMWare.</li>
+    <li>SAM-ICE now operates much faster.</li>
+  </ol>
+  <h2 class="heading2">Version 2.64b</h2>
+  <ol class="maintext">
+    <li>Minor improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 2.62c</h2>
+  <ol class="maintext">
+    <li>Improved error handling.</li>
+  </ol>
+  <h2 class="heading2">Version 2.60c</h2>
+  <ol class="maintext">
+    <li>Error checking after write turned off by default to avoid unnecessary error messages on some systems.</li>
+  </ol>
+  <h2 class="heading2">Version 2.60b</h2>
+  <ol class="maintext">
+    <li>Number of available soft BPs increased.</li>
+  </ol>
+  <h2 class="heading2">Version 2.58c</h2>
+  <ol class="maintext">
+    <li>Add function for logging.</li>
+  </ol>
+  <h2 class="heading2">Version 2.58b</h2>
+  <ol class="maintext">
+    <li>Improved handling of scan chains with multiple devices.</li>
+  </ol>
+  <h2 class="heading2">Version 2.56a</h2>
+  <ol class="maintext">
+    <li>Support for ARM926EJ-S I- and D-Caches.</li>
+  </ol>
+  <h2 class="heading2">Version 2.52b</h2>
+  <ol class="maintext">
+    <li>Improved reset handling.</li>
+  </ol>
+  <h2 class="heading2">Version 2.50b</h2>
+  <ol class="maintext">
+    <li>Improved scan chain handling with multiple devices.</li>
+  </ol>
+  <h2 class="heading2">Version 2.50a</h2>
+  <ol class="maintext">
+    <li>Improved breakpoint handling.</li>
+  </ol>
+  <h2 class="heading2">Version 2.46d</h2>
+  <ol class="maintext">
+    <li>Log file improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.46c</h2>
+  <ol class="maintext">
+    <li>Halting ARM926EJ-S and ARM966E-S improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.46b</h2>
+  <ol class="maintext">
+    <li>Halting ARM9 cores improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.44a</h2>
+  <ol class="maintext">
+    <li>Breakpoint management improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 2.30a</h2>
+  <ol class="maintext">
+    <li>Delay after Reset can now be controlled.
+    <br>JLINKARM_SetResetDelay() now controls the pause after RESET. Default is 0 ms, which means stopping the core immediately.
+    <br>The length of the RESET pulse is fixed.
+    </li>
+  </ol>
+  <h2 class="heading2">Version 2.22b</h2>
+  <ol class="maintext">
+    <li>Reset behaviour has been improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.22a</h2>
+  <ol class="maintext">
+    <li>DCC behaviour has been improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.22</h2>
+  <ol class="maintext">
+    <li>RESET behaviour has been improved for STR710.</li>
+  </ol>
+  <h2 class="heading2">Version 2.20b</h2>
+  <ol class="maintext">
+    <li>RESET behaviour has been improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.14</h2>
+  <ol class="maintext">
+    None.
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- PROGRAM CORRECTIONS                                                  -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="pcorr">Program corrections</a></h1>
+  <h2 class="heading2">Version 4.06b</h2>
+  <ol class="maintext">
+    <li>DLL may cause a crash on PID change when using with SWD interface. Fixed.</li>
+  </ol>  
+  <h2 class="heading2">Version 4.06</h2>
+  <ol class="maintext">
+    <li>Reset with Cortex-M3 cores did not work properly. Fixed.</li>
+  </ol>  
+  <h2 class="heading2">Version 4.04</h2>
+  <ol class="maintext">
+    <li>Reset with Cortex-M3 cores did not work properly. Fixed.</li>
+    <li>Flasher ARM did not work properly with TI TMS470 devices. Fixed.</li>
+  </ol>  
+  <h2 class="heading2">Version 3.96c</h2>
+  <ol class="maintext">
+    <li>SWD communication did not work properly. Fixed.</li>
+  </ol>  
+  <h2 class="heading2">Version 3.96b</h2>
+  <ol class="maintext">
+    <li>Flasher ARM handshake control did not work properly. Fixed.</li>
+  </ol>  
+  <h2 class="heading2">Version 3.96a</h2>
+  <ol class="maintext">
+    <li>Instruction set emulation did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.94</h2>
+  <ol class="maintext">
+    <li>Cortex-M3 with SWD did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.92a</h2>
+  <ol class="maintext">
+    <li>Reset with Cortex-M3 did not work properly. Fixed.</li>
+    <li>TCP/IP communication did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.92</h2>
+  <ol class="maintext">
+    <li>Reset with SWD did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.90d</h2>
+  <ol class="maintext">
+    <li>Reset with SWD did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.90c</h2>
+  <ol class="maintext">
+    <li>JLINKARM_SPEED_INFO structure was not initialized during flash programming. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.90</h2>
+  <ol class="maintext">
+    <li>Emulation did not restore target RAM in some cases. Fixed.</li>
+    <li>Download on TI TMS470 devices did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.86</h2>
+  <ol class="maintext">
+    <li>Read memory via SWD on Cortex-M3 cores performed an extra read access. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.80c</h2>
+  <ol class="maintext">
+    <li>Write register did not work properly on CM3 devices. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.80b</h2>
+  <ol class="maintext">
+    <li>FlashBP and FlashDL license for LPC2xxx devices did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.78d</h2>
+  <ol class="maintext">
+    <li>Read/write memory with slow speed (<30kHz) did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+  <ol class="maintext">
+    <li>Single stepping on Cortex-M3 devices did not work properly. Fixed.</li>
+    <li>Cortex-M3 with SWD did not work properly. Fixed.</li>
+    <li>Instruction set simulation did not work properly. Fixed.</li>
+    <li>Adaptive clocking did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74e</h2>
+  <ol class="maintext">
+    <li>Breakpoint handling did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74b</h2>
+  <ol class="maintext">
+    <li>Cache handling on ARM9 devices did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.72a</h2>
+  <ol class="maintext">
+    <li>Reset strategy BP@0 did not work properly. Fixed.</li>
+    <li>Reset after debug session did not work properly on Cortex-M3. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.70c</h2>
+  <ol class="maintext">
+    <li>Reset after debug session did not work on Cortex-M3. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.70b</h2>
+  <ol class="maintext">
+    <li>J-Link GDB Server has read incorrect register values. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.68b</h2>
+  <ol class="maintext">
+    <li>J-Link ARM with Cortex-M3 did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.68a</h2>
+  <ol class="maintext">
+    <li>Instruction set simulation did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.66a</h2>
+  <ol class="maintext">
+    <li>Multiple devices in JTAG chain did not work properly. Fixed.</li>
+    <li>JTAG communication did not work properly in some cases. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.64a</h2>
+  <ol class="maintext">
+    <li>Auto speed recognition in IAR EWARM did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.62a</h2>
+  <ol class="maintext">
+    <li>USB communication with J-Link-OC-STR did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+  <ol class="maintext">
+    <li>Read/Write memory on Cortex-M3 did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.58b</h2>
+  <ol class="maintext">
+    <li>USB driver with J-Link Rev 3/4 did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+  <ol class="maintext">
+    <li>Instruction set simulation did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+  <ol class="maintext">
+    <li>Reset on J-Link-OC-LPC did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+  <ol class="maintext">
+    <li>JLINKARM_ReadMemU16() does not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.40a</h2>
+  <ol class="maintext">
+    <li>PC has incorrect value after halt using DBGRQ. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.30k</h2>
+  <ol class="maintext">
+    <li>ARM7/9 bug single stepping mov rx, # if condition was not met. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.30d</h2>
+  <ol class="maintext">
+    <li>ARM7 bug single stepping BX PC. Fixed.</li>
+    <li>ARM7 bug single stepping SUB SP, #immed_7. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.30c</h2>
+  <ol class="maintext">
+    <li>CM3 write bug. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.30b</h2>
+  <ol class="maintext">
+    <li>ADI software reset sequence did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.12f</h2>
+  <ol class="maintext">
+    <li>Some settings were overwritten. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.72d</h2>
+  <ol class="maintext">
+    <li>Serial number of J-Link could change. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68g</h2>
+  <ol class="maintext">
+    <li>Flash DLL did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68f</h2>
+  <ol class="maintext">
+    <li>ADI software reset sequence did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.66b</h2>
+  <ol class="maintext">
+    <li>Firmware identification did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.62c</h2>
+  <ol class="maintext">
+    <li>USB handling did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.52b</h2>
+  <ol class="maintext">
+    <li>Writing of 32 bit and 16 bit data did not work properly in big endian mode. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.50b</h2>
+  <ol class="maintext">
+    <li>OTS bug has been fixed which lead to problems on units with older firmware. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.46f</h2>
+  <ol class="maintext">
+    <li>Automatic USB driver update did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.46c</h2>
+  <ol class="maintext">
+    <li>ARM_ReadMemU32 did not work properly on ARM9 cores. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.46</h2>
+  <ol class="maintext">
+    <li>New USB driver fixes "blue screen problem" @ offset 4189.</li>
+  </ol>
+  <h2 class="heading2">Version 2.14b</h2>
+  <ol class="maintext">
+    <li>ARM_ReadMemU32 did not work properly. Fixed.<br>
+        This was not a major problem, since most read operations use ARM_ReadMem, which worked fine.
+    </li>
+  </ol>
+  <h2 class="heading2">Version 2.14a</h2>
+  <ol class="maintext">
+    <li>Target RESET set speed back to 30kHz. Fixed.</li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- KNOWN PROBLEMS                                                       -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="problems">Known problems in current version</a></h1>
+  <ol class="maintext">
+    <li>None.</li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Release history                                                      -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="history">Release history</a></h1>
+  <table class="maintext">
+    <tr> 
+      <td width=20%>Version</td>
+      <td width=30%>Release date</td>
+      <td>Short explanation</td>
+    </tr>
+    <tr> 
+      <td>V4.08a</td>
+      <td>Jun-29 2009</td>
+      <td>New feature: Full support for watchpoints on Cortex-M3.<br>
+          Improvement: Log file can be configured via J-Link control panel.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.06b</td>
+      <td>Jun-12 2009</td>
+      <td>Correction: DLL may cause a crash on PID change when using with SWD interface. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.06</td>
+      <td>Jun-03 2009</td>
+      <td>New feature: Breakpoint behaviour during execution can be configured in the J-Link control panel.<br>
+          Improvement: Target interface speed can be changed via the J-Link control panel.<br>
+          Correction:  Reset with Cortex-M3 cores did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.04</td>
+      <td>Apr-09 2009</td>
+      <td>New feature: Watchpoint handling for Cortex-M3 cores added.<br>
+          New feature: Dialog added to allow setting of break-/watchpoints via the J-Link control panel.<br>
+          New feature: Dialog added to select from a list of emulators connected via TCP/IP.<br>
+          Improvement: Performance with Cortex-M3 cores improved.<br>
+          Correction:  Reset with Cortex-M3 cores did not work properly. Fixed.<br>
+          Correction:  Flasher ARM did not work properly with TI TMS470 devices. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.02</td>
+      <td>Jan-13 2009</td>
+      <td>New feature: Flasher ARM support for big endian targets.<br>
+          Improvement: Performance with Cortex-M3 cores and SWD improved.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.00</td>
+      <td>Dec-16 2008</td>
+      <td>New feature: Flash programming for Toshiba TMPM330.<br>
+          New feature: Support for J-Link ARM Pro added.<br>
+          Improvement: Performance of memory accesses with ARM11 cores.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.96b</td>
+      <td>Nov-12 2008</td>
+      <td>Correction:  Flasher ARM handshake control did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.96a</td>
+      <td>Nov-05 2008</td>
+      <td>New feature: Flasher ARM supports ASCII protocol for remote communication.<br>
+          Improvement: Performance of memory accesses with Cortex-M3 cores via SWD.<br>
+          Correction:  Instruction set emulation did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.96</td>
+      <td>Oct-31 2008</td>
+      <td>New feature: Flasher ARM support for CM3 devices added.<br>
+          New feature: Flasher ARM supports init sequence command "Reset".<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.94</td>
+      <td>Oct-15 2008</td>
+      <td>Correction:  Cortex-M3 with SWD did not work properly. Fixed.<br>
+      <td>Improvement: Flasher ARM supports adaptive clocking.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.92a</td>
+      <td>Oct-06 2008</td>
+      <td>Correction:  Reset with Cortex-M3 did not work properly. Fixed.<br>
+      <td>Correction:  TCP/IP communication did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.92</td>
+      <td>Sep-30 2008</td>
+      <td>New feature: Support for Flasher ARM added.<br>
+          New feature: Support for ARM1156 and ARM1176 added.<br>
+          Correction:  Reset with SWD did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.90d</td>
+      <td>Sep-01 2008</td>
+      <td>Correction: Reset with SWD did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.90c</td>
+      <td>Aug-25 2008</td>
+      <td>Correction: JLINKARM_SPEED_INFO structure was not initialized during flash programming. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.90</td>
+      <td>Aug-11 2008</td>
+      <td>New feature: Support for some new flash devices added.<br>
+          New feature: Support for Analog Devices ADuC7038 added.<br>
+          Correction:  Emulation did not restore target RAM in some cases. Fixed.<br>
+          Correction:  Download on TI TMS470 devices did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.88</td>
+      <td>Jul-25 2008</td>
+      <td>New feature: Ability to power down target system on Cortex-M3 cores.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.86</td>
+      <td>Jun-27 2008</td>
+      <td>New feature: J-Link status window added which shows various information.<br>
+          Improvement: New license dialog with real time update added.<br>
+          Correction:  Read memory via SWD on Cortex-M3 cores performed an extra read access. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.84</td>
+      <td>Jun-03 2008</td>
+      <td>New feature: Support for Flasher ARM added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.82</td>
+      <td>May-16 2008</td>
+      <td>New feature: Support for serial wire output (SWO) added.<br>
+          Improvement: WAIT handling on SWD connections added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.80c</td>
+      <td>Apr-09 2008</td>
+      <td>Correction: Write register did not work properly on CM3 devices. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.80b</td>
+      <td>Apr-08 2008</td>
+      <td>Correction: FlashBP and FlashDL license for LPC2xxx devices did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.80</td>
+      <td>Mar-07 2008</td>
+      <td>New feature: Support for flash download and flash breakpoints for various microcontrollers.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.78d</td>
+      <td>Jan-16 2008</td>
+      <td>Correction: Read/write memory with slow speed (<30kHz) did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.78a</td>
+      <td>Dec-04 2007</td>
+      <td>New feature: Support for ARM11 devices.<br>
+          New feature: Support for Cortex-M1 devices.<br>
+          Improvement: New reset type (JLINKARM_CM3_RESET_TYPE_CORE) for Cortex-M3.<br>
+          Improvement: Disassembly cache added to improve performance.<br>
+          Correction:  Single stepping on Cortex-M3 devices did not work properly. Fixed.<br>
+          Correction:  Cortex-M3 with SWD did not work properly. Fixed.<br>
+          Correction:  Instruction set simulation did not work properly. Fixed.<br>
+          Correction:  Adaptive clocking did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74e</td>
+      <td>Aug-09 2007</td>
+      <td>New feature: Support for Atmel AT91CAP9 and AT91SAM9RL64 added.<br>
+          Correction:  Breakpoint handling did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74c</td>
+      <td>Jul-16 2007</td>
+      <td>Improvement: Installer can detect any installed IAR EWARM and update the JLinkARM.dll.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74b</td>
+      <td>Jul-12 2007</td>
+      <td>Correction: Cache handling on ARM9 devices did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74a</td>
+      <td>Jul-11 2007</td>
+      <td>Improvement: Using BKPT instruction on ARM9 cores with architecture version 5 to save a watchpoint unit.<br>
+          Improvement: Allow single stepping on breakpointed instructions.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.72a</td>
+      <td>Jun-18 2007</td>
+      <td>Correction: Reset strategy BP@0 did not work properly. Fixed.<br>
+          Correction: Reset after debug session did not work properly on Cortex-M3. Fixed.<br>
+          New feature: Serial wire debug (SWD) support for Cortex-M3 added.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.70c</td>
+      <td>May-21 2007</td>
+      <td>Correction: Reset after debug session did not work on Cortex-M3. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.70b</td>
+      <td>May-18 2007</td>
+      <td>Correction: J-Link GDB Server has read incorrect register values. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.70a</td>
+      <td>May-15 2007</td>
+      <td>New feature: Support for CP15 access on ARM926EJ-S.<br>
+          Improvement: New reset strategy for AT91SAM7 MCU's.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.68b</td>
+      <td>Mar-30 2007</td>
+      <td>Correction:  J-Link ARM with Cortex-M3 did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.68a</td>
+      <td>Mar-30 2007</td>
+      <td>New feature: Support for accessing the ETB (Embedded Trace Buffer) added.<br>
+          Improvement: Performance of trace data capture improved.<br>
+          Correction:  Instruction set simulation did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.66a</td>
+      <td>Mar-19 2007</td>
+      <td>Correction:  Multiple devices in JTAG chain did not work properly. Fixed.<br>
+          Correction:  JTAG communication did not work properly in some cases. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.64a</td>
+      <td>Mar-08 2007</td>
+      <td>Correction:  Auto speed recognition in IAR EWARM did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.62a</td>
+      <td>Feb-23 2007</td>
+      <td>Improvement: Auto speed recognition also detects adaptive clocking.<br>
+          Improvement: Reset behavior for reset strategy normal improved.<br>
+          Improvement: Improved performance on indirect memory reads.<br>
+          Correction:  USB communication with J-Link-OC-STR did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.60a</td>
+      <td>Feb-09 2007</td>
+      <td>New feature: Instructions may be emulated if they can not be simulated.<br>
+          New feature: Automatically CPU clock frequency detection also works with J-Link-OC-LPC.<br>
+          Improvement: Better performance on memory write/read with adaptive clocking.<br>
+          Correction:  Read/Write memory on Cortex-M3 did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.58c</td>
+      <td>Jan-12 2007</td>
+      <td>Improvement: Certified J-Link USB driver.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.58b</td>
+      <td>Dec-29 2006</td>
+      <td>Correction: USB driver with J-Link Rev 3/4 did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.58a</td>
+      <td>Dec-22 2006</td>
+      <td>Improvement: Auto detection of scan chain configuration changed.<br>
+          New feature: CPU clock frequency detection also works with adaptive clocking.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.56e</td>
+      <td>Dec-07 2006</td>
+      <td>Improvement: Support for J-Link CE.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.56b</td>
+      <td>Dec-01 2006</td>
+      <td>Improvement: Allow higher voltage range up to 3.6 volts for older J-Links.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.56a</td>
+      <td>Nov-30 2006</td>
+      <td>Improvement: Reset behavior for reset strategy BP@0 improved.<br>
+          Correction: Instruction set simulation did not work properly.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.50a</td>
+      <td>Oct-17 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.46a</td>
+      <td>Sep-29 2006</td>
+      <td>Reset handling improved.<br>
+          Set speed on J-Link-OC-LPC improved.<br>
+          Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.44a</td>
+      <td>Sep-21 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.42a</td>
+      <td>Sep-12 2006</td>
+      <td>Improved general performance of J-Link.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.40a</td>
+      <td>Aug-21 2006</td>
+      <td>PC has incorrect value after halt using DBGRQ. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.38a</td>
+      <td>Aug-16 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.36a</td>
+      <td>Aug-01 2006</td>
+      <td>Support for some new MCU devices in Flash DLL.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30k</td>
+      <td>Jul-07 2006</td>
+      <td>Single stepping bug on ARM Instructions MOV rx, # if condition was not met. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30g</td>
+      <td>Jul-01 2006</td>
+      <td>Hard breakpoint bug fixed which could result in Hard BPs being ignored.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30f</td>
+      <td>Jun-28 2006</td>
+      <td>Normal Reset strategy improved.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30e</td>
+      <td>Jun-27 2006</td>
+      <td>Single stepping bug fixed (mov r10, #)
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30d</td>
+      <td>Jun-23 2006</td>
+      <td>Single stepping bug fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30c</td>
+      <td>Jun-22 2006</td>
+      <td>CM3 memory write bug fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30b</td>
+      <td>Jun-21 2006</td>
+      <td>Support for CM3,V1.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30a</td>
+      <td>Jun-19 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.24a</td>
+      <td>May-31 2006</td>
+      <td>Download speed for ARM9 cores improved.<br>
+          General speed improvements.<br>
+          Instruction set simulation improved.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.20a</td>
+      <td>Apr-27 2006</td>
+      <td>Support for Cortex M3 devices.<br>
+          Improved auto speed recognition.<br>
+          Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.14a</td>
+      <td>Mar-14 2006</td>
+      <td>Breakpoint handling improved.<br>
+          Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12f</td>
+      <td>Mar-10 2006</td>
+      <td>Minor program correction.</td>
+    </tr>
+    <tr> 
+      <td>V3.12e</td>
+      <td>Mar-07 2006</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V3.12d</td>
+      <td>Feb-28 2006</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V3.12c</td>
+      <td>Feb-24 2006</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V3.12b</td>
+      <td>Feb-24 2006</td>
+      <td>Program correction in JLinkRDI.</td>
+    </tr>
+    <tr> 
+      <td>V3.12a</td>
+      <td>Feb-23 2006</td>
+      <td>Improved breakpoint handling.</td>
+    </tr>
+    <tr> 
+      <td>V3.10e</td>
+      <td>Feb-21 2006</td>
+      <td>Improved memory access.<br>
+          Improved JTAG handling.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10c</td>
+      <td>Feb-10 2006</td>
+      <td>New reset strategies added.<br>
+          Improved support for J-Link-OC-LPC.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10b</td>
+      <td>Feb-09 2006</td>
+      <td>Improved reset behaviour.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10a</td>
+      <td>Feb-08 2006</td>
+      <td>Support for J-Link-OC-LPC added.<br>
+          Support for J-Trace added.<br>
+          Improved reset behaviour.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00h</td>
+      <td>Feb-02 2006</td>
+      <td>Improved handling of 16-bit and 32-bit read operations.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00g</td>
+      <td>Jan-30 2006</td>
+      <td>Some performance improvements.         
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00d</td>
+      <td>Jan-13 2006</td>
+      <td>New software package.<br>
+          Some performance improvements.         
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.74c</td>
+      <td>Dec-05 2005</td>
+      <td>Memory read and write functions has been improved.</td>
+    </tr>
+    <tr> 
+      <td>V2.74b</td>
+      <td>Nov-21 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.74a</td>
+      <td>Nov-18 2005</td>
+      <td>Support of multiple J-Link on one PC added.<br>
+          Support for multi core debugging added.<br>
+          Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.72d</td>
+      <td>Nov-10 2005</td>
+      <td>Signal check for RESET and TRST removed.<br>
+          Minor improvements and program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V2.72b</td>
+      <td>Nov-08 2005</td>
+      <td>Reset handling improved.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.72a</td>
+      <td>Nov-03 2005</td>
+      <td>Auto speed recognition improved.<br>
+          DCC communication improved.<br>
+          Support for adaptive clocking added.<br>
+          Signal check for TCK, RESET and TRST added.<br>
+          Supply voltage check added (Warning if supply voltage is to high).<br>
+          Some minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.70b</td>
+      <td>Oct-28 2005</td>
+      <td>Instruction set simulation improved.<br>
+          Auto speed recognition improved.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.70a</td>
+      <td>Oct-25 2005</td>
+      <td>Flash DLL support for Philips LPC 2xxx series.<br>
+          Improved cache handling for ARM9 devices.<br>
+          Performance of DCC communication improved (for J-Link Rev.5).
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.68h</td>
+      <td>Oct-11 2005</td>
+      <td>Added command "SetResetPulseLen" to JLINKARM_ExecCommand().</td>
+    </tr>
+    <tr> 
+      <td>V2.68g</td>
+      <td>Oct-10 2005</td>
+      <td>Program correction: Flash DLL did not work properly.</td>
+    </tr>
+    <tr> 
+      <td>V2.68f</td>
+      <td>Oct-07 2005</td>
+      <td>Program correction: ADI software reset sequence did not work properly.</td>
+    </tr>
+    <tr> 
+      <td>V2.68e</td>
+      <td>Oct-06 2005</td>
+      <td>Clear breakpoints and restart CPU in JLINKARM_Close().</td>
+    </tr>
+    <tr> 
+      <td>V2.68d</td>
+      <td>Sep-30 2005</td>
+      <td>SAM-ICE support for new chips added.</td>
+    </tr>
+    <tr> 
+      <td>V2.68c</td>
+      <td>Sep-23 2005</td>
+      <td>Improved reset and identify behaviour.</td>
+    </tr>
+    <tr> 
+      <td>V2.68b</td>
+      <td>Sep-19 2005</td>
+      <td>Cache handling for ARM 9 devices.</td>
+    </tr>
+    <tr> 
+      <td>V2.68a</td>
+      <td>Aug-19 2005</td>
+      <td>Allows to disable the CPSR check after read.</td>
+    </tr>
+    <tr> 
+      <td>V2.66c</td>
+      <td>Aug-18 2005</td>
+      <td>Some improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.66b</td>
+      <td>Aug-08 2005</td>
+      <td>Some improvements and program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V2.66a</td>
+      <td>Jul-28 2005</td>
+      <td>New J-Link ARM firmware.<br>
+          Flash DLL supports Atmel AT91SAM7S 32/64/128/256.</td>
+    </tr>
+    <tr> 
+      <td>V2.64b</td>
+      <td>Jul-21 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.64a</td>
+      <td>Jul-15 2005</td>
+      <td>Add new function JLINKARM_ResetNoHalt().</td>
+    </tr>
+    <tr> 
+      <td>V2.62c</td>
+      <td>Jul-12 2005</td>
+      <td>Improved error handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.62b</td>
+      <td>Jul-07 2005</td>
+      <td>Support for Atmel AT91SAM7SA1/A2.</td>
+    </tr>
+    <tr> 
+      <td>V2.62a</td>
+      <td>Jun-30 2005</td>
+      <td>Support for Atmel SAM-ICE.</td>
+    </tr>
+    <tr> 
+      <td>V2.60c</td>
+      <td>Jun-21 2005</td>
+      <td>Error checking after write turned off by default to avoid unnecessary error messages on some systems.</td>
+    </tr>
+    <tr> 
+      <td>V2.60b</td>
+      <td>Jun-10 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.60a</td>
+      <td>Jun-06 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.58c</td>
+      <td>May-23 2005</td>
+      <td>Add function for logging.</td>
+    </tr>
+    <tr> 
+      <td>V2.58b</td>
+      <td>May-17 2005</td>
+      <td>Improved handling of scan chains with multiple devices.</td>
+    </tr>
+    <tr> 
+      <td>V2.58a</td>
+      <td>May-12 2005</td>
+      <td>Add functions to connect to J-Link via TCP/IP.</td>
+    </tr>
+    <tr> 
+      <td>V2.56b</td>
+      <td>May-05 2005</td>
+      <td>926EJ-S cache handling</td>
+    </tr>
+    <tr> 
+      <td>V2.56a</td>
+      <td>Apr-28 2005</td>
+      <td>Caching of flash memory added.</td>
+    </tr>
+    <tr> 
+      <td>V2.54a</td>
+      <td>Apr-25 2005</td>
+      <td>Additional functions for watchpoint handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.52b</td>
+      <td>Apr-22 2005</td>
+      <td>Some program corrections / improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.52a</td>
+      <td>Apr-08 2005</td>
+      <td>Additional functions for breakpoint handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.50e</td>
+      <td>Apr-06 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.50b</td>
+      <td>Apr-04 2005</td>
+      <td>OTS bug has been fixed.<br>
+          Improved scan chain handling with multiple devices.</td>
+    </tr>
+    <tr> 
+      <td>V2.50a</td>
+      <td>Mar-31 2005</td>
+      <td>Improved breakpoint handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.46f</td>
+      <td>Mar-21 2005</td>
+      <td>Minor program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V2.46e</td>
+      <td>Mar-16 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.46d</td>
+      <td>Mar-15 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.46c</td>
+      <td>Mar-14 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.46b</td>
+      <td>Mar-04 2005</td>
+      <td>Major improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.46a</td>
+      <td>Feb-28 2005</td>
+      <td>Major improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.44b</td>
+      <td>Feb-16 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.44a</td>
+      <td>Feb-15 2005</td>
+      <td>Breakpoint management improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.42a</td>
+      <td>Feb-10 2005</td>
+      <td>Support for writing and reading ETM registers.<br>
+          Breakpoint management.</td>
+    </tr>
+    <tr> 
+      <td>V2.40a</td>
+      <td>Feb-01 2005</td>
+      <td>Additional functions for RDI handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.32a</td>
+      <td>Dec-16 2004</td>
+      <td>Access to JTAG IR and DR registers added.</td>
+    </tr>
+    <tr> 
+      <td>V2.30a</td>
+      <td>Dec-14 2004</td>
+      <td>JLINKARM_SetResetDelay() allows setting a pause after RESET, before stopping the core.</td>
+    </tr>
+    <tr> 
+      <td>V2.22b</td>
+      <td>Dec-01 2004</td>
+      <td>Reset behaviour improvements</td>
+    </tr>
+    <tr> 
+      <td>V2.22a</td>
+      <td>Nov-17 2004</td>
+      <td>DCC improvements</td>
+    </tr>
+    <tr> 
+      <td>V2.22</td>
+      <td>Nov-16 2004</td>
+      <td>Various improvements</td>
+    </tr>
+    <tr> 
+      <td>V2.20b</td>
+      <td>Nov-09 2004</td>
+      <td>Various improvements</td>
+    </tr>
+    <tr> 
+      <td>V2.14b</td>
+      <td>Aug-26 2004</td>
+      <td>Fixes ARM_ReadMemU32 bug in V2.14a and previous versions</td>
+    </tr>
+    <tr> 
+      <td>V2.14a</td>
+      <td>Aug-26 2004</td>
+      <td>Fixes smaller bug in V2.14</td>
+    </tr>
+    <tr> 
+      <td>V2.14</td>
+      <td>Aug-06 2004</td>
+      <td>First version with release history</td>
+    </tr>
+  </table>
+  <!-------------------------------------------------------------------------->
+  <!-- MISCELLANEOUS                                                        -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="misc">Miscellaneous</a></h1>
+      
+  <p class="maintext"> This document was first released with version 2.14 of the 
+    software.<br>
+          Software released earlier is documented internally.<br>
+          This information is available at request.
+        </p>
+  <!--  Modifiable information ends here   ----------------------------------------->
+  <hr>
+  <br>
+  <p class="maintext">
+  Copyright 2001-2009 SEGGER Microcontroller GmbH & Co. KG. All rights reserved.<br>
+  For more information, please visit our website <a href ="http://www.segger.com/">www.segger.com</a> or contact us at <a href ="mailto:info@segger.com">info@segger.com</a><br>
+  </p>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<p>I was included from the base template</p>
+
+<ul>
+@for $person in $people
+  <li>{{ $person['name'] | doge }}!</li>
+@endfor
+</ul>

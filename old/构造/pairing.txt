@@ -1,0 +1,49 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+    StringBuilder sb = new StringBuilder();
+
+    boolean dfs() {
+        if (!cin.hasNext()) {
+            return false;
+        }
+        String s = cin.next();
+        if (s.charAt(0) == 'i') {
+            sb.append(s);
+            return true;
+        }
+        sb.append("pair<");
+        if (!dfs())
+            return false;
+        sb.append(',');
+        if (!dfs())
+            return false;
+        sb.append('>');
+        return true;
+    }
+
+    public void run() {
+        int n = cin.nextInt();
+        if (dfs()) {
+            if (cin.hasNext()) {
+                out.println("Error occurred");
+            } else {
+                out.println(sb.toString());
+            }
+        } else {
+            out.println("Error occurred");
+        }
+
+    }
+
+    public static void main(String[] args) throws IOException {
+        Main sloved = new Main();
+        sloved.run();
+        sloved.out.close();
+    }
+
+    Scanner cin = new Scanner(System.in);
+    PrintWriter out = new PrintWriter(System.out);
+}

@@ -1,0 +1,1367 @@
+<html>
+
+<head>
+  <title>Release notes</title>
+</head>
+
+<style>
+  H2, H3, H4 { color: blue }
+  H1, H2, H3, H4, H5 { font-family: Arial, Helvetica, sans-serif;}
+  PRE {  color: black;  margin-left: 2%; }
+  BODY { color: black;  margin-left: 2%; font-family: Verdana, Arial, Helvetica, sans-serif; font-size=75%}
+  table{ color: black;  font-family: Verdana; font-size=100%}
+  .maintext {
+    font-size: 10px;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  h1.newsbox {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 10px;
+    background: #526194 no-repeat right;
+    border: thin solid #000000;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .heading2 {
+    color: #336699;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 25px;
+  }
+</style>
+
+<body bgcolor="#FFFFFF">
+  <!--  Modifiable information starts here ----------------------------------------->
+  <h2>Release notes for J-Flash ARM V4.08a</h2>
+  <p class="maintext"></p>
+  <ol class="maintext">
+    <li><a href=#features>New features</a></li>
+    <li><a href=#improvements>Improvements</a></li>
+    <li><a href=#pcorr>Program corrections</a></li>
+    <li><a href=#problems>Known problems</a></li>
+    <li><a href=#history>Release history</a></li>
+    <li><a href=#misc>Miscellaneous</a></li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- NEW FEATURES                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="features">New features</a></h1>
+  <h2 class="heading2">Version 4.08a</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs:<br>
+          NXP LPC1311<br>
+          NXP LPC1313<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.06</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Eon EN29PL032<br>
+          Eon EN29PL064<br>
+          Eon EN29LV160B<br>
+          Eon EN29LV800B<br>
+          Eon EN71PL032<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          Atmel AT91SAM3U<br>
+          NXP LPC1111<br>
+          NXP LPC1113<br>
+          NXP LPC1751<br>
+          NXP LPC1752<br>
+          NXP LPC1754<br>
+          NXP LPC1756<br>
+          NXP LPC1758<br>
+          NXP LPC1764<br>
+          NXP LPC1765<br>
+          NXP LPC1766<br>
+          NXP LPC1768<br>
+          NXP LPC2917<br>
+          NXP LPC2919<br>
+          NXP LPC2927<br>
+          NXP LPC2929<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.04</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Macronix MX29LV128D<br>
+          Spansion S29JL064H<br>
+          Spansion S29WS128P<br>
+          Spansion S29WS256P<br>
+          Spansion S29WS512P<br>
+          Spansion S29WS512P<br>
+          ST M36W0R5040<br>
+          ST M36W0R6040<br>
+          ST M36W0R6050<br>
+          ST M58WR016<br>
+          ST M58WR032<br>
+          ST M58WR064<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          Analog Devices ADuC7061<br>
+          Analog Devices ADuC7062<br>
+          NXP LPC1766 ES<br>
+          NXP LPC2365<br>
+          NXP LPC2367<br>
+          NXP LPC2377<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.00</h2>
+    <ol class="maintext">
+      <li>Support for Toshiba TMPM330.<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.96a</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Eon EN29LV800BT<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.92</h2>
+    <ol class="maintext">
+      <li>Support for Flasher ARM<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.90</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Spansion S29GL01GP<br>
+          Spansion S29GL128P<br>
+          Spansion S29GL256P<br>
+          Spansion S29GL512P<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          Analog Devices ADuC7038<br>
+          ST STR910FAx32<br>
+          ST STR911FAx42<br>
+          ST STR911FAx44<br>
+          ST STR912FAx32<br>
+          ST STR912FAx42<br>
+          ST STR912FAx44<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.82</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Luminary LM3S6918<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.80</h2>
+    <ol class="maintext">
+      <li>Support for SWD (Serial Wire Debug).<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Spansion S29WS064J<br>
+          Spansion S29WS128J<br>
+          Spansion S29WS128N<br>
+          Spansion S29WS256N<br>
+      </li>
+      <li>Support for Cortex-M3 devices:<br>
+          Luminary LM3S series<br>
+          ST STM32 series<br>
+      </li>
+      <li>Support for ADuC7060 devices.<br>
+      </li>
+      <li>Support for custom RAMCode.<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.74e</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Spansion S29GL032AxRx<br>
+          Spansion S29GL032AxWx<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.74d</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Macronix MX29LV160C<br>
+          Macronix MX29LV400C<br>
+          Macronix MX29LV800C<br>
+          Spansion S29WS064J<br>
+          Spansion S29WS128J<br>
+          Spansion S29WS128N<br>
+          Spansion S29WS256N<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+    <ol class="maintext">
+      <li>Option to select either engineering or simplified user interface mode.<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.72a</h2>
+    <ol class="maintext">
+      <li>Support for some new Atmel devices:<br>
+          Atmel AT91SAM7X512<br>
+          Atmel AT91SAM7XC128<br>
+          Atmel AT91SAM7XC256<br>
+          Atmel AT91SAM7XC512<br>
+      </li>
+      <li>Support for some new flash devices:<br>
+          Spansion S29AL008<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.68a</h2>
+    <ol class="maintext">
+      <li>Support for some new NXP devices:<br>
+          NXP LPC2109<br>
+          NXP LPC2468<br>
+          NXP LPC2478<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.66a</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Intel 28F128P33<br>
+          Intel 28F256P33<br>
+          Intel 28F640P33<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.62a</h2>
+    <ol class="maintext">
+      <li>Support for some new Atmel devices:<br>
+          Atmel AT91SAM7S512<br>
+          Atmel AT91SAM7SE32<br>
+          Atmel AT91SAM7SE256<br>
+          Atmel AT91SAM7SE512<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+    <ol class="maintext">
+      <li>Verifying CRC of target instead of read back entire program.<br></li>
+      <li>New menu entry "File|Merge..." allows merging of data files.<br></li>
+      <li>Actions performed on "Auto" command can be configured.<br></li>
+    </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+    <ol class="maintext">
+      <li>Automatically correction of PLL settings for TI TMS470 series.<br></li>
+      <li>Identification of flash devices by flash ID look up.<br></li>
+      <li>Support for some new NXP devices:<br>
+          NXP (Philips) LPC2364<br>
+          NXP (Philips) LPC2366<br>
+          NXP (Philips) LPC2368<br>
+          NXP (Philips) LPC2378<br>
+      </li>
+      <li>Support for new flash device:<br>
+          Spansion S29AL032D<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.52a</h2>
+    <ol class="maintext">
+      <li>New feature: Automatic CPU clock frequency detection.</li>
+    </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          ST STR735F<br>
+          ST STR736F<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.44a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          Atmel AT49BV160D<br>
+          Atmel AT49BV320D<br>
+          Atmel AT49BV322D<br>
+          Atmel AT49BV640D<br>
+          Atmel AT49BV642D<br>
+      </li>
+      <li>Added new MCU devices:<br>
+          ST STR750F<br>
+          ST STR751F<br>
+          ST STR752F<br>
+          ST STR755F<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          ST M28W320FC<br>
+          ST M28W320FS<br>
+          ST M28W640EC<br>
+          ST M28W640FC<br>
+          ST M28W640FS<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.40a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          Spansion S29AL016D<br>
+          Atmel AT49BV163D<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.38a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Philips SJA2010<br>
+          Philips SJA2510<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.36a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Philips LPC2101<br>
+          Philips LPC2102<br>
+          Philips LPC2103<br>
+          TI TMS470R1B512<br>
+          TI TMS470R1B768<br>
+          TI TMS470R1B1M<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.32a</h2>
+    <ol class="maintext">
+      <li>Support for unsecuring MAC71xx devices added.</li>
+    </ol>
+  <h2 class="heading2">Version 3.30a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          OKI ML67Q4050<br>
+          OKI ML67Q4051<br>
+          OKI ML67Q4060<br>
+          OKI ML67Q4061<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.24a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          AMD Am29SL800D<br>
+          Sharp LH28F128SPHTD<br>
+          SST SST39VF6401B<br>
+          SST SST39VF6402B<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+    <ol class="maintext">
+      <li>Added support for CFI compliant flash devices.<br></li>
+      <li>Added support for securing / unsecuring flash memory.<br></li>
+      <li>Added new flash devices:<br>
+          Intel 28F004B3<br>
+          Intel 28F008B3<br>
+          Intel 28F016B3<br>
+          Intel 28F160B3<br>
+          Intel 28F320B3<br>
+          Intel 28F400B3<br>
+          Intel 28F640B3<br>
+          Intel 28F800B3<br>
+          SST SST39VF160<br>
+          SST SST39VF320<br>
+          SST SST39VF640<br>
+          ST M29W400D<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.12a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          Spansion S29GL032M<br>
+          Spansion S29GL064M<br>
+          Spansion S29GL128M<br>
+          Spansion S29GL256M<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.10a</h2>
+    <ol class="maintext">
+      <li>Calculate CRC when opening data files.<br></li>
+      <li>Added new flash devices:<br>
+          Spansion S29GL128N<br>
+          Spansion S29GL256N<br>
+          Spansion S29GL512N<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.00d</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          ST STR730FZ1<br>
+          ST STR730FZ2<br>
+          ST STR731FV0<br>
+          ST STR731FV1<br>
+          ST STR731FV2<br>
+          ST STR911FM32x<br>
+          ST STR911FM44x<br>
+          ST STR912FM32x<br>
+          ST STR912FM44x<br>
+      </li>
+      <li>Added new flash devices:<br>
+          AMD S71PL032J<br>
+          AMD S71PL064J<br>
+          AMD S71PL127J<br>
+          Intel 28F128P30B<br>
+          Intel 28F128P30T<br>
+          Intel 28F256P30B<br>
+          Intel 28F256P30T<br>
+          Intel 28F640P30B<br>
+          Intel 28F640P30T<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.16a</h2>
+    <ol class="maintext">
+      <li>Support for adaptive clocking added.</li>
+    </ol>
+  <h2 class="heading2">Version 2.14a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Atmel AT91SAM7X128<br>
+          Atmel AT91SAM7X256<br>
+          Freescale MAC7101<br>
+          Freescale MAC7106<br>
+          Freescale MAC7111<br>
+          Freescale MAC7112<br>
+          Freescale MAC7116<br>
+          Freescale MAC7121<br>
+          Freescale MAC7122<br>
+          Freescale MAC7126<br>
+          Freescale MAC7131<br>
+          Freescale MAC7136<br>
+          Freescale MAC7141<br>
+          Freescale MAC7142<br>
+          Philips LPC2141<br>
+          Philips LPC2142<br>
+          Philips LPC2144<br>
+          Philips LPC2146<br>
+      </li>
+      <li>Option to check if program area is empty before program.</li>
+    </ol>
+  <h2 class="heading2">Version 2.12a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Analog Devices ADuC7229<br>
+          TI TMS470R1VF288<br>
+          Philips PCF87750<br><br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.10a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          TI TMS470R1A64<br>
+          TI TMS470R1A288<br>
+          TI TMS470R1A384<br>
+          TI TMS470R1VF688<br>
+          TI TMS470R1VF689<br>
+      </li>
+      <li>Added new flash devices:<br>
+          ST M29W640D<br>
+          ST M29W800D<br>
+          Atmel AT49BV001A<br>
+          Atmel AT49BV002<br>
+          Atmel AT49BV040A<br>
+          Atmel AT49BV1024A<br>
+          Atmel AT49BV2048<br>
+          Atmel AT49BV320C<br>
+          Atmel AT49BV512<br>
+          Atmel AT49BV640<br>
+          Atmel AT49BV802A<br>
+          Atmel AT49F001A<br>
+          Atmel AT49F002A<br>
+          Atmel AT49F040A<br>
+          Atmel AT49F1024<br>
+          Atmel AT49F1024A<br>
+          Atmel AT49F2048A<br>
+          Atmel AT49F4096A<br>
+          Atmel AT49F512<br>
+          Atmel AT49LV2048<br>
+          Atmel AT49SV322A<br>
+          Atmel AT49SN3208<br>
+          Atmel AT49SN6416<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.04a</h2>
+    <ol class="maintext">
+      <li>Support for Philips LPC2134 / LPC2136.</li>
+      <li>Some new flash devices added.</li>
+    </ol>
+  <h2 class="heading2">Version 2.02a</h2>
+    <ol class="maintext">
+      <li>Command line option added.</li>
+    </ol>
+  <h2 class="heading2">Version 2.00</h2>
+    <ol class="maintext">
+      <li>Added menu item help to open user manual.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36g</h2>
+    <ol class="maintext">
+      <li>Added new project for LogicPD Zoom LH7A40x eval boards.</li>
+      <li>Added new flash device (ST M29DW128DF).</li>
+    </ol>
+  <h2 class="heading2">Version 1.36a</h2>
+    <ol class="maintext">
+      <li>Add ability to connect with J-Link via TCP/IP.</li>
+      <li>Add project for NetSilicon NS9360 eval. board.</li>
+      <li>Add flash devices (M29DW323Dx / M29DW324Dx / M29DW640D).</li>
+    </ol>
+  <h2 class="heading2">Version 1.34a</h2>
+    <ol class="maintext">
+      <li>Support for Philips LPC 213x series.</li>
+    </ol>
+  <h2 class="heading2">Version 1.32a</h2>
+    <ol class="maintext">
+      <li>Beta support for TI TMS470R1 A128/A256.</li>
+      <li>New menu points "Read back sectors" and "Read back chip".</li>
+    </ol>
+  <h2 class="heading2">Version 1.30a</h2>
+    <ol class="maintext">
+      <li>Support for second flash bank of STR71x series.</li>
+      <li>Full support for Samsung S3F445HX (includes DCC mode).</li>
+      <li>New flash devices and MCUs supported.</li>
+    </ol>
+  <h2 class="heading2">Version 1.28a</h2>
+    <ol class="maintext">
+      <li>Support for ATMEL SAM7 S32/S128/S256.</li>
+      <li>Support for ST STR711 / STR712.</li>
+      <li>Beta support for Samsung S3F445HX.</li>
+    </ol>
+  <h2 class="heading2">Version 1.24a</h2>
+    <ol class="maintext">
+      <li>Support for Analog Devices ADuC7020.</li>
+    </ol>
+  <h2 class="heading2">Version 1.22a</h2>
+    <ol class="maintext">
+      <li>Support for binary files.</li>
+      <li>Export of setup files.</li>
+      <li>MCU selection.</li>
+    </ol>
+  <h2 class="heading2">Version 1.20b</h2>
+    <ol class="maintext">
+      <li>Beta support for ATMEL's SAM7S64 chip.</li>
+    </ol>
+  <h2 class="heading2">Version 1.20a</h2>
+    <ol class="maintext">
+      <li>New menu point "EDIT | Eliminate blank areas".</li>
+    </ol>
+  <h2 class="heading2">Version 1.18a</h2>
+    <ol class="maintext">
+      <li>Programming internal flash for Philips LPC2xxx.</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Improvements                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="improvements">Improvements</a></h1>
+
+  <h2 class="heading2">Version 3.78a</h2>
+    <ol class="maintext">
+      <li>Programming of second flash bank of ST STR91x devices.</li>
+      <li>Auto detection of JTAG scan chain configuration.</li>
+    </ol>
+  <h2 class="heading2">Version 3.72c</h2>
+    <ol class="maintext">
+      <li>RAMCode for Atmel AT91SAM7 series improved.</li>
+    </ol>
+  <h2 class="heading2">Version 3.70a</h2>
+    <ol class="maintext">
+      <li>New reset strategy for AT91SAM7 MCU's.</li>
+    </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+    <ol class="maintext">
+      <li>Data window allows to edit items in gap areas.</li>
+    </ol>
+  <h2 class="heading2">Version 3.56b</h2>
+    <ol class="maintext">
+      <li>Feed watchdog for TI TMS470 devices.</li>
+    </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+    <ol class="maintext">
+      <li>Auto unlock flash sectors during programming for Intel flashes and STR7 devices.</li>
+      <li>RAM check with auto RAM size detection.</li>
+    </ol>
+  <h2 class="heading2">Version 3.42b</h2>
+    <ol class="maintext">
+      <li>Improved performance of verify data.</li>
+    </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+    <ol class="maintext">
+      <li>Data files are displayed in target endianess.</li>
+      <li>General speed improvement.</li>
+    </ol>
+  <h2 class="heading2">Version 3.30a</h2>
+    <ol class="maintext">
+      <li>Improved performance since new DLL is used.</li>
+    </ol>
+  <h2 class="heading2">Version 3.24a</h2>
+    <ol class="maintext">
+      <li>Improved performance since new DLL is used.</li>
+    </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+    <ol class="maintext">
+      <li>Improved auto speed recognition.</li>
+      <li>New commands available for CPU init sequence.</li>
+    </ol>
+  <h2 class="heading2">Version 3.14a</h2>
+    <ol class="maintext">
+      <li>Improved handling of AT91SAM7A3.</li>
+      <li>Watchdog refresh for ADuC703x devices.</li>
+    </ol>
+  <h2 class="heading2">Version 3.12a</h2>
+    <ol class="maintext">
+      <li>Minor improvements.</li>
+    </ol>
+  <h2 class="heading2">Version 3.10e</h2>
+    <ol class="maintext">
+      <li>Improved memory access.</li>
+      <li>Improved JTAG handling.</li>
+    </ol>
+  <h2 class="heading2">Version 3.10c</h2>
+    <ol class="maintext">
+      <li>Allow to connect via USB to J-Link devices 0 to 3.</li>
+    </ol>
+  <h2 class="heading2">Version 3.10b</h2>
+    <ol class="maintext">
+      <li>Minor improvements.</li>
+    </ol>
+  <h2 class="heading2">Version 3.00h</h2>
+    <ol class="maintext">
+      <li>Minor improvements.</li>
+    </ol>
+  <h2 class="heading2">Version 3.00d</h2>
+    <ol class="maintext">
+      <li>Download performance improved.</li>
+    </ol>
+  <h2 class="heading2">Version 2.16c</h2>
+    <ol class="maintext">
+      <li>Added new flash devices: <br>
+          AMIC A29L400B<br>
+          AMIC A29L400T<br>
+          Atmel AT49SV802A<br>
+          Atmel AT49SV802AT<br>
+          ST STR711FR0xx<br>
+          ST STR712FR0xx<br>
+          ST STR715FR0xx<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.14a</h2>
+    <ol class="maintext">
+      <li>Improved performance of DCC mode.</li>
+      <li>Improved programming performance for data files with many areas.</li>
+    </ol>
+  <h2 class="heading2">Version 2.12b</h2>
+    <ol class="maintext">
+      <li>Added new function "Disable MMU" to init sequence editor.</li>
+    </ol>
+  <h2 class="heading2">Version 2.12a</h2>
+    <ol class="maintext">
+      <li>Programming of some Intel flashes accelerated.</li>
+    </ol>
+  <h2 class="heading2">Version 2.10a</h2>
+    <ol class="maintext">
+      <li>Data file handling accelerated.</li>
+      <li>Display current address during program or verify in progbar window.</li>
+      <li>Change default settings: "Skip blank areas" is enabled.</li>
+    </ol>
+  <h2 class="heading2">Version 2.04c</h2>
+    <ol class="maintext">
+      <li>Added new project file for LogicPD LH79524 eval. board.</li>
+      <li>Added new flash devices: <br>
+          Sharp LH28F128BFHED<br>
+          Sharp LH28F640BFHE-PTTL<br>
+          Sharp LH28F640BFHE-PBTL<br>
+          Sharp LH28F640BFHG-PTTL<br>
+          Sharp LH28F640BFHG-PBTL<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.04b</h2>
+    <ol class="maintext">
+      <li>Added new project files for AT91RM9200 eval. boards.</li>
+      <li>Automatically unlock sectors before erase or program.</li>
+    </ol>
+  <h2 class="heading2">Version 2.04a</h2>
+    <ol class="maintext">
+      <li>New DLL allows JTAG speed down to 1 kHz.</li>
+      <li>New function "Test speed" added.</li>
+      <li>Added project file for Atmel AT91RM9200 with external flash.</li>
+      <li>Added project file for Sharp LH75411 with external flash.</li>
+    </ol>
+  <h2 class="heading2">Version 2.00</h2>
+    <ol class="maintext">
+      <li>New license management system.</li>
+      <li>Improved erase algorithm for some Atmel flash devices.</li>
+      <li>Added project file for AT91FR40162 chip with internal flash.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36f</h2>
+    <ol class="maintext">
+      <li>Divided all Analog Devices microcontrollers in different Revision steps.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36e</h2>
+    <ol class="maintext">
+      <li>Improved support for Intel flash chips.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36b</h2>
+    <ol class="maintext">
+      <li>Improved support for 2x 16bit configuration with Intel flash chips.</li>
+      <li>Improved support for big endian devices.</li>
+    </ol>
+  <h2 class="heading2">Version 1.34a</h2>
+    <ol class="maintext">
+      <li>Handling of scan chains with multiple devices.</li>
+      <li>Some flash devices added.</li>
+    </ol>
+  <h2 class="heading2">Version 1.30a</h2>
+    <ol class="maintext">
+      <li>Improved performance of some target operations.</li>
+    </ol>
+  <h2 class="heading2">Version 1.28a</h2>
+    <ol class="maintext">
+      <li>Improved performance of 'open mot files'.</li>
+      <li>Improved performance of 'read back target memory'.</li>
+    </ol>
+  <h2 class="heading2">Version 1.26a</h2>
+    <ol class="maintext">
+      <li>Added full support for ATMEL's SAM7.</li>
+    </ol>
+  <h2 class="heading2">Version 1.24c</h2>
+    <ol class="maintext">
+      <li>Improved support for ATMEL's SAM7S64 chip.</li>
+    </ol>
+  <h2 class="heading2">Version 1.22a</h2>
+    <ol class="maintext">
+      <li>Lock/unlock support for some devices.</li>
+    </ol>
+  <h2 class="heading2">Version 1.18a</h2>
+    <ol class="maintext">
+      <li>Connect behaviour has been improved</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- PROGRAM CORRECTIONS                                                  -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="pcorr">Program corrections</a></h1>
+  <h2 class="heading2">Version 4.04</h2>
+    <ol class="maintext">
+      <li>Download to emulator did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.00</h2>
+    <ol class="maintext">
+      <li>CRC calculation did not work properly. Fixed.</li>
+      <li>"Verify CRC" hangs on last sector in some cases. Fixed.</li>
+      <li>Flash programming of SST flashes did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.90b</h2>
+    <ol class="maintext">
+      <li>Target CPU was not halted automatically. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.74d</h2>
+    <ol class="maintext">
+      <li>Open *.bin files from commandline did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+    <ol class="maintext">
+      <li>Flash programming for Atmel AT91SAM7A3 did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.72a</h2>
+    <ol class="maintext">
+      <li>Chip erase on old ADuC702x devices did not work properly. Fixed.</li>
+      <li>Verify CRC did not work properly in all cases. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.64a</h2>
+    <ol class="maintext">
+      <li>Hex file parsing did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.58a</h2>
+    <ol class="maintext">
+      <li>Old reset commands of CPU init sequence did not work. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+    <ol class="maintext">
+      <li>J-Flash commandline did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+    <ol class="maintext">
+      <li>J-Flash crashes sometimes when closing a data window. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 2.16b</h2>
+    <ol class="maintext">
+      <li>Serial number of J-Link could change. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 2.14a</h2>
+    <ol class="maintext">
+      <li>Progress bar does not update properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 2.10a</h2>
+    <ol class="maintext">
+      <li>Incorrect device name "STR710FR". Changed to "STR710FZ".</li>
+    </ol>
+  <h2 class="heading2">Version 1.34a</h2>
+    <ol class="maintext">
+      <li>Some problems with big endian devices. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 1.20a</h2>
+    <ol class="maintext">
+      <li>Project files not saved properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 1.18a</h2>
+    <ol class="maintext">
+      <li>JTAG auto speed selection did not work properly. Fixed.</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- KNOWN PROBLEMS                                                       -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="problems">Known problems in current version</a></h1>
+    <ol class="maintext">
+      <li>Load last project file and data file at startup.</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Release history                                                      -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="history">Release history</a></h1>
+  <table class="maintext">
+    <tr> 
+      <td width=20%>Version</td>
+      <td width=30%>Release date</td>
+      <td>Short explanation</td>
+    </tr>
+    <tr> 
+      <td>V4.08a</td>
+      <td>Jun-29 2009</td>
+      <td>New feature: Support for some new flash devices.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.06</td>
+      <td>Jun-03 2009</td>
+      <td>New feature: Support for some new flash devices.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.04</td>
+      <td>Apr-09 2009</td>
+      <td>New feature: Support for some new flash devices.<br>
+          Correction:  Download to emulator did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.00</td>
+      <td>Dec-16 2008</td>
+      <td>New feature: Support for Toshiba TMPM330.<br>
+          Correction:  CRC calculation did not work properly. Fixed.<br>
+          Correction:  "Verify CRC" hangs on last sector in some cases. Fixed.<br>
+          Correction:  Flash programming of SST flashes did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.96a</td>
+      <td>Nov-05 2008</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.92</td>
+      <td>Sep-30 2008</td>
+      <td>New feature: Support for Flasher ARM.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.90b</td>
+      <td>Aug-22 2008</td>
+      <td>Correction: Target CPU was not halted automatically. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.90</td>
+      <td>Aug-11 2008</td>
+      <td>New feature: Support for some new flash devices.<br>
+          New feature: Support for some new ST devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.82</td>
+      <td>May-16 2008</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.80</td>
+      <td>Mar-07 2008</td>
+      <td>New feature: Support for SWD (Serial Wire Debug).
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.78a</td>
+      <td>Dec-04 2007</td>
+      <td>New feature: Support for some new flash devices.<br>
+          New feature: Support for Cortex-M3 devices.<br>
+          New feature: Support for ADuC7060 devices.<br>
+          New feature: Support for custom RAMCode.<br>
+          Improvement: Programming of second flash bank of ST STR91x devices.<br>
+          Improvement: Auto detection of JTAG scan chain configuration.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74e</td>
+      <td>Aug-09 2007</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74d</td>
+      <td>Jul-27 2007</td>
+      <td>New feature: Support for some new flash devices.<br>
+          Correction:  Open *.bin files from commandline did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74a</td>
+      <td>Jul-11 2007</td>
+      <td>New feature: Option to select either engineering or simplified user interface mode.<br>
+          Correction:  Flash programming for Atmel AT91SAM7A3 did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.72c</td>
+      <td>Jul-04 2007</td>
+      <td>Improvement: RAMCode for Atmel AT91SAM7 series improved.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.72a</td>
+      <td>Jun-18 2007</td>
+      <td>New feature: Support for some new Atmel devices.<br>
+          New feature: Support for some new flash devices.<br>
+          Correction: Chip erase on old ADuC702x devices did not work properly. Fixed.<br>
+          Correction: Verify CRC did not work properly in all cases. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.70a</td>
+      <td>May-15 2007</td>
+      <td>Improvement: New reset strategy for AT91SAM7 MCU's.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.68a</td>
+      <td>Mar-30 2007</td>
+      <td>New feature: Support for some new NXP devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.66a</td>
+      <td>Mar-19 2007</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.64a</td>
+      <td>Mar-08 2007</td>
+      <td>Correction: Hex file parsing did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.62a</td>
+      <td>Feb-23 2007</td>
+      <td>New feature: Support for some new Atmel SAM7 devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.60a</td>
+      <td>Feb-09 2007</td>
+      <td>New feature: Verifying CRC of target instead of read back entire program.<br>
+          New feature: New menu entry "File|Merge..." allows merging of data files.<br>
+          New feature: Actions performed on "Auto" command can be configured.<br>
+          Improvement: Data window allows to edit items in gap areas.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.58a</td>
+      <td>Dec-22 2006</td>
+      <td>Correction: Old reset commands of CPU init sequence did not work. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.56b</td>
+      <td>Dec-01 2006</td>
+      <td>Improvement: Feed watchdog for TI TMS470 devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.56a</td>
+      <td>Nov-30 2006</td>
+      <td>New feature: Support for some new NXP (Philips) LPC devices.<br>
+          New feature: Support for some new flash devices.<br>
+          New feature: Automatically correction of PLL settings for TI TMS470 series.<br>
+          New feature: Identification of flash devices by flash ID look up.<br>
+          Improvement: Auto unlock flash sectors for Intel flashes and STR7 devices.<br>
+          Improvement: RAM check with auto RAM size detection.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.52a</td>
+      <td>Nov-16 2006</td>
+      <td>New feature: Automatic CPU clock frequency detection.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.50a</td>
+      <td>Oct-17 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.46a</td>
+      <td>Sep-29 2006</td>
+      <td>Support for some new ST STR73xF devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.44a</td>
+      <td>Sep-21 2006</td>
+      <td>Support for ST STR75xF devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.42b</td>
+      <td>Sep-13 2006</td>
+      <td>Improved performance of verify data.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.42a</td>
+      <td>Sep-12 2006</td>
+      <td>Support for some new flash devices added.<br>
+          Data files are displayed in target endianess.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.40a</td>
+      <td>Aug-21 2006</td>
+      <td>Support for some new flash devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.38a</td>
+      <td>Aug-16 2006</td>
+      <td>Support for some new flash devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.36a</td>
+      <td>Aug-01 2006</td>
+      <td>Support for some new flash devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.32a</td>
+      <td>Jul-24 2006</td>
+      <td>Support for unsecuring MAC71xx devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30a</td>
+      <td>Jun-19 2006</td>
+      <td>Improved performance since new DLL is used.<br>
+          Support for OKI ML67Q40xx devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.24a</td>
+      <td>May-31 2006</td>
+      <td>Support for some new flash devices.<br>
+          Improved performance since new DLL is used.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.20a</td>
+      <td>Apr-27 2006</td>
+      <td>Support for CFI compliant flash devices.<br>
+          Support for some new flash devices.<br>
+          Support for securing / unsecuring flash memory.<br>
+          Some improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.14a</td>
+      <td>Mar-14 2006</td>
+      <td>Improved handling of AT91SAM7A3.<br>
+          Watchdog refresh for ADuC703x devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12e</td>
+      <td>Mar-07 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12d</td>
+      <td>Feb-28 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12c</td>
+      <td>Feb-24 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12b</td>
+      <td>Feb-24 2006</td>
+      <td>Program correction in JLinkRDI.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12a</td>
+      <td>Feb-23 2006</td>
+      <td>Added support for some new flash devices.<br>
+          Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10e</td>
+      <td>Feb-21 2006</td>
+      <td>Improved memory access.<br>
+          Improved JTAG handling.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10c</td>
+      <td>Feb-10 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10b</td>
+      <td>Feb-09 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10a</td>
+      <td>Feb-08 2006</td>
+      <td>Calculate CRC when opening data files.<br>
+          Added support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00h</td>
+      <td>Feb-02 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00g</td>
+      <td>Jan-30 2006</td>
+      <td>Some performance improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00d</td>
+      <td>Jan-13 2006</td>
+      <td>New software package.<br>
+          Some performance improvements.<br>
+          Added support for some new flash devices / MCUs.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.16c</td>
+      <td>Dec-02 2005</td>
+      <td>Added support for new flash devices.</td>
+    </tr>
+    <tr> 
+      <td>V2.16b</td>
+      <td>Nov-10 2005</td>
+      <td>Program correction: Serial number problem</td>
+    </tr>
+    <tr> 
+      <td>V2.16a</td>
+      <td>Nov-08 2005</td>
+      <td>Support for adaptive clocking.</td>
+    </tr>
+    <tr> 
+      <td>V2.14a</td>
+      <td>Oct-25 2005</td>
+      <td>Added support for new MCUs devices.<br>
+          Some performance improvements.<br>
+          Check if program area is empty before program.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.12b</td>
+      <td>Oct-10 2005</td>
+      <td>Added new function "Disable MMU" to init sequence editor.</td>
+    </tr>
+    <tr> 
+      <td>V2.12a</td>
+      <td>Oct-04 2005</td>
+      <td>Added some new MCUs.<br>
+          Programming of some Intel flashes accelerated.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.10a</td>
+      <td>Sep-22 2005</td>
+      <td>Added several new flash devices and some MCUs.<br>
+          Display current address during program or verify in progbar window.<br>
+          Change default settings: "Skip blank areas" is enabled.<br>
+          Data file handling accelerated.<br>
+          Rename STR710FR to STR710FZ (correct device name).
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.04b</td>
+      <td>Sep-01 2005</td>
+      <td>Added new project files for AT91RM9200.<br>
+          Automatically unlock sectors before erase or program.</td>
+    </tr>
+    <tr> 
+      <td>V2.04a</td>
+      <td>Aug-19 2005</td>
+      <td>Latest DLL with some improvements added.<br>
+          New flash chips supported.</td>
+    </tr>
+    <tr> 
+      <td>V2.02a</td>
+      <td>Aug-05 2005</td>
+      <td>Command line option added.</td>
+    </tr>
+    <tr> 
+      <td>V2.00b</td>
+      <td>Jul-13 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.00a</td>
+      <td>Jul-12 2005</td>
+      <td>Latest DLL with some improvements added.</td>
+    </tr>
+    <tr> 
+      <td>V2.00</td>
+      <td>Jul-07 2005</td>
+      <td>Added menu item 'help' to open user manual.<br>
+          New license management system.<br>
+          Improved erase algorithm for some Atmel flash devices.</td>
+    </tr>
+    <tr> 
+      <td>V1.36g</td>
+      <td>Jun-23 2005</td>
+      <td>Added a new project and a new flash device.</td>
+    </tr>
+    <tr> 
+      <td>V1.36f</td>
+      <td>Jun-13 2005</td>
+      <td>Divided all Analog Devices microcontrollers in different Revision steps.</td>
+    </tr>
+    <tr> 
+      <td>V1.36e</td>
+      <td>Jun-09 2005</td>
+      <td>Improved support for Intel flash chips.</td>
+    </tr>
+    <tr> 
+      <td>V1.36b</td>
+      <td>May-24 2005</td>
+      <td>Improved support for 2x 16bit configuration with Intel flash chips.<br>
+          Improved support for big endian devices.</td>
+    </tr>
+    <tr> 
+      <td>V1.36a</td>
+      <td>May-20 2005</td>
+      <td>Add ability to connect with J-Link via TCP/IP.<br>
+          Add project for NetSilicon NS9360 eval. board.<br>
+          Add flash devices (M29DW323Dx / M29DW324Dx / M29DW640D).</td>
+    </tr>
+    <tr> 
+      <td>V1.34a</td>
+      <td>May-17 2005</td>
+      <td>Handling of scan chains with multiple devices.<br>
+          Support for Philips LPC 213x series.<br>
+          Minor program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V1.32a</td>
+      <td>April-22 2005</td>
+      <td>Beta support for TI TMS470R1 A128/A256.<br>
+          New menu points "Read back sectors" and "Read back chip".</td>
+    </tr>
+    <tr> 
+      <td>V1.30a</td>
+      <td>March-18 2005</td>
+      <td>Support for second flash bank of STR71x series.<br>
+          New flash devices and MCUs supported.<br>
+          Minor program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V1.28d</td>
+      <td>March-11 2005</td>
+      <td>Support for Pyhtec LPC2294 with external flash.</td>
+    </tr>
+    <tr> 
+      <td>V1.28c</td>
+      <td>March-10 2005</td>
+      <td>Full support for Samsung S3F445HX.</td>
+    </tr>
+    <tr> 
+      <td>V1.28b</td>
+      <td>March-09 2005</td>
+      <td>Improved support for Samsung S3F445HX.</td>
+    </tr>
+    <tr> 
+      <td>V1.28a</td>
+      <td>March-03 2005</td>
+      <td>Support for ATMEL SAM7 S32/S128/S256.<br>
+          Support for ST STR711 / STR712.<br>
+          Beta support for Samsung S3F445HX.
+      </td>
+    </tr>
+    <tr> 
+      <td>V1.26a</td>
+      <td>Feb-25 2005</td>
+      <td>Added full support for ATMEL's SAM7.</td>
+    </tr>
+    <tr> 
+      <td>V1.24c</td>
+      <td>Feb-18 2005</td>
+      <td>Improved support for ATMEL's SAM7S64 chip.</td>
+    </tr>
+    <tr> 
+      <td>V1.24b</td>
+      <td>Feb-15 2005</td>
+      <td>Minor changes in JLinkARM.dll</td>
+    </tr>
+    <tr> 
+      <td>V1.24a</td>
+      <td>Feb-03 2005</td>
+      <td>Support for Analog Devices ADuC7020.</td>
+    </tr>
+    <tr> 
+      <td>V1.22a</td>
+      <td>Jan-26 2005</td>
+      <td>Lock/unlock support for some devices.<br>
+          Support for binary files.<br>
+          Export of setup files.<br>
+          MCU selection.<br>
+          Minor bug fixes.
+      </td>
+    </tr>
+    <tr> 
+      <td>V1.20b</td>
+      <td>Dec-21 2004</td>
+      <td>Beta support for ATMEL's SAM7S64 chip.</td>
+    </tr>
+    <tr> 
+      <td>V1.20a</td>
+      <td>Dec-14 2004</td>
+      <td>Menu point "EDIT | Eliminate blank areas" implemented.</td>
+    </tr>
+    <tr> 
+      <td>V1.18a</td>
+      <td>Nov-17 2004</td>
+      <td>First version with release history</td>
+    </tr>
+  </table>
+  <!-------------------------------------------------------------------------->
+  <!-- MISCELLANEOUS                                                        -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="misc">Miscellaneous</a></h1>
+  <p class="maintext">
+    This document was first released with version 1.18a of the software.<br>
+    Software released earlier is documented internally.<br>
+    This information is available at request.
+  </p>
+  <!--  Modifiable information ends here   ----------------------------------------->
+  <hr>
+  <p class="maintext">
+    Copyright 2001-2009 SEGGER Microcontroller GmbH & Co. KG. All rights reserved.<br>
+    For more information, please visit our website <a href ="http://www.segger.com/">www.segger.com</a> or contact us at <a href ="mailto:info@segger.com">info@segger.com</a><br>
+  </p>
+</body>
+</html>

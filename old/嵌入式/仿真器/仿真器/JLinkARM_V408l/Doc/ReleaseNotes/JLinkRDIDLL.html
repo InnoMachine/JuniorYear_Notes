@@ -1,0 +1,997 @@
+<html>
+<head>
+<title>Release notes</title>
+</head>
+<style>
+  H2, H3, H4 { color: blue }
+  H1, H2, H3, H4, H5 { font-family: Arial, Helvetica, sans-serif;}
+  PRE {  color: black;  margin-left: 2%; }
+  BODY { color: black;  margin-left: 2%; font-family: Verdana, Arial, Helvetica, sans-serif; font-size=75%}
+  table{ color: black;  font-family: Verdana; font-size=100%}
+  .maintext {
+    font-size: 10px;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  h1.newsbox {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 10px;
+    background: #526194 no-repeat right;
+    border: thin solid #000000;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .heading2 {
+    color: #336699;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 25px;
+  }
+</style>
+
+<body bgcolor="#FFFFFF">
+  <!--  Modifiable information starts here ----------------------------------------->
+  <h2>Release notes for J-Link RDI DLL V4.08a</h2>
+  <ol class="maintext">
+    <li><a href=#features>New features</a></li>
+    <li><a href=#improvements>Improvements</a></li>
+    <li><a href=#pcorr>Program corrections</a></li>
+    <li><a href=#problems>Known problems</a></li>
+    <li><a href=#history>Release history</a></li>
+    <li><a href=#misc>Miscellaneous</a></li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- NEW FEATURES                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="features">New features</a></h1>
+  <h2 class="heading2">Version 3.90</h2>
+  <ol class="maintext">
+    <li>Support for Analog Devices ADuC7038 added.<br></li>
+  </ol>
+  <h2 class="heading2">Version 3.86</h2>
+  <ol class="maintext">
+    <li>Support for accessing CP15 registers on ARM926EJ-S.<br></li>
+  </ol>
+  <h2 class="heading2">Version 3.82</h2>
+  <ol class="maintext">
+    <li>New reset strategy for NXP LPC devices added.<br></li>
+  </ol>
+  <h2 class="heading2">Version 3.80</h2>
+  <ol class="maintext">
+    <li>Support for Cortex-M3.<br></li>
+  </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+  <ol class="maintext">
+    <li>Support for some new ST devices:<br>
+        ST STR911FW32<br>
+        ST STR911FW44<br>
+        ST STR912FW32<br>
+        ST STR912FW44<br>
+    </li>
+    <li>Support for Analog Devices ADuC7060.<br></li>
+    <li>Option to execute macro file after every reset.<br></li>
+  </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+  <ol class="maintext">
+    <li>RDI status window added which displays some information about the current debug session.<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.72a</h2>
+  <ol class="maintext">
+    <li>Support for setting watchpoints in ARM RVDS.<br>
+    </li>
+    <li>Support for some new Atmel devices:<br>
+        Atmel AT91SAM7X512<br>
+        Atmel AT91SAM7XC128<br>
+        Atmel AT91SAM7XC256<br>
+        Atmel AT91SAM7XC512<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.70a</h2>
+  <ol class="maintext">
+    <li>Support for accessing CP15 registers on ARM920T/ARM922T.<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.68a</h2>
+  <ol class="maintext">
+    <li>Support for some new NXP devices:<br>
+        NXP LPC2109<br>
+        NXP LPC2468<br>
+        NXP LPC2478<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.62a</h2>
+  <ol class="maintext">
+    <li>Support for some new Atmel devices:<br>
+        Atmel AT91SAM7S512<br>
+        Atmel AT91SAM7SE32<br>
+        Atmel AT91SAM7SE256<br>
+        Atmel AT91SAM7SE512<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+  <ol class="maintext">
+    <li>Option to skip flash download on CRC match.
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+  <ol class="maintext">
+    <li>Automatically correction of PLL settings for TI TMS470 series.<br><br></li>
+    <li>Tool to display RDI configuration dialog.<br><br></li>
+    <li>Support for some new NXP devices:<br>
+        NXP (Philips) LPC2364<br>
+        NXP (Philips) LPC2366<br>
+        NXP (Philips) LPC2368<br>
+        NXP (Philips) LPC2378<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+  <ol class="maintext">
+    <li>Added support for new MCUs:<br>
+        ST STR735F<br>
+        ST STR736F<br>
+        ST STR750F<br>
+        ST STR751F<br>
+        ST STR752F<br>
+        ST STR755F<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.36a</h2>
+  <ol class="maintext">
+    <li>Added support for new MCUs:<br>
+        Philips LPC2101<br>
+        Philips LPC2102<br>
+        Philips LPC2103<br>
+        TI TMS470R1A64<br>
+        TI TMS470R1A128<br>
+        TI TMS470R1A256<br>
+        TI TMS470R1A288<br>
+        TI TMS470R1A384<br>
+        TI TMS470R1B512<br>
+        TI TMS470R1B768<br>
+        TI TMS470R1B1M<br>
+        TI TMS470R1VF288<br>
+        TI TMS470R1VF688<br>
+        TI TMS470R1VF689<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.30a</h2>
+  <ol class="maintext">
+    <li>Added support for new MCUs:<br>
+        OKI ML67Q4050<br>
+        OKI ML67Q4051<br>
+        OKI ML67Q4060<br>
+        OKI ML67Q4061<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+  <ol class="maintext">
+    <li>Added switch to enable flash mirror area @ address 0.<br><br></li>
+    <li>Added support for new MCUs:<br>
+        Atmel AT91SAM7A3<br>
+        Atmel AT91SAM7S321<br>
+        ST STR715FR0<br>
+        ST STR730FZ1<br>
+        ST STR730FZ2<br>
+        ST STR731FV0<br>
+        ST STR731FV1<br>
+        ST STR731FV2<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 3.12a</h2>
+  <ol class="maintext">
+    <li>Added vector catch for ARM7 / ARM9 devices</li>
+  </ol>
+  <h2 class="heading2">Version 3.00d</h2>
+  <ol class="maintext">
+    <li>Support for new ST MCUs added:<br>
+        ST STR911FM32x<br>
+        ST STR911FM44x<br>
+        ST STR912FM32x<br>
+        ST STR912FM44x<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 2.74a</h2>
+  <ol class="maintext">
+    <li>Support for adaptive clocking added.</li>
+    <li>Signal check for TCK, RESET and TRST added.</li>
+    <li>Supply voltage check added (Warning if supply voltage is to high).</li>
+  </ol>
+  <h2 class="heading2">Version 2.72a</h2>
+  <ol class="maintext">
+    <li>Support for new Analog Devices MCUs added:<br>
+        Analog ADuC7030<br>
+        Analog ADuC7031<br>
+        Analog ADuC7032<br>
+        Analog ADuC7033<br>
+        Analog ADuC7128<br>
+        Analog ADuC7129<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 2.70a</h2>
+  <ol class="maintext">
+    <li>Support for some Philips LPC21xx devices added:<br>
+        Philips LPC2134<br>
+        Philips LPC2136<br>
+        Philips LPC2141<br>
+        Philips LPC2142<br>
+        Philips LPC2144<br>
+        Philips LPC2146<br>
+        Philips LPC2148<br>
+    </li>
+  </ol>
+  <h2 class="heading2">Version 2.62a</h2>
+  <ol class="maintext">
+    <li>Support for Atmel SAM-ICE.</li>
+  </ol>
+  <h2 class="heading2">Version 2.58a</h2>
+  <ol class="maintext">
+    <li>Add ability to connect to J-Link via TCP/IP.</li>
+  </ol>
+  <h2 class="heading2">Version 2.56a</h2>
+  <ol class="maintext">
+    <li>New feature "Flash download".</li>
+  </ol>
+  <h2 class="heading2">Version 2.54a</h2>
+  <ol class="maintext">
+    <li>Support for Philips LPC2xxx series.</li>
+    <li>Watchpoint handling added.</li>
+  </ol>
+  <h2 class="heading2">Version 2.50e</h2>
+  <ol class="maintext">
+    <li>None.</li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Improvements                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="improvements">Improvements</a></h1>
+  <h2 class="heading2">Version 3.78a</h2>
+  <ol class="maintext">
+    <li>Performance of flash programming improved.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+  <ol class="maintext">
+    <li>Using BKPT instruction on ARM9 cores with architecture version 5 to save a watchpoint unit.</li>
+  </ol>
+  <h2 class="heading2">Version 3.70a</h2>
+  <ol class="maintext">
+    <li>New reset strategy for AT91SAM7 MCU's.</li>
+  </ol>
+  <h2 class="heading2">Version 3.64a</h2>
+  <ol class="maintext">
+    <li>Programming multiple sectors on devices with small flash sectors.</li>
+  </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+  <ol class="maintext">
+    <li>Simulate/emulate some instructions on "go" to avoid flash programming.</li>
+    <li>Always detect CPU clock frequency automatically.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+  <ol class="maintext">
+    <li>Auto unlock flash sectors for STR7 devices.</li>
+  </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+  <ol class="maintext">
+    <li>Checkbox for verify download added.</li>
+    <li>Endian select button added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.24a</h2>
+  <ol class="maintext">
+    <li>Improved performance since new DLL is used.</li>
+  </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+  <ol class="maintext">
+    <li>Improved auto speed recognition.</li>
+  </ol>
+  <h2 class="heading2">Version 3.14a</h2>
+  <ol class="maintext">
+    <li>Watchdog refresh for ADuC703x devices.</li>
+    <li>Semihosting handling improved.</li>
+    <li>Vector catch handling improved.</li>
+    <li>Breakpoint handling improved.</li>
+    <li>Some minor improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 3.12a</h2>
+  <ol class="maintext">
+    <li>Improved handling of semi hosting.</li>
+    <li>Improved breakpoint handling.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10e</h2>
+  <ol class="maintext">
+    <li>Improved memory access.</li>
+    <li>Improved JTAG handling.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10c</h2>
+  <ol class="maintext">
+    <li>Allow to connect via USB to J-Link devices 0 to 3.</li>
+    <li>New reset strategies added.</li>
+  </ol>
+  <h2 class="heading2">Version 3.10b</h2>
+  <ol class="maintext">
+    <li>Minor improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 3.00h</h2>
+  <ol class="maintext">
+    <li>Improved RDI logfile.</li>
+    <li>Allow configuration of reset delay.</li>
+  </ol>
+  <h2 class="heading2">Version 3.00d</h2>
+  <ol class="maintext">
+    <li>Some performance improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 2.74e</h2>
+  <ol class="maintext">
+    <li>Improved macro file handling.</li>
+  </ol>
+  <h2 class="heading2">Version 2.74d</h2>
+  <ol class="maintext">
+    <li>J-Link RDI User's Guide added to software package.</li>
+  </ol>
+  <h2 class="heading2">Version 2.74b</h2>
+  <ol class="maintext">
+    <li>Signal check for RESET and TRST removed.</li>
+    <li>Breakpoint handling improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.72a</h2>
+  <ol class="maintext">
+    <li>Instruction set simulation improved.</li>
+    <li>Auto speed recognition improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68g</h2>
+  <ol class="maintext">
+    <li>Rename Analog Devices MCUs in config dialog.</li>
+    <li>Improved software reset for Analog Devices ADuC7xxx MCUs.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68f</h2>
+  <ol class="maintext">
+    <li>Improved config dialog.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68e</h2>
+  <ol class="maintext">
+    <li>SAM-ICE: Support for new chips added.<br>
+        AT91RM3400<br>
+        AT91RM9200<br>
+        AT91SAM926x<br>
+        AT91C140<br>
+        AT75C221<br>
+        AT75C340
+    </li>
+  </ol>
+  <h2 class="heading2">Version 2.68d</h2>
+  <ol class="maintext">
+    <li>Add several reset methods.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68c</h2>
+  <ol class="maintext">
+    <li>Improved reset and identify behaviour.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68b</h2>
+  <ol class="maintext">
+    <li>Cache handling for ARM 9 devices.</li>
+  </ol>
+  <h2 class="heading2">Version 2.66b</h2>
+  <ol class="maintext">
+    <li>Improved error handling.</li>
+  </ol>
+  <h2 class="heading2">Version 2.62c</h2>
+  <ol class="maintext">
+    <li>Improved error handling.</li>
+  </ol>
+  <h2 class="heading2">Version 2.62b</h2>
+  <ol class="maintext">
+    <li>Support for semi-hosting.</li>
+  </ol>
+  <h2 class="heading2">Version 2.58c</h2>
+  <ol class="maintext">
+    <li>Add logging.</li>
+  </ol>
+  <h2 class="heading2">Version 2.58b</h2>
+  <ol class="maintext">
+    <li>Improved handling of scan chains with multiple devices.</li>
+  </ol>
+  <h2 class="heading2">Version 2.52b</h2>
+  <ol class="maintext">
+    <li>Loading of JLinkARM Dll has been improved.</li>
+  </ol>
+  <h2 class="heading2">Version 2.52a</h2>
+  <ol class="maintext">
+    <li>New RDI configuration dialog.</li>
+    <li>TAP number (for scain chains with multiple devices) can be configured.</li>
+    <li>Software breakpoints can be disabled.</li>
+    <li>Flash cache can be disabled.</li>
+  </ol>
+  <h2 class="heading2">Version 2.50e</h2>
+  <ol class="maintext">
+    <li>Base address of flash memory can be configured.</li>
+    <li>Improved license management.</li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- PROGRAM CORRECTIONS                                                  -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="pcorr">Program corrections</a></h1>
+  <h2 class="heading2">Version 3.90c</h2>
+  <ol class="maintext">
+    <li>JLINKARM_SPEED_INFO structure was not initialized during flash programming. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.78d</h2>
+  <ol class="maintext">
+    <li>Path of JLinkRDI.ini file was changed in accident. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+  <ol class="maintext">
+    <li>Single stepping did not work properly. Fixed.</li>
+    <li>Adaptive clocking with NXP devices did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74f</h2>
+  <ol class="maintext">
+    <li>GHS debugger with big endian targets did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+  <ol class="maintext">
+    <li>Flash programming for Atmel AT91SAM7A3 did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.72b</h2>
+  <ol class="maintext">
+    <li>Single step in vector area did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.68a</h2>
+  <ol class="maintext">
+    <li>Flash programming did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.64a</h2>
+  <ol class="maintext">
+    <li>Flash programming did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+  <ol class="maintext">
+    <li>Tracing did not work properly. Fixed.</li>
+    <li>Reading GPIOs on NXP LPC214x and LPC23xx devices did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56i</h2>
+  <ol class="maintext">
+    <li>Old style reset commands in "*.setup" files did not work. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.56e</h2>
+  <ol class="maintext">
+    <li>Semi-hosting SYS_WRITE did not allow large files. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+  <ol class="maintext">
+    <li>Flash download did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.30b</h2>
+  <ol class="maintext">
+    <li>RDI Semihosting: File size was not returned correctly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.14a</h2>
+  <ol class="maintext">
+    <li>Flash programming for AT91SAM7A3 did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 3.12b</h2>
+  <ol class="maintext">
+    <li>JLinkRDI DLL with ARM RVDS did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.74c</h2>
+  <ol class="maintext">
+    <li>RDI DLL with ARM RVDS did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.74b</h2>
+  <ol class="maintext">
+    <li>Serial number of J-Link could change. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.70a</h2>
+  <ol class="maintext">
+    <li>Software interrupts not used for semihosting did not work correctly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 2.68f</h2>
+  <ol class="maintext">
+    <li>Clear breakpoints at exit and restart core correctly.</li>
+  </ol>
+  <h2 class="heading2">Version 2.66c</h2>
+  <ol class="maintext">
+    <li>Return correct RDI version number.</li>
+  </ol>
+  <h2 class="heading2">Version 2.62d</h2>
+  <ol class="maintext">
+    <li>Minor bugfixes.</li>
+  </ol>
+  <h2 class="heading2">Version 2.50e</h2>
+  <ol class="maintext">
+    <li>None.</li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- KNOWN PROBLEMS                                                       -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="problems">Known problems in current version</a></h1>
+  <ol class="maintext">
+    <li>None.</li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Release history                                                      -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="history">Release history</a></h1>
+  <table class="maintext">
+    <tr> 
+      <td width=20%>Version</td>
+      <td width=30%>Release date</td>
+      <td>Short explanation</td>
+    </tr>
+    <tr>
+      <td>V4.08a</td>
+      <td>Jun-29 2009</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.06</td>
+      <td>Jun-03 2009</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.04</td>
+      <td>Apr-09 2009</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.90c</td>
+      <td>Aug-25 2008</td>
+      <td>Correction: JLINKARM_SPEED_INFO structure was not initialized during flash programming. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.90</td>
+      <td>Aug-11 2008</td>
+      <td>New feature: Support for Analog Devices ADuC7038 added.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.86</td>
+      <td>Jun-27 2008</td>
+      <td>New feature: Support for accessing CP15 registers on ARM926EJ-S.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.82</td>
+      <td>May-16 2008</td>
+      <td>Improvement: New reset strategy for NXP LPC devices added.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.80</td>
+      <td>Mar-07 2008</td>
+      <td>New feature: Support for Cortex-M3.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.78d</td>
+      <td>Jan-16 2008</td>
+      <td>Correction: Path of JLinkRDI.ini file was changed in accident. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.78a</td>
+      <td>Dec-04 2007</td>
+      <td>New feature: Support for some new ST devices.<br>
+          New feature: Support for Analog Devices ADuC7060.<br>
+          New feature: Option to execute macro file after every reset.<br>
+          Improvement: Performance of flash programming.<br>
+          Correction:  Single stepping did not work properly. Fixed.<br>
+          Correction:  Adaptive clocking with NXP devices did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.74f</td>
+      <td>Aug-10 2007</td>
+      <td>Correction: GHS debugger with big endian targets did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.74a</td>
+      <td>Jul-11 2007</td>
+      <td>New feature: RDI status window added which displays some information about the current debug session.<br>
+          Improvement: Using BKPT instruction on ARM9 cores with architecture version 5 to save a watchpoint unit.<br>
+          Correction:  Flash programming for Atmel AT91SAM7A3 did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.72a</td>
+      <td>Jun-18 2007</td>
+      <td>New feature: Support for setting watchpoints in ARM RVDS.<br>
+          New feature: Support for some new Atmel devices.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.70a</td>
+      <td>May-15 2007</td>
+      <td>New feature: Support for accessing CP15 registers on ARM920T/ARM922T.<br>
+          Improvement: New reset strategy for AT91SAM7 MCU's.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.68a</td>
+      <td>Mar-30 2007</td>
+      <td>New feature: Support for some new NXP devices.<br>
+          Correction:  Flash programming did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.66a</td>
+      <td>Mar-19 2007</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.64a</td>
+      <td>Mar-08 2007</td>
+      <td>Improvement: Programming multiple sectors on devices with small flash sectors.<br>
+          Correction:  Flash programming did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.62a</td>
+      <td>Feb-23 2007</td>
+      <td>New feature: Support for some new Atmel SAM7 devices.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.60a</td>
+      <td>Feb-09 2007</td>
+      <td>New feature: Option to skip flash download on CRC match.<br>
+          Improvement: Simulate/emulate some instructions on "go" to avoid flash programming.<br>
+          Improvement: Always detect CPU clock frequency automatically.<br>
+          Correction:  Tracing did not work properly. Fixed.<br>
+          Correction:  Reading GPIOs on NXP LPC214x and LPC23xx devices did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.56i</td>
+      <td>Dec-14 2006</td>
+      <td>Correction: Old style reset commands in "*.setup" files did not work. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.56e</td>
+      <td>Dec-07 2006</td>
+      <td>Correction: Semi-hosting SYS_WRITE did not allow large files. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.56a</td>
+      <td>Nov-30 2006</td>
+      <td>New feature: Support for some new NXP devices.<br>
+          New feature: Automatically correction of PLL settings for TI TMS470 series.<br>
+          New feature: Tool to display RDI configuration dialog.<br>
+          Improvement: Auto unlock flash sectors for STR7 devices.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.50a</td>
+      <td>Oct-17 2006</td>
+      <td>Added automatically CPU clock frequency detection.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.46a</td>
+      <td>Sep-29 2006</td>
+      <td>Added support for some new ST MCUs.<br>
+          Checkbox for verify download added.<br>
+          Endian select button added.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.44a</td>
+      <td>Sep-21 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.42a</td>
+      <td>Sep-12 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.40a</td>
+      <td>Aug-21 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.38a</td>
+      <td>Aug-16 2006</td>
+      <td>Some minor improvements.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.36a</td>
+      <td>Aug-01 2006</td>
+      <td>Added support for some new MCUs.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.30b</td>
+      <td>Jun-21 2006</td>
+      <td>Support for CM3, Rev.1
+      </td>
+    </tr>
+    <tr>
+      <td>V3.30a</td>
+      <td>Jun-19 2006</td>
+      <td>Improved performance since new DLL is used.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.24a</td>
+      <td>May-31 2006</td>
+      <td>Improved performance since new DLL is used.
+      </td>
+    </tr>
+    <tr>
+      <td>V3.20a</td>
+      <td>Apr-27 2006</td>
+      <td>Improved auto speed recognition.<br>
+          Added support for some new MCUs.<br>
+          Added switch to enable flash mirror area @ address 0.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.14a</td>
+      <td>Mar-14 2006</td>
+      <td>Watchdog refresh for ADuC703x devices.<br>
+          Some improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12e</td>
+      <td>Mar-07 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12d</td>
+      <td>Feb-28 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12c</td>
+      <td>Feb-24 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12b</td>
+      <td>Feb-24 2006</td>
+      <td>Program correction: JLinkRDI with ARM RVDS.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12a</td>
+      <td>Feb-23 2006</td>
+      <td>Added vector catch for ARM7 / ARM9 devices.<br>
+          Improved handling of semi hosting.<br>
+          Improved breakpoint handling.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10e</td>
+      <td>Feb-21 2006</td>
+      <td>Improved memory access.<br>
+          Improved JTAG handling.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10c</td>
+      <td>Feb-10 2006</td>
+      <td>Allow to connect via USB to J-Link devices 0 to 3.<br>
+          New reset strategies added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10b</td>
+      <td>Feb-09 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10a</td>
+      <td>Feb-08 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00h</td>
+      <td>Feb-02 2006</td>
+      <td>Improved RDI logfile.<br>
+          Allow configuration of reset delay.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00g</td>
+      <td>Jan-30 2006</td>
+      <td>Some performance improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00d</td>
+      <td>Jan-13 2006</td>
+      <td>New software package.<br>
+          Some performance improvements.<br>
+          Support for new ST MCUs added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.74e</td>
+      <td>Nov-23 2005</td>
+      <td>Improved macro file handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.74d</td>
+      <td>Nov-11 2005</td>
+      <td>J-Link RDI User's Guide added to software package.</td>
+    </tr>
+    <tr> 
+      <td>V2.74c</td>
+      <td>Nov-10 2005</td>
+      <td>Program correction: RDI DLL with ARM RVDS did not work properly.</td>
+    </tr>
+    <tr> 
+      <td>V2.74b</td>
+      <td>Nov-10 2005</td>
+      <td>Signal check for RESET and TRST removed.<br>
+          Some improvements and program corrections.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.74a</td>
+      <td>Nov-08 2005</td>
+      <td>Support for adaptive clocking added.<br>
+          Signal check for TCK, RESET and TRST added.<br>
+          Supply voltage check added (Warning if supply voltage is to high).
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.72a</td>
+      <td>Oct-28 2005</td>
+      <td>Instruction set simulation improved.<br>
+          Auto speed recognition improved.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.70a</td>
+      <td>Oct-25 2005</td>
+      <td>Support for some Philips LPC21xx devices added.<br>
+          Program correction: Software interrupts during semihosting.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.68g</td>
+      <td>Oct-07 2005</td>
+      <td>Rename Analog Devices MCUs in config dialog.<br>
+          Improved software reset for Analog Devices ADuC7xxx MCUs.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.68f</td>
+      <td>Oct-05 2005</td>
+      <td>Improved config dialog.</td>
+    </tr>
+    <tr> 
+      <td>V2.68e</td>
+      <td>Oct-04 2005</td>
+      <td>SAM-ICE: Support for new chips added.</td>
+    </tr>
+    <tr> 
+      <td>V2.68d</td>
+      <td>Sep-28 2005</td>
+      <td>Add several reset methods.</td>
+    </tr>
+    <tr> 
+      <td>V2.68c</td>
+      <td>Sep-23 2005</td>
+      <td>Improved reset and identify behaviour.</td>
+    </tr>
+    <tr> 
+      <td>V2.68b</td>
+      <td>Sep-19 2005</td>
+      <td>Cache handling for ARM 9 devices.</td>
+    </tr>
+    <tr> 
+      <td>V2.66c</td>
+      <td>Sep-01 2005</td>
+      <td>Some program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V2.66b</td>
+      <td>Aug-08 2005</td>
+      <td>Imrpoved error handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.62d</td>
+      <td>Jul-22 2005</td>
+      <td>Minor bugfixes.</td>
+    </tr>
+    <tr> 
+      <td>V2.62c</td>
+      <td>Jul-12 2005</td>
+      <td>Improved error handling.</td>
+    </tr>
+    <tr> 
+      <td>V2.62b</td>
+      <td>Jul-07 2005</td>
+      <td>Support for semi-hosting.</td>
+    </tr>
+    <tr> 
+      <td>V2.62a</td>
+      <td>Jun-30 2005</td>
+      <td>Support for Atmel SAM-ICE.</td>
+    </tr>
+    <tr> 
+      <td>V2.60a</td>
+      <td>Jun-06 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.58c</td>
+      <td>May-23 2005</td>
+      <td>Add logging.</td>
+    </tr>
+    <tr> 
+      <td>V2.58b</td>
+      <td>May-17 2005</td>
+      <td>Improved handling of scan chains with multiple devices.</td>
+    </tr>
+    <tr> 
+      <td>V2.58a</td>
+      <td>May-12 2005</td>
+      <td>Add ability to connect to J-Link via TCP/IP.</td>
+    </tr>
+    <tr> 
+      <td>V2.56a</td>
+      <td>Apr-28 2005</td>
+      <td>New feature "Flash download".</td>
+    </tr>
+    <tr> 
+      <td>V2.54a</td>
+      <td>Apr-25 2005</td>
+      <td>Support for Philips LPC2xxx series.<br>
+          Watchpoint handling added.</td>
+    </tr>
+    <tr> 
+      <td>V2.52b</td>
+      <td>Apr-13 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.52a</td>
+      <td>Apr-08 2005</td>
+      <td>New RDI configuration dialog</td>
+    </tr>
+    <tr> 
+      <td>V2.50e</td>
+      <td>Apr-06 2005</td>
+      <td>First version with release history</td>
+    </tr>
+  </table>
+  <!-------------------------------------------------------------------------->
+  <!-- MISCELLANEOUS                                                        -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="misc">Miscellaneous</a></h1>    
+  <p class="maintext"> This document was first released with version 2.50e of the software.<br>
+    Software released earlier is documented internally.<br>
+    This information is available at request.
+  </p>
+  <!--  Modifiable information ends here   ----------------------------------------->
+  <hr>
+  <br>
+  <p class="maintext">
+    Copyright 2001-2008 SEGGER Microcontroller GmbH & Co. KG. All rights reserved.<br>
+    For more information, please visit our website <a href ="http://www.segger.com/">www.segger.com</a> or contact us at <a href ="mailto:info@segger.com">info@segger.com</a><br>
+  </p>
+</body>
+</html>

@@ -1,0 +1,761 @@
+数据结构期末复习-tips
+——邵振宇
+2015/1/16 开始整理
+2015/1/17 补充至 期终复习ppt第98页
+2015/1/18 完 //- - 都到凌晨了的说……
+第1章：
+数据，数据结构，基本类型，抽象数据类型，Java语言的面向对象编程、递归的概念与实现。
+tips：要会用递归思想写出算法。
+
+第2章     算法分析
+最佳、最差和平均情况下的复杂度差异;
+大O、Ω和 θ 符号 ；
+小生觉得大O足矣；Ω对表示时间复杂度的函数的下界更加逼近； θ对下界和上界都更加逼近。
+1）分析某个语句的执行次数（频度）
+2）分析某个程序段执行的时间复杂度（用大O表示，要求写出推导过程）
+
+第3章     表、栈和队列
+表、栈和队列的（基本概念，顺序存储结构，链式存储结构，应用）
+	 表：
+         逻辑-----（e1, e2, …..en) 
+         物理------数组实现     
+		   链表实现------单链表
+                                 循环链表
+                                 双向链表
+		   cursor 光标
+	 操作------查找、插入、删除等
+
+	 栈、队列
+	 定义-----栈的定义， 队列的定义
+	 机内实现------数组      （循环队列）
+                       单链表
+
+	 特殊矩阵的压缩存储	Arrays and Matrix
+		1D-Array	2D-Array	
+		Special Matrix	特殊矩阵
+			Diagonal. M(i,j)=0 for i!=j;
+			Tridiagonal. M(i,j)=0 for|i-j|>1;
+			Lower triangular. M(i,j)=0 for i<j;
+			Upper triangular. M(i,j)=0 for i>j;
+			Symmetric.M(i,j)=M(j,i);
+		Sparse Matrices	稀疏矩阵
+
+第4章   树
+1.二叉树的定义、性质
+2.满二叉树与完全二叉树的概念
+3.二叉树的机内存储：
+	数组表示（完全二叉树）、左---右拉链表示、cursor                                                        
+4.先序、中序、后序遍历	递归&非递归方法
+  层次遍历-----用到队列
+	中序遍历的非递归方法：
+	void inorder(BinaryNode<T> node){
+		BinaryNode<T> p=node;
+		Stack<BianaryNode<T>> stack=new Stack<BinaryNode<T>>();
+		while(true){
+			while(p!=null){
+				stack.push(p);
+				p=p.left;
+			}
+			//不停地压入左子直到找到leftest子
+			if(!stack.isEmpty()){
+				p=stack.pop();
+				//
+				p=p.right;
+			}
+			else
+				return;
+		}
+		return;	
+	}
+	后序遍历的非递归方法：
+	void Postorder(BinaryNode <T> * t) {  
+		Stack <StkNode<T>>s(10);
+		StkNode<T> Cnode;
+		BinaryNode<T> * p = t;
+		for(  ;  ;  ) {  
+			while (p!=NULL) { 
+				Cnode.ptr = p;   
+				Cnode.tag = 0; 
+				s.push(Cnode);
+				p = p->Left;
+			}     
+			Cnode = s.pop( );  
+			p = Cnode.ptr;
+			while ( Cnode.tag = = 1) { 
+			//从右子树回来
+				cout << p->element;
+		                if ( !s.IsEmpty( )) { 
+					Cnode = s.pop( );  
+					p = Cnode.ptr;  
+				}
+				else  return;
+			}
+			Cnode.tag = 1;  s.push(Cnode);   
+			p = p->Right;    
+			//从左子树回来
+		}//for
+	}         
+
+5.利用先序（后序）和中序遍历构造一棵树
+void createBinaryTree(String pres, ins ; BinaryNode <T>node){
+     int inpos;
+     String  prestemp, instemp ;
+     if (pres.length( )==0) 
+	node=null;
+   
+     else { 
+	node=new BinaryNode<T>();
+	t.element=pres.charAt(0);   
+	inpos=0;
+        while (ins.charAt(inpos)!=t.element) 
+		inpos++;
+              
+        prestemp=pres.substring(1,inpos);
+        instemp=ins.substring(0,inpos-1);
+        createBinaryTree(prestemp, instemp, node.left);
+
+        prestemp=pres(inpos+1, pres.length( )-1);
+        instemp=ins(inpos+1, pres.length( )-1);
+        createBinaryTree(prestemp, instemp, t.right);
+     }
+}
+
+6.* 利用广义表表示来构造一棵树
+
+7.树的存储方式：
+	广义表表示：a(b(f,g),c,d(h,i,j),e)
+	双亲表示法
+	左子女—右兄弟表示法
+
+8.树的遍历：深度优先遍历，广度优先遍历
+9.Thread Tree	线索树(一般采取中序遍历的遍历顺序)
+	两个关键的操作方法：(ThreadInorder类中)
+	ThreadNode<T> first(){
+		while(current.leftThread==0)
+			current=current.leftChild;
+		return current;
+	}
+	//确定遍历的首项
+
+	ThreadNode<T> next(){
+		ThreadNode<T> p=current.rightChild;
+		if(current.rightThread==0){
+			while(p.leftThread==0)
+				p=p.leftChild;			
+		}
+		current=p;
+		return current;
+	}
+	//确定当前项的下一项
+
+	当然最重要的应该是构造线索树的方法，相当于预先模拟了一次中序遍历并把线索都记录下来。
+	ThreadInorder(ThreadNode<T> t){
+		Stack<T> stack=new Stack<T>();
+		ThreadNode<T> p=t;
+		ThreadNode<T> pre=null;
+		while(true){
+			while(!p.empty()){
+				stack.push(p);
+				p=p.leftChild;
+			}
+			if(!stack.empty()){
+				p=s.pop();
+				if(!pre.isEmpty()){
+					if(pre.rightChild=null){
+						pre.rightThread=1;
+						pre.rightChild=p;
+					}
+					if(p.left.leftChild=bull){
+						p.leftThread=1;
+						p.leftChild=pre;
+					}
+					//上面这个if套目测暂时没有用到过
+				}
+				pre=p;
+				p=p.rightChild;
+			}else
+				return;
+		}
+	}
+
+10.哈夫曼树
+	tips：
+		增长树
+			内、外通路长度（内、外路径）
+			节点的带权路径长度
+			带权的内、外路经长度
+		霍夫曼树
+			给出m个实数W1，W2，…，Wm （m>=2） 作为m个外结点的权构造一棵增长树， 使得带权外路径长度最小
+
+	哈夫曼树的构造
+		Huffman 算法
+		notice：当内结点的权值与外结点的权值相等的情况下， 内结点应排在外结点之后。除了保证带权外路径长度最小外，还保证max Ij, Ij之和 也有最小值（依小生之见并无太大用处）
+        哈夫曼编码
+        扩充的二叉、三叉、….、t叉树
+
+11.等价类问题
+	嘛？！
+
+第4.1章 二叉搜索树
+    1.二叉搜索树的概念
+	简单来说就是一棵二叉树，left<=root<=right
+    2.带索引的二叉搜索树的概念
+	索引的值leftSize=左子树包含的节点数+1（亦即本身作为的一个节点）
+	不带索引根本不能很好地实现快捷的搜索的说
+	三个重要的方法：getMin()/getMax(),insert(Comparable x,BinaryNode t),delete(Comparable x,BinaryNode t)
+	notice：
+		①这几个方法的核心都是递归算法
+		②二叉搜索树的delete要考虑三种情况：无子节点（直接删），只有一个子节点（替代即可），有两个子节点（用left.getMax()或right.getMin()代替）
+	BinaryNode remove( Comparable x, BinaryNode t ) {
+		if( t == null )
+			return t;
+		if( x.compareTo( t.element ) < 0 )
+			t.left = remove( x, t.left );
+		else if( x.compareTo( t.element ) > 0 )
+			t.right = remove( x, t.right );
+		else if( t.left != null && t.right != null ){
+			t.element = findMin( t.right ).element;
+			t.right = remove( t.element , t.right );
+		}
+		else
+			t = ( t.left != null ) ? t.left : t.right;
+		return t;
+	}
+
+    3. AVL树-----平衡的二叉搜索树
+    节点类的属性包括四项：data，left，right，balance（height，=右子树高度-左子树高度∈【-1,1】）。事实上实际算法中并不需要balance这项属性，倒是height更具有实用价值。
+    因为比起一般的二叉搜索树多了对左右子树高度的要求，从而结点个数为n的树的高度为log2n级别，search也只需要O(log2n)时间复杂度。
+    最基本也是最重要的操作有两个：插入 & 删除
+    插入：
+	左外侧，右外侧-----一次旋转 （右单；左单）
+	左内侧，右内侧-----二次旋转（先左后右；先右后左）
+	private AVLNode  insert( Comparable x, AVLNode t ){
+		if ( t == null )
+			return new AVLNode(x,null,null);
+			
+		if ( x.compareTo( t.element ) < 0 ) {
+			t.left = insert( x, t.left );
+			if( height( t.left ) – height( t.right ) == 2 )
+				if( x.compareTo( t.left.element ) < 0 )
+					t = rotateWithLeftChild ( t );
+					//左子树高度超标，进行单旋调整
+				else  t = doubleWithLeftChild( t );
+					//双旋调整
+		}
+		else if( x.compareTo( t.element ) > 0 ){
+			t.right = insert( x, t.right ) ;
+			if( height( t.right ) – height( t.left ) == 2 )
+				if( x.compareTo( t.right.element ) > 0 )
+					t = rotateWithRightChild( t );
+				else  t = doubleWithRightChild( t );
+		}				
+		t.height = max( height( t.left ), height( t.right ) ) + 1;
+		return t;
+	}
+	//喏，左子树的单旋调整方法如下
+	private  static  AVLNode  rotateWithLeftChild( AVLNode k2 ) {
+		AVLNode k1 = k2.left;
+		//调整完之后k2是k1的右子节点；那么k1原先的右子树自然就丢给k2做了左子树
+		k2.left = k1.right;
+		k1.right = k2;
+		k2.height = max( height( k2.left ), height( k2.right ) ) + 1 ;
+		k1.height = max( height( k1.left ), k2.height ) + 1;
+		return k1;
+	}
+	//然后是左子树的双旋调整
+	private  static  AVLNode  doubleWithLeftChild( AVLNode k3 ){
+		k3.left = rotateWithRightChild( k3.left );
+		return rotateWithLeftChild( k3 );
+	}
+	//对右子树的调整与以上方法类似，~~~
+    
+    删除：
+	同二叉搜索树。另外，若删除操作导致平衡因子超出AVL树定义的范围，则需进行调整。
+	//有点繁，应该不必掌握
+	private  static AVLNode delete(AVLNode t, DataType x) {  
+		//若为空树，则返回空，否则返回被删除的结点所属的树根  
+		if (t == null ) 
+			return null;   
+		if(x == t.data) { 
+			//找到要删除的结点 
+			AVLData min = findMin(t.rightChild);  
+			if(min!=null) { 
+			//右子树存在
+				t.data = min.data;
+				if(min != t.rightChild) {  
+					//即t.rightChild存在左子树  
+					AVLNode parent = getParent(t.rightChild, min.data);  
+					parent.leftChild = min.rightChild; 
+					//完成替换
+				}
+				else {
+					//t.rightChild不存在左子树的话
+					t.rightChild = min.rightChild;
+					//直接“上位”完成替换
+				} 
+			}
+			else
+			//如果右子树不存在
+				t=t.left;
+		}
+		else 
+			//呐，如果没找到要删除的节点
+			if(x < t.data) {
+				//在其左子树中进行删除  
+				t.leftChild = delete(t.leftChild,x);
+				if(height(t.rightChild) - height(t.leftChild) == 2){ 
+					//删除后失去平衡  
+					//若删除后，t.rightChild的左子树比右子树高，则进行左双旋转(画图看得比较清楚)
+					if(height(t.rightChild.leftChild) > height(t.rightChild.rightChild))  
+							t = doubleRotateWithRight(t);  
+						else    //否则，进行左单旋转  
+							t = singleRotateWithRight(t);  
+					}  
+				}  
+			 } 
+			else if(x > t.data){  
+				//略
+			}
+		
+		//重新计算t的高度，并返回删除后的树的根  
+		if (t != null){
+			t.height = max(height(t.leftChild), height(t.rightChild))+1;  
+		}  
+		return t;  
+	}
+
+    4. B-树
+    对于m路树，对第h层最多有m^h个节点，总共最多有（m^h-1）/(m-1)个节点；
+    对已知高度h和已知节点总数n的B-Trees，m介于logm（n+1）和n之间。
+    特征要求：
+	①根节点至少有两个子节点（即根的数据域/关键码不能为空）；
+	②除根外的每个节点不少于m/2个子节点（即除根外的每个内部节点的关键码不少于m/2-1个）
+	③外部节点都位于同一层。
+    tips：外部节点数目=关键码的个数+1
+    估计会考insert和delete操作：
+    insert：
+	一个原则：让加就加，加完如果超额就把中间那个元素往上顶；循环往复此过程。
+    delete：
+	首先如果是叶节点的话，让删就删，删完如果元素数目不足能借则借（通过父节点辗转借兄弟节点的），不能借就跟兄弟节点和父节点的相夹的那个元素整儿合并，然后继续此过程。如果不是叶节点，那么就拿左子树的最大元素或者右子树的最小元素替换删除值，然后套用删除叶节点的情况。
+
+    5.B+树
+    在B-树的基础上加了两项定义要求：
+	①关键码只分布在叶节点上；
+	②叶节点的个数满足另外单独定义的关键码数m1.要求其个数不小于m1/2，不大于m1.
+    tips：对B+树的一切操作都是在叶节点上进行的；
+	  叶节点之间指针连接。
+
+第5章 散列表 Hash
+1.散列函数的选择
+	取舍法；平方取中法；乘法杂凑函数（/zj）
+	量化评判标准：装载因子α，即hash表中已经存储的关键字个数与可以散列位置的比值，表征着hash表中的拥挤情况
+2.碰撞の解决办法
+	开地址法
+		线性探查（冲突之后则开始累加）（类似“泥土有新翻过的痕迹，敌人就在附近”）
+		平方探查（冲突之后地址的增值是递增的平方和）（“特别的爱给特别的你”“不论你在哪里我都会找到你”）
+		二次散列（对产生碰撞的d=hash（xi），有c=hash（x1），然后d+=c，循环该运算直到碰撞解除）
+	链地址法
+		就是散列表的关键字对应存储的内容位于链表中，换言之，链表构成的线性数组。用链表的自由扩展的特性解决碰撞问题。
+3.计算平均搜索长度
+第6章 优先队列
+1.优先队列的概念
+	其实就是一个largest-in，first-out的队列，其中的每个元素都被赋予了优先级。
+	同其他数据结构一样，优先队列的重点也是其查找、增加、删除操作的实现。
+2.优先队列的实现
+	用无序的线性表来实现（我觉得这种方式简单粗暴无脑；insert的时间复杂度是θ(1)，delete的却是θ(n)/zj）
+        用堆来实现
+		堆的定义
+			就是一棵完全二叉树，父节点恒不大于（或不小于）子节点。注意跟二叉搜索树的差别：对子节点无左右大小之分。
+		初始化一个堆
+			有对一组无序元素进行调整，和逐个添加、调整构造堆两种方式。
+		堆排序
+			即在最大（或最小）堆的初始化后，做n-1次删除并调整操作。其时间复杂度参考初始化堆和删除操作的复杂度计算。
+	多说无益，上代码(最小堆)：
+	public void insert( Comparable x ) throws OverFlow{  
+		if( isFull() )
+			throw new Overflow();
+		int hole = ++currentSize;
+		for( ; (hole > 1)&& (x.compareTo(array[hole/2]) < 0);hole/=2)
+			array[ hole ] = array[ hole / 2 ];
+		array[ hole ] = x;
+	}
+	
+	public Comparable deleteMin() {
+		//成功删除之后“顺手”返回最小值
+		if( isEmpty() )
+			return null;   
+		Comparable minItem = findMin();
+		//其实findMin()不过就是返回最小堆的第一个元素的引用罢了
+		array[ 1 ] = array[ currentSize];
+		currentSize--;
+		percolateDown( 1 );
+		//将第一个位置向下调整
+		return minItem;
+	}
+	//那么小生以为的最关键的一步来了，如何进行向下调整
+	private void percolateDown( int hole ) {
+		int child;
+		Comparable tmp = array[ hole ];
+		for( ; hole *2 <= currentSize; hole = child ){
+			child = hole * 2;
+			//找个较小的子节点来与自己对换
+			if ((child != currentSize) && (array[ child + 1 ].compareTo( array[ child ] ) < 0 ))
+				child++;
+			if( array[child ].compareTo( tmp ) < 0 )
+				array[ hole ] = array[ child ];
+			else	break;
+		}
+		array[ hole ] = tmp;
+	}
+	//将一个无序的不能称之为堆的堆整个调整（建立）的方法简单直接：将所有非叶节点都向下调整一次。
+	private void buildHeap( ) {
+		for( int i = currentSize / 2; i > 0 ; i-- )
+			percolateDown( i );
+	}
+	tips：对调整一个完整的堆的时间复杂度分析：
+		假设有k+1层（从第0层计），则k=log2n向下取整。第i层的最大交换次数为k-i，第i层最多有2^i个节点。
+		故总交换次数为∑2^i(k-i)=O(n)
+	      而如果是逐个元素添加构造一个堆的话：
+		时间复杂度就变成了∑log2k（每次添加时比较次数的和），其中k是添加的第k个元素，等于log2(n!)=O(nlogn)
+第7章 排序
+来吧，这是一次算法的小集！ready？
+1.关于排序
+	两大类：内排序 & 外排序，后者目前没有接触过实例。
+	稳定性的判定依据：排序后关键值码相同的元素的相对位置是否发生了改变。
+2.插入排序
+	直接插入排序，二分法插入排序，表插入排序，shell排序……
+
+	直接插入排序：
+	public static void insertionSort( Comparable [ ] a ){
+		//直接插入排序,歘歘歘歘歘~！
+		int j;
+		for ( int p = 1; p < a.length; p++ ){
+			Comparable tmp = a[ p ];
+			for ( j = p; (j > 0) && (tmp.compareTo( a[ j – 1 ] ) < 0); j-- )
+				a[ j ] = a[ j – 1 ];
+			a[ j ] = tmp;
+		}
+	} 
+	稳定。
+	第i个元素的平均比较与移动次数
+        C=1/i*1+((i-1)/i)*(i/2+1)=(i+1)/2
+        M=1/i*2+((i-1)/i)*(i/2+2)=(i+3)/2 //notice：每一次跟tmp相关的赋值操作都被视为一次移动
+	KCN（比较次数）=O(n^2)
+	RMN（移动次数）=O(n^2)
+
+	折半（二分法）插入排序：
+	代码就不写了要看的话去翻pptのchapter7第15页（不过那个是C++的；码啖C++老子没过八十啊……！）
+	只是在查找插入位置这一点上对直接插入进行了改进，找到插入位置之后还是要用大规模移动->插入的麻烦方法塞进去。
+	依然稳定。
+	插入第i个元素时对关键码的比较次数为log2i＋1（向下取整）
+	KCN=O(nlog2n)
+
+	希尔排序（缩小增量排序）
+	小生蛮喜欢这种排序思想的23333
+	它的方法是
+		1）取一增量（间隔gap<n），按增量分组，对每组使用直接插入排序或其他方法进行排序。
+		2）减少增量（分的组减少，但每组记录增多）。直至增量为1，即为一个组时。
+		ps：关于增量的官方定义小生并不清楚，姑且可以认为是“组数”
+	public static void shellsort( Comparable [ ] a ){
+		for (  int gap = a.length / 2; gap > 0; gap /= 2 )
+			for ( int i = gap; i < a.length; i++ ){
+				Comparable tmp = a[ i ];
+				int j = i;
+				for ( ; j >= gap && tmp.compareTo( a[ j- gap ] ) < 0; j -= gap )
+					a[ j ] = a[ j – gap ];
+				a[ j ] = tmp;
+			}
+	}
+	它实际上是通过每次改变gap不断增加数列的有序性，从而使直接插入排序得到优化。
+	很显然，这是不稳定的。
+3.交换排序
+	小生认为最重要的一点是对该排序思想本质的认识：不断的交换反序的对偶，直到不再有反序的对偶为止。
+	冒泡排序，快速排序
+
+	冒泡排序
+	public void bubbleSort(int[] a){
+		//小到大的排序
+		int temp = 0;
+		for(int i = 0;i<a.length;i++)
+			for(int j = i;j<a.lengthj++)
+				if(a[i]>a[j])	swap(a,i,j);   
+        }
+	关于比较次数的计算显而易见，至于移动次数，注意每次比较判中（四声）时都会移动三次就好咯。
+	稳定。好像时间复杂度是O(n^2)的几种排序算法都能保证稳定性。
+
+	快速排序
+	多快好不省说的就是它了吧。
+	public int  partition(int[] list,int low,int high){
+		int i=low,  j=high; 
+		int pivot=list[low];
+		//据说对上面这个pivot枢纽元的选取用随机的方法比较好
+		//但是据说在数据量很大的时候随机数的生成代价是很高的，于是一种名叫“三数中值分割法”的方法应运而生。
+		//其实现机制是取list[low],list[high]和list[(low+high)/2]三数的中值。
+		while (i < j ) { 
+			while(list[j]>pivot && i<j)  
+				j--;
+			list[i]=list[j];
+			while(list[i]<pivot.getkey && i<j) 
+				i++;
+			list[j]=list[i];
+		}
+		list[i]=pivot ;
+		return i;
+	}
+	//我并不能确定以上代码的正确性……不过思路应该是对的（吧）
+	不稳定，好的方法总是放荡不羁爱自由……
+
+	好坏情况对时间复杂的的影响位于O(log2n)和O(n^2)之间。据证平均时间复杂度为O（nlog2n）。
+	对空间复杂度的分析：递归不可避免的带来空间代价的提高，需要的栈空间介于O（log2n）和O（n）之间。
+4.选择排序
+	直接选择排序，堆排序（请注意，这也是选择排序的一种），锦标赛排序
+
+	直接选择排序：
+	它与插入排序的差别在于不是插进去，而是换出来。（个别字眼不要想歪！）所以对每个元素的处理至多只有一次swap（三次移动）。
+	机智如我写下上面一句话之后突然意识到这是对上面第483行附近某句话的无情打脸……复杂度又高还不稳定的算法哟~！
+	对其比较次数的计算蛮容易：对第i个数，要比较n-i次。
+	
+	锦标赛排序：
+	是对直接选择排序在选择第i小（或大）元素过程的优化。藉由树形结构的额外空间开销（好在只有O（1），毕竟只需要n-1个额外的附加空间，来记录关键码之外的active和index（记录在完全二叉树中的序号）属性），实现与二分法不同的优化机制。
+	比较次数的计算主要是产生和调整树形的过程产生的，近似为（n-1)＋(n-1)(log2n-1)，约等于(n-1)*log2n=O(nlog2n)
+	稳定的。
+
+	堆排序：
+	既不需要额外的空间开销，又能保证不重复比较。
+	代码参考见第6章第2部分。
+5.归并排序
+	又是小生蛮喜欢的一种排序思想！
+	化零为整，把无数有序的局部数列整合到一起，缩减比较次数，虽然移动次数会比较多。
+	合并趟数为log2n，每趟比较n的一次方级，所以时间复杂度为O(nlog2n)。
+	稳定。
+	代码行数略多但没有鉴赏价值。就是递归调用自身不断地细分，然后对细分的部分完成局部排序之后调用另一个归并merge()方法。merge()的过程脑补可得。详见ppt-chapter7的第59页。
+	还有一种表归并排序，与上述大同小异。
+6.基数排序（叫做“桶排序”的话更有趣一点）
+	小生私底下觉得这种排序思想蛮好玩！略逗…
+	码啖ppt-chapter7上的代码小生读了好多遍才看懂后面的复杂度分析！第73页自取。姑且认为搞懂这个算法的机制就够了好咯！
+	以ppt上所讲为例，是以线性链表实现的。线性链表的数量为radix，每一个线性链表都是一个队列。每个排序码都被看成是d元组，简单来说就是要分解成d个参量来依次进行桶排的分桶操作。注意这里要以权值最低至权值最高的顺序来选取分桶的参考标准（即“元”），否则将不能正确实现排序，切记切记。
+	时间复杂度分析：
+		初始化桶   O(radix)
+		分配桶     O(n)
+		收集桶     O(radix) 
+		循环d次，所以，总执行时间为O(d*(n+radix))
+	附加空间：O(n+2radix)，即指针和桶指针
+	ps：突然发现这种方法在某些情况下有奇效！你看它的平均比较次数只有O(d·(n+r))啊！
+第8章 并查集
+	说真的小生对这玩意儿很有好感……！优化算法的好方法！
+	//不考！咩哈哈哈~！
+	//喂喂不考还写出来干嘛！？
+	//装逼不行啊？！
+	//- - 
+	//小生觉得自己有精分嫌疑了……
+第9章 图
+	终于等到你还好我没放弃（治疗）~~~
+1.无向图、有向图的有关概念
+	点V，边E；
+	有向图，无向图G；
+	完全图，子图；
+	度d，入度，出度；
+	路径，简单路径，环，简单环；
+	（对无向图而言）连通图，连通分量（极大连通子图），（对有向图而言）强连通图，强连通分量（极大强连通子图）；
+	加权图，加权有向图；
+	网络（加权连通图，加权强连通图）；
+	生成树（极小连通图）
+
+	tips：总边数=总度数/2；
+2.图的存储方式
+这里指的是存储边的信息的方式。另需开辟数组记录点的信息。
+	邻接矩阵
+		不加权的话有边记为a[i][j]=1,无边=0；加权的话有边=权值，无边= ∞ ；
+        邻接表
+		不加权的话link的对象就是每一个连接得到的点组成的链表；加权的话链表中每个对象加一块数据域存储权值。加权有向图的邻接表又叫逆邻接表。
+	邻接多重表
+		对无向图而言克服了边记录冗余的问题。同时使相同点出发和指向的边也具有了联系。
+3.图的若干算法
+	1) 图的遍历
+	   //这就像是追求人生另一半的过程……
+	   //代码并不麻烦所以就能省则省吧~~
+	   //承认吧楼上你就是懒！
+	   //扯！懒的话我会写下这些无用的文字吗！？
+	   //- - 那是因为你精分……
+
+		DFS 深度优先搜索
+			拿出“不到黄河心不死”“不到长城非好汉”的气魄来！
+			【突然脑补出“夸父追·日”的另一种打开方式……好害怕……】
+			要用递归的机制；需要一个visited数组记录某点是否已经被遍历过。道理很简单：好马不吃回头草，追过没追上的妹子一般还是省省吧。
+			时间复杂度分析：用邻接表表示 O(n+e)，e为边数；用邻接矩阵表示 O(n^2) 
+		BFS 广度优先搜索
+			简直是少年不知*宝贵，四处撒网、重点捕捉的抽象诠释啊！
+			【不知怎的小生又开始脑补宙斯的风流韵事……STOP！】
+			需要创建一个队列来记录临幸……哦不，访问顺序；需要一个visited数组记录某点是否已经被遍历过。废话，除非编译器会凭空产生一个赫拉不停地把宙斯留情的女人或母兽或雌性爬行动物都dispose掉……
+			时间复杂度分析：邻接表的话只要O(e)，相当于藉由访问边嘛；用邻接矩阵的话要O(n^2)，同理。
+		notice：以上的搜索方法只能适用于连通图。如果是非连通图的话，将每个点都作为起始点跑一下就好咯~
+			//泥垢！不要让宙斯入侵我东土神话！
+			//- - 楼上指的不包括《山海经》里那些异类吧……
+        2) 最小（代价）生成树
+	   说在前面：下面两种方法都是运用了逐步求解的策略。小生认为这相似于贪心思想，只不过较之而言这能够保证最后结果最优。
+		Prime算法
+			算法实现机制是依据已经找到的点来找寻可以get到的最小边，唯一的要求就是该最小边的另一端点须为还没有取出的点。
+			不加优化的话它的时间复杂度=1*(n-1)+2*(n-2)+……+(n-1)*(n-(n-1))=O(n^3)（邻接矩阵存储）
+			优化方法是另外增加两个数组lowcost和nearvex，前者存放生成树顶点集合内顶点到生成树外各顶点的边的当前最小权值，-1或无穷大表示不连通；后者记录生成树顶点集合外各顶点距离集合内最近的顶点，-1表示该点已加入肯德基豪华……哦不，已加入生成树顶点集合。每次get新的点和边之后都要对这两个数组进行一次修改。
+		还是给出代码来对照理解一下吧！
+		    public static void prim(int[][] graph, int n){ 
+			//char[] c = new char[]{'A','B','C','D','E','F','G','E','F'}; 
+			int[] lowcost = new int[n];
+			int[] nearvex = new int[n];
+			int i, j, min, minid;
+        
+			for(i = 1; i < n; i++){
+				lowcost[i] = graph[0][i];
+				nearvex[i] = 0;            
+			}
+
+			for(i = 1; i < n; i++){
+				min = MAX;
+				minid = 0;
+				for(j = 1; j < n; j++){
+					if (lowcost[j] < min && lowcost[j] != -1) {
+						min = lowcost[j];
+						minid = j;
+					}
+				}
+				lowcost[minid] = -1;
+				for (j = 1; j < n; j++) {    
+					if (graph[minid][j] < lowcost[j]) {
+						lowcost[j] = graph[minid][j];
+						nearvex[j] = minid;
+					}
+				}
+			}
+		}
+		简介明快是我喜欢的调调~！
+		就这样，算法复杂度被强行降低到了O(n^2)。
+
+		Kuscal算法
+			算法实现过程：建堆；不断寻找下一条最小的边；判断是否与已经取出的边构成回路；取出，直到n-1条边足数为止。
+			取最小的边用最小堆；判断是否构成回路用并查集DisjointSet（总感觉这东西有种查族谱不能近亲结婚的感觉。宙斯你……）。
+		伪码略见分晓：
+		public void kruskal(){
+			int edgesAccepted;
+			DisjSet s;
+			priorityQueue h;
+			//居然还定义成了优先队列……是棵树就好了嘛！
+			Vertex u, v ;
+			SetType uset, vset; 
+			Edge e;
+
+			h = readGraphIntoHeapArray();
+			h.buildHeap() ;
+			//小生已经记不起buildHeap()是如何实现的了……去上面找找看吧……
+			s = new DisjSet( NUM_VERTICES );
+			
+			edgesAccepted = 0 ;
+			while( edgesAccepted < NUM_VERTICES – 1 ){  
+			e = h.deleteMin() ;   
+			//Edge e = (u, v)
+			uset = s. find( u );
+			vset = s.find( v );
+			if( uset != vset ) {
+				//相等的话就是近亲了。宙斯你跟你妹……
+				edgesAccepted++;
+				s.union( uset, vset );
+				//有种从此结婚是一家了的感觉……
+			}
+		}
+		时间复杂度分析：
+			建堆O(elog2e)，如果是邻接矩阵的话要O(n^2)；
+			e次出堆操作，O(elog2e)；
+			2e次执行并查集的find操作，O(elog2n)；
+			n-1次并查集的union操作，O(n)；
+			总时间复杂度为上述之和。
+			
+		另：有道思考题问这两种算法分别适用于哪种情况。小生窃以为点少用前者，边少用后者，量化的判断比较的话就不清楚了。
+        
+	3) 最短路径
+		含非负权值的单源最短路径 Dijkstra算法
+			与Prim算法极其相似但是！不一样的！小生为此查阅了一些资料后来发现只怪自己太蠢……很显然Prim算法搞出来的树不一定是以预先找好的点为根的，而Dijkstra生成的树呢？这一点资料里没有讲，小生以为这样生成的树的根就是那个“单源”。
+			Prim算法在get一个点之后要更新lowcost数组，判断条件是(graph[minid][j] < lowcost[j])为真，现要改成(!visited[w] && edge[u][w] < MAXNUM && dist[u]+edge[u][w] < dist[w])，然后dist[w]=dist[u]+edge[u][w]。
+			另外，此算法一般还会设置一个path数组用于记录到达该点的前置点。
+			时间复杂度为O(n^2)。
+		
+		边上权值为任意值的单源最短路径（贝尔曼—福特）
+			动态规划思想的运用。即：经过m条边到达某点的最短路径必然等于经过m-1条边到达的某前置点的最短路径与该前置点到该点的路径长度之和的最小值。而从原点到某点的最短路径，就等于经过任意条边到达该点的所有最短路径的最小值了。
+			小生喜欢这个思想！
+			时间复杂度为O(n^3)。
+
+		所有顶点之间的最短路径 Floyed算法
+			前提：各边权值均大于0的带权有向图。
+			时间复杂度是O(n^3)。因为这个算法就是Dijkstra算法的拷贝版：把有向图的每个顶点作为原点重复执行n次。
+			简直粗暴！
+		但是，仅仅是思想的拷贝。实现的主要代码却是异常的精简：
+		for(int k=0; k<n; k++)
+			for(int i=0; i<n; i++)
+				for(int j=0; j<n; j++)
+					if( a[i][k]+a[k][j]<a[i][j] ){  
+						a[i][j]=a[i][k]+a[k][j];
+						path[i][j]=path[k][j];
+					}
+		看在它如此简单（的样子）的份儿上，小生就原谅它的粗暴啦~！
+
+        4) 活动网络
+		用顶点表示活动的网络 AOV网——拓扑排序
+			AOV网是无环有向图，顶点表示活动，有向边表示先决条件。
+			拓扑排序算法思想：
+				随便选出一个入度为0的点；删掉该点及其所有出边；
+				重复上述步骤直到选完为止。
+			显然拓扑排序的结果并不唯一。
+			代码实现基本等同BFS，差别在于第一步预先把所有（而不是仅仅一个）入度为0的点全部加入队列中。
+			时间复杂度为O(n+n+e)，即第一步的处理，每个点和每条边被遍历一遍。
+
+                用边表示活动的网络   AOE网——关键路径
+			AOE网的顶点表示事件（状态），边表示活动，边上的权往往被赋予时间cost等含义。
+			完成某一事件允许的最早的时间是从源点到该点的最长路径，这一点切莫弄反。
+			
+		定义变量：
+			Ve[i]－表示事件Vi的可能最早发生时间，Vl[i]－表示事件Vi的允许的最晚发生时间。
+			有Ve[i]=max{Ve[j]+dur(< Vj,Vi >}，在拓扑排序的基础上正推；Vl[i]=min{Vl[j]-dur (<Vi,Vj>)}，在逆拓扑排序的基础上倒推。
+			e[k]－表示活动ak=<Vi,Vj>的可能的最早开始时间，l[k]－表示活动ak= <Vi,Vj> 的允许的最迟开始时间。
+			有：e[k]=Ve[i]，l[k]＝Vl[j]-dur(<i,j>)
+		实现步骤：
+			①用邻接表记录数据信息，完成拓扑排序。（看ppt上例子的意思，用的是静态邻接表，需要一并记录cost）；
+			②初始化Ve为0；
+			③求Ve：
+			for (i=0; i<n ; i++){
+				edge p=NodeTable[i].adj;
+				while (p!=null){  
+					k = p. dest;
+					if (Ve[i]+p. cost > Ve[k]) 
+						Ve[k]=Ve[i]+p. cost ;
+					p=p. link;
+				}
+			}
+			④初始化Vl为Ve[n-1]；
+			⑤求Vl：
+			for (i=n-2; i ; i--){  
+				p=NodeTable[i].adj;
+				while(p!=null){    
+					k=p. dest;
+					if (Vl[k]-p. cost<Vl[i])
+						Vl[i]=Vl[k]-p. cost ;
+					p=p. link;
+				} 
+			}
+			⑥求e和l：
+			for (i=0; i<n ;i++){
+				p=NodeTable[i].adj;
+				while (p!=null) {  
+					k= p. dest;
+					e=Ve[i];  
+					l=Vl[k]-p. cost ;
+					if(l==e)
+						//此处应有反应：这个活动是不能变更时间的关键活动！
+					p=p. link;
+				} 
+			} 
+		时间复杂度分析：拓扑排序，求Ve和Vl耗费O(n+e)；求各种活动e和l用掉O(e)。总共为O(n+e)。
+	
+	ps：关于那个找到并输出图中所有环的题目，记住以下几点即可：
+		①每个点都要作为源点深搜一遍；
+		②只有源点作为环的起点时才视为有效的环予以输出；
+		再加一个剪枝优化：所有序号比当前源点小的节点将不纳入搜索的有效点的范围。
+
+就是这样了，加油~！

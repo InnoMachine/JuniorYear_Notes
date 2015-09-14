@@ -1,0 +1,39 @@
+<mockup version="1.0" skin="sketch" fontFace="_sans" measuredW="1047" measuredH="638" mockupW="934" mockupH="600">
+  <controls>
+    <control controlID="5" controlTypeID="__group__" x="113" y="38" w="934" h="600" measuredW="934" measuredH="600" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Page%20Frame</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="934" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="5">
+          <controlProperties>
+            <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+            <value>0</value>
+            <verticalScrollbar>true</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="2" y="73" w="912" h="497" measuredW="1600" measuredH="1200" zOrder="1" locked="false" isInGroup="5">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <src>./img/background.jpg</src>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::LinkBar" x="734" y="106" w="-1" h="-1" measuredW="152" measuredH="19" zOrder="2" locked="false" isInGroup="5">
+          <controlProperties>
+            <color>16777215</color>
+            <text>Home%2C%20Contact%2C%20About</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="50" y="106" w="-1" h="-1" measuredW="263" measuredH="41" zOrder="3" locked="false" isInGroup="5">
+          <controlProperties>
+            <align>left</align>
+            <color>16777215</color>
+            <size>40</size>
+            <text>Dessert%20House</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Calender {
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    String[] x = in.next().trim().split(":");
+    GregorianCalendar a = new GregorianCalendar(), b = new GregorianCalendar();
+    a.set(Integer.parseInt(x[0]),Integer.parseInt(x[1])-1,Integer.parseInt(x[2])-1);
+    x = in.next().trim().split(":");
+    b.set(Integer.parseInt(x[0]),Integer.parseInt(x[1])-1,Integer.parseInt(x[2])-1);
+    double diff = a.getTimeInMillis() - b.getTimeInMillis();
+    diff = Math.abs(diff);
+    diff /= (1000. * 60. * 60. * 24.);
+    System.out.printf("%.0f%n", diff);
+  }
+}

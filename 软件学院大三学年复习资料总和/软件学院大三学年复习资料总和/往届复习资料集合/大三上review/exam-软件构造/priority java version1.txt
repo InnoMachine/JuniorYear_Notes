@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static Scanner in;
+	static PrintWriter out;
+//	static StreamTokenizer in; static int next() throws Exception {in.nextToken(); return (int) in.nval;}
+
+	public static void main(String[] args) throws Exception {
+		in = new Scanner(System.in);
+		out = new PrintWriter(System.out);
+//		in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+
+		String name = in.nextLine();
+
+		int n = Integer.parseInt(in.nextLine());
+
+		String[] s = new String[n];
+		String[] t = new String[n];
+		int[] type = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			String[] tok = in.nextLine().split(" ");
+			s[i] = tok[0];
+			t[i] = tok[tok.length - 2].substring(0, tok[tok.length - 2].length() - 2);
+			if (tok[1].equals("posted")) type[i] = 3;
+			if (tok[1].equals("commented")) type[i] = 2;
+			if (tok[1].equals("likes")) type[i] = 1;
+		}
+
+		TreeMap<String, Integer> map = new TreeMap<String, Integer>();
+
+		for (int i = 0; i < n; i++) if (!s[i].equals(name)) map.put(s[i], 0);
+		for (int i = 0; i < n; i++) if (!t[i].equals(name)) map.put(t[i], 0);
+
+		for (int i = 0; i < n; i++)
+			if (s[i].equals(name)) map.put(t[i], map.get(t[i]) + type[i]);
+			else if (t[i].equals(name)) map.put(s[i], map.get(s[i]) + type[i]);
+		
+		int m = 1000;
+		TreeSet<String>[] set = new TreeSet[m];
+		for (int i = 0; i < m; i++) set[i] = new TreeSet<String>();
+
+		for (int i = 0; i < n; i++) if (!s[i].equals(name)) set[map.get(s[i])].add(s[i]);
+		for (int i = 0; i < n; i++) if (!t[i].equals(name)) set[map.get(t[i])].add(t[i]);
+		
+		for (int i = m - 1; i >= 0; i--) for (String ss : set[i]) out.println(ss);
+
+
+		out.close();
+	}
+}

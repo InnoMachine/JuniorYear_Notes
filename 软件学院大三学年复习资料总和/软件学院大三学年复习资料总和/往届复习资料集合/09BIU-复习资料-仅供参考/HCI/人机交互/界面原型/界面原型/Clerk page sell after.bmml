@@ -1,0 +1,163 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1071" measuredH="702" mockupW="934" mockupH="681">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="137" y="21" w="934" h="681" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="187" y="127" w="-1" h="-1" measuredW="263" measuredH="41" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>0</color>
+        <size>40</size>
+        <text>Dessert%20House</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="912" y="134" w="83" h="27" measuredW="59" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <href>Sign%20page%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22775%2C113%2C858%2C140%22%20href%3D%22Sign%2520page.bmml%22%20alt%3D%22Sign%20page%22%20id%3D%224%22/%3E</map>
+        <text>LogOff</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TabBar" x="138" y="168" w="912" h="425" measuredW="245" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <hrefs>Clerk%20page%26bm%3BClerk%20page.bmml%26bm%3BClerk%20page.bmml%26bm%3BClerk%20page.bmml%2CClerk%20page%20edit%20product%26bm%3BClerk%20page%20edit%20product.bmml%26bm%3BClerk%20page%20edit%20product.bmml%26bm%3BClerk%20page%20edit%20product.bmml%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2221%2C147%2C88%2C174%22%20href%3D%22Clerk%2520page.bmml%22%20alt%3D%22Clerk%20page%22%20id%3D%225%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2288%2C147%2C173%2C174%22%20href%3D%22Clerk%2520page%2520edit%2520product.bmml%22%20alt%3D%22Clerk%20page%20edit%20product%22%20id%3D%225%22/%3E%0A</map>
+        <selectedIndex>2</selectedIndex>
+        <text>Clerk%20Info%2C%20Edit%20Product%2C%20Sell</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="__group__" x="405" y="456" w="175" h="203" measuredW="175" measuredH="203" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="175" h="203" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="16"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="36" y="7" w="113" h="99" measuredW="1024" measuredH="680" zOrder="1" locked="false" isInGroup="16">
+          <controlProperties>
+            <src>../../../../../../%25E8%25BD%25AF%25E9%2599%25A2/%25E8%25BD%25AF%25E9%2599%25A2%25E8%25AF%25BE%25E7%25A8%258B/%25E5%25A4%25A7%25E4%25B8%2589%25E7%25AC%25AC%25E4%25B8%2589%25E5%25AD%25A6%25E6%259C%259F/%25E4%25BA%25BA%25E6%259C%25BA%25E4%25BA%25A4%25E4%25BA%2592/%25E4%25BD%259C%25E4%25B8%259A/%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/img/10.jpg</src>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="23" y="109" w="61" h="-1" measuredW="42" measuredH="21" zOrder="2" locked="false" isInGroup="16">
+          <controlProperties>
+            <bold>true</bold>
+            <text>Biscuit</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="23" y="135" w="85" h="-1" measuredW="85" measuredH="21" zOrder="3" locked="false" isInGroup="16">
+          <controlProperties>
+            <text>Order%20by%20Carol</text>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="23" y="163" w="61" h="25" measuredW="45" measuredH="27" zOrder="4" locked="false" isInGroup="16">
+          <controlProperties>
+            <text>Sell</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="17" controlTypeID="__group__" x="193" y="423" w="175" h="203" measuredW="175" measuredH="203" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="175" h="203" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="17"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="42" y="15" w="103" h="99" measuredW="340" measuredH="340" zOrder="1" locked="false" isInGroup="17">
+          <controlProperties>
+            <src>../../../../../../%25E8%25BD%25AF%25E9%2599%25A2/%25E8%25BD%25AF%25E9%2599%25A2%25E8%25AF%25BE%25E7%25A8%258B/%25E5%25A4%25A7%25E4%25B8%2589%25E7%25AC%25AC%25E4%25B8%2589%25E5%25AD%25A6%25E6%259C%259F/%25E4%25BA%25BA%25E6%259C%25BA%25E4%25BA%25A4%25E4%25BA%2592/%25E4%25BD%259C%25E4%25B8%259A/%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/img/4.jpg</src>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="29" y="117" w="55" h="-1" measuredW="55" measuredH="21" zOrder="2" locked="false" isInGroup="17">
+          <controlProperties>
+            <bold>true</bold>
+            <text>Sanwich</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="29" y="143" w="86" h="-1" measuredW="86" measuredH="21" zOrder="3" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>Order%20by%20apple</text>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="29" y="171" w="61" h="25" measuredW="45" measuredH="27" zOrder="4" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>Sell</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Canvas" x="405" y="219" w="175" h="237" measuredW="100" measuredH="70" zOrder="6" locked="false" isInGroup="-1"/>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Image" x="424" y="226" w="141" h="138" measuredW="1024" measuredH="1024" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../../../../%25E8%25BD%25AF%25E9%2599%25A2/%25E8%25BD%25AF%25E9%2599%25A2%25E8%25AF%25BE%25E7%25A8%258B/%25E5%25A4%25A7%25E4%25B8%2589%25E7%25AC%25AC%25E4%25B8%2589%25E5%25AD%25A6%25E6%259C%259F/%25E4%25BA%25BA%25E6%259C%25BA%25E4%25BA%25A4%25E4%25BA%2592/%25E4%25BD%259C%25E4%25B8%259A/%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/img/2.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="__group__" x="424" y="364" w="91" h="81" measuredW="91" measuredH="81" zOrder="8" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="57" measuredH="21" zOrder="0" locked="false" isInGroup="31">
+          <controlProperties>
+            <bold>true</bold>
+            <text>CupCake</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="26" w="-1" h="-1" measuredW="91" measuredH="21" zOrder="1" locked="false" isInGroup="31">
+          <controlProperties>
+            <text>Order%20by%20Daniel</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="0" y="56" w="61" h="25" measuredW="45" measuredH="27" zOrder="2" locked="false" isInGroup="31">
+          <controlProperties>
+            <text>Sell</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Canvas" x="619" y="219" w="175" h="226" measuredW="100" measuredH="70" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Image" x="650" y="234" w="112" h="110" measuredW="500" measuredH="500" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../../../../%25E8%25BD%25AF%25E9%2599%25A2/%25E8%25BD%25AF%25E9%2599%25A2%25E8%25AF%25BE%25E7%25A8%258B/%25E5%25A4%25A7%25E4%25B8%2589%25E7%25AC%25AC%25E4%25B8%2589%25E5%25AD%25A6%25E6%259C%259F/%25E4%25BA%25BA%25E6%259C%25BA%25E4%25BA%25A4%25E4%25BA%2592/%25E4%25BD%259C%25E4%25B8%259A/%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/img/1.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="638" y="349" w="-1" h="-1" measuredW="78" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Cherry%20Cake</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="638" y="375" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Order%20by%20qinxu</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Button" x="638" y="403" w="61" h="25" measuredW="45" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sell</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Canvas" x="829" y="219" w="175" h="258" measuredW="100" measuredH="70" zOrder="11" locked="false" isInGroup="-1"/>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Image" x="863" y="240" w="113" h="128" measuredW="363" measuredH="486" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../../../../%25E8%25BD%25AF%25E9%2599%25A2/%25E8%25BD%25AF%25E9%2599%25A2%25E8%25AF%25BE%25E7%25A8%258B/%25E5%25A4%25A7%25E4%25B8%2589%25E7%25AC%25AC%25E4%25B8%2589%25E5%25AD%25A6%25E6%259C%259F/%25E4%25BA%25BA%25E6%259C%25BA%25E4%25BA%25A4%25E4%25BA%2592/%25E4%25BD%259C%25E4%25B8%259A/%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/img/9.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Label" x="858" y="379" w="-1" h="-1" measuredW="84" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Cream%20Bread</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="858" y="405" w="-1" h="-1" measuredW="103" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Order%20by%20Jasmine</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Button" x="857" y="431" w="61" h="25" measuredW="45" measuredH="27" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sell</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

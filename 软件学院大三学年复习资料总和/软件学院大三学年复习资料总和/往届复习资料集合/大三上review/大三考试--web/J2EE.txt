@@ -1,0 +1,605 @@
+public class J2EE_Review_Information implements 吴晓菊J2EE复习提纲
+来源： 陆妙善的日志
+题型：填空 30’  简答（答关键点）  问答（详细描述）
+
+不考：API、配置（XML）
+
+考：概念性问题
+
+JavaEE
+1.Java EE 平台概述（重要） 
+
+Java EE（Java Platform，Enterprise Edition）是sun公司推出的企业级应用程序版本。这个版本以前称为 J2EE。能够为我们帮助开发和部署可移植、健壮、可伸缩且安全的服务器端 Java 应用程序。Java EE 是在 Java SE 的基础上构建的，它提供 Web 服务、组件模型、管理和通信 API，可以用来实现企业级的面向服务体系结构（service-oriented architecture，SOA）和 Web 2.0 应用程序。
+
+ 
+
+2.使用分布式的多层应用模型 构件，多层分哪些层？ 
+
+J2EE可以分为4层:
+
+1:运行在客户端机器上的客户端组件
+
+2:运行在J2EE服务器上的Web层组件.
+
+3:运行在j2EE服务器上的业务逻辑层组件.
+
+4:运行在EIS服务器上的企业信息系统层软件.
+
+一般,J2EE应用程序被认为是三层体系结构的,因为它们主要分布在三个地方. 客户端,服务器端,数据库或者是后台的遗留层.
+
+ 
+
+3.Java EE应用由各种各不同组件构成，都有哪些组件 
+
+网上答案：J2EE的规范定义了下面的一些组件:
+1:客户端程序和applets是运行在客户端的组件.
+
+2:java servlet 和jsp技术是运行在服务器端的服务器组件.
+
+3:EJB技术是运行在服务器端的商务逻辑组件.
+
+PPT答案：
+
+1.J2EE Clients
+
+Web Client；Applets；Application Client；JavaBean组件（the Javabean Component Architecture ）；
+
+2.Web Component
+
+Servlet;Web page(JSP)
+
+3.business Component
+
+EJB(会话bean 实体bean 消息驱动bean);
+
+4.Java EE应用服务器是以容器的形式提供服务，容器分哪些类型？分别提供了哪些服务？
+
+1．EJB container ：管理J2EE程序的执行
+
+2．Web container：管理网页，servlet和部分EJB程序的执行
+
+3.  Application Client container：管理客户端组件应用的执行
+
+4.Applets container：管理applets的执行
+
+5.Java EE应用最后会被打包部署的，打包部署的文件包括哪些内容？
+
+1.一个或者是多个功能化的组件，例如EJB，web Page ，servlet或者是applet
+
+2.可以描述部署内容的部署描文件
+
+6.Java EE应用模块有哪些类型？模块被打包后拓展名是什么？各个模块的内容分别包括什么？
+
+web模块， *.war   包括servlet类文件，JSP页面文件，支持类文件，GIF和html文件，XML配置文件
+
+ejb模块， *.jar     包括ejb文件，ejb配置文件
+
+application client模块； *.jar   包括相关类文件，程序客户端配置文件
+
+resource adapter模块   *.rar    包括所有的java接口，类，本地库和文档和资源适配描述文件
+
+7.Java EE应用可重用模型，哪些角色？
+
+The Java EE product provider
+
+The tool provider
+
+Application Component Provider
+
+Application Assembler
+
+Applicaion Deployer and Administrator
+
+8.Java EE应用哪些广泛使用的EJB、web容器？
+
+EJB技术，Servlet技术，JSF，JSP，Java Persistent API，Java Transaction API，JAX-RS，Managed Beans，CDI，Dependency Injection，Bean Validation，JMS，JavaEE connector Architecture，JMail API，
+
+ 
+
+Web应用
+1.Web应用是Web应用服务器的动态拓展，哪两种类型？
+
+面向服务的和面向表现的两种类型
+
+2.一个JavaWeb应用的请求处理流程。
+
+ 
+
+        The client sends an HTTP request to the web server.
+
+        A web server that  implements Java Servlet and JavaServer Pages technology converts the request into an HTTPServletRequest object.
+
+        This object is delivered to a web component, which can interact with JavaBeans components or a database to generate dynamic content.
+
+        The web component can then generate an HTTPServletResponse or can pass the request to another web component.
+
+         A web component eventually generates a HTTPServletResponse object.
+
+         The web server converts this object to an HTTP response and returns it to the client.
+
+ 
+
+3.一个Web应用会包括哪些内容？
+
+Web组件和web资源；服务器端实用工具类（utility classes，例如database beans，shopping carts等）；客户端的类（小程序，实用工具类）
+
+4.Web组件可以是Servlet和web页面，哪些技术可以实现Web页面
+
+Jsp，JSF
+
+5.Web应用的一些特征可以在部署到容器时被配置，两种配置的方式是什么？
+
+JavaEE注解的方式（Java EE annotations）；XML部署文件(deployment descriptor)；
+
+6.Web容器提供了哪些服务？
+
+Web容器提供了许多支持服务使得可以加强对网络组件的能力，使他们更容易开发。
+
+7.Web模块的目录结构。
+
+根目录document root：存放html，Xhtml页面，客户端类和文档，静态资源例如图片等的目录；
+
+WEB-INF目录，包括已经编译的class类文件夹，tags标签文件夹，lib引用类库文件夹，配置类文件（例如web.xml，ejb-jar.xml）
+
+ 
+
+ 
+
+Servlet
+Java servlet技术是所有的web程序的基础
+
+1.Servlet 生命周期
+
+Servlet的生命周期有servlet所部属的容器控制
+
+当一个客户端请求发送到服务器时，容器开始执行以下步骤：
+
+如果servlet实例不存在
+
+载入servlet类
+创建一个servlet的实例
+调用init方法初始化这个实例
+然后调用service的方法，传递request和response对象
+
+如果容器需要移除这个servlet，那么他就会通过调用servlet的destroy方法来释放这个servlet
+
+2.Http请求，URL组成部分包括哪些元素？
+
+采用请求响应模型，request（从客户端到服务器端），response（从服务器端到客户端）
+
+Request包括：request方法（包括GET，HEAD，POST，PUT，DELETE，OPTIONS，TRACE）；requestURL（一个字符串，由它来导向一个web组件，或者是一个静态的对象，例如html页面或者是图片文件什么的）；header fields；body
+
+Response包括：result code（例如404（表示请求资源不可用），401（请求需要HTTP认证），500（服务器内部错误导致无法完成请求）503（服务器超载导致无法完成请求））；header fields；body
+
+URL组成：
+
+http://[host]:[port][request path]?[query string] 请求路径由以下元素组成：
+
+上下文路径：向前的斜线/和servlet的Web应用的上下文根的拼接。
+
+servlet路径：与激活该请求的组件别名相应的路径部分，由向前的斜线/开始。
+
+路径信息：请求路径的部分，不是上下文路径或者servlet路径的部分。
+
+3.Tomcat的组件结构，以及如何处理请求。
+
+组件结构：
+
+Server代表一个服务器
+
+Connector在某一个指定端口监听用户请求，并且将获得的请求交给engine来处理
+
+Engine将获得的请求匹配到某个虚拟主机上，并且吧请求交给该host来处理
+
+Host代表虚拟主机，每一个都和某个网络域名想匹配，每一个都可部署多个web应用
+
+Context对应一个web应用（由一些Servlet，HTML，Java类，JSP页面和一些其他的资源组成，在创建时根据在获得<Tomcat_home>\conf\web.xml和<Webapp_home>/WEB-INF/web.xml载入Servlet类。在请求时查询映射表找到被请求Servlet类并且执行以获得请求回应）
+
+请求处理流程：例如（http：//localhost：8080/HelloWorld）
+
+请求被发送偶感到本机端口8080,被Java HTTP Connector获得
+Connector将该请求交给它所在的service的Engine来处理并等待Engine的回应
+Engine获得请求，匹配所有的虚拟主机
+Engine匹配到名为localhost的主机
+Localhost主机获得请求，匹配所拥有的所有Context
+Localhost主机匹配到路径为/HelloWorld的Context
+路径为/HelloWorld的Context获得请求，在映射表中寻找对应的servlet
+Context匹配URLPATTERN为/的Servlet
+构造HttpServletRequest对象和HttpServletResponse对象，作为参考调用该Servlet的Service方法
+Context把执行完后的HttpServletResponse返回给localhost主机
+Host把HttpServletResponse对象返回给Engine
+Engine把HttpServletResponse对象返回给Connector
+Connector把HttpServletResponse对象返回给客户Browser
+4.Session 的两种实现机制（详细了解，重点，课件servlet.ppt第115张）
+
+1.Cookie机制
+
+1.1访问站点——创建新会话对象（Httpsession），server分配唯一会话标识号（sessionID）；
+
+1.2Server创建一个暂时的HTTP cookie用来存储sessionID，server会将cookie添加到HTTP响应中，cookie被放置到客户机浏览器中，存储到客户机硬盘；
+
+1.3客户浏览器发送包含cookie的请求
+
+1.4根据客户机浏览器发送的sessionID信息，server找到相应的HttpSession对象，跟踪会话
+
+1.5在会话超时间隔期间，如果没有接收到新的请求，server将删除此会话对象
+
+2.URL重写
+
+Cookie被客户禁用时采用url重写机制：调用response.EncodeURL(URL)方法
+
+2.1   5与cookie机制相同（PPT原话）
+
+2.2  server将sessionID放在返回给客户端的URL中
+
+2.3  客户端浏览器发送请求包含sessionID
+
+2.4  根据包含请求的sessionID信息（URL），server找到相应的httpSession对象，跟踪会话
+
+5.Web组件可以调用其他的外部资源，采用什么方式调用？（包含页面进来）
+
+1.直接的
+
+有两种可能性：Web组件可以包括（include）其他资源的内容，也可以提出一个请求导航到（forward）另一个资源。
+
+2.间接的
+
+Web组件中嵌入一个url（embeds a url）用来指向另外一个web组件来返回给客户端
+
+6.Session和Cookie 使用场景分别是什么？
+
+Cookie：
+
+跟踪会话，也可以独立于http会话使用cookie
+长期“记住用户信息”
+存储在本地计算机硬盘上
+示例：在购物车系统中，使用cookie记录用户id，预填充；使用会话，跟踪登录状态，跟踪应用程序的使用情况，cookie.txt文件，记录用户对语言和颜色的选择之类的偏好
+
+Session
+
+保存在服务器端内存中
+使用机制不同
+示例：在购物车系统中，跟踪用户的购物车，导航信息，登录状态
+
+7.Filter使用场景是什么？（在什么情况下使用）
+
+1.改善代码重用，在不修改servlet代码的情况下想servlet添加功能（如身份验证）
+
+2.用于跨多个servlet执行一些功能，创建可重复使用的功能
+
+3.在servlet处理请求之前截获请求（如：在调用servlet之前截获请求，验证用户身份，未经授权的用户遭到拒绝，而servlet不知道曾经有过这样的请求）
+
+具体使用场景：
+
+代码重用；
+
+应用安全策略；
+
+日志；
+
+为特定目标浏览器传输XML输出
+
+图像转换。加密
+
+动态压缩输出
+
+8.Listener的使用场景？
+
+1.监听系统关闭或者是开启
+
+2.监听用户访问次数
+
+3.监听用户是否登录
+
+4.监听session是否改变等
+
+9.如何处理Servlet的线程安全问题？
+
+Servlet默认是多线程的，Server创建一个实例，用它处理并发请求——编写线程安全的类，避免使用可以修改的类变量和实例变量
+
+实例变量是在队中分配的，不是线程安全的；
+
+Request，response是线程安全的
+
+局部变量是在战中分配的，是线程安全的（局部变量可以作为参数传递）
+
+ 
+
+JSP
+1.生命周期。
+
+1.请求被映射到jsp页面
+
+2.服务器端为jsp页面查找已有的实现类，如果没有找到则创建新的jsp页面的实现类，然后把这个类载入JVM。在实现类装在完成后，JVM将创建这个类的一个实例。
+
+3.初始化：初始化JSP页面对象
+
+4.处理请求
+
+5.生命周期终止：服务器不再把客户端的请求发给JSP。在所有的请求处理完之后会释放掉这个类的所有实例。这种情况一般发生在服务器关闭的时候或者是服务器要保存资源，检测到有jsp文件更新等
+
+2.JSP是文本文档，包括哪两种类型的文本？
+
+Static data；JSP elements
+
+3.JSP页面有两种语法表达方式，哪两种？（可见JSP.ppt第16张）
+
+标准Jsp语法表示和XML表示
+
+4.JSP元素都有哪些？
+
+指令元素
+
+例如：
+
+<%@page ...%>;
+
+<%@include ...%>;
+
+<%@taglib ...%>;
+
+脚本元素
+
+例如
+
+<%...%>
+
+<%=…%>
+
+<%!...%>
+
+行为元素
+
+例如：
+
+jsp:[set|get] Property;
+
+jsp:[include|forward]
+
+jsp:plugin
+
+5.在JSP页面的翻译阶段，要去处理构建动态内容的JSP元素，是如何处理这些元素的？（指令、脚本、动作（include,forward）在翻译是如何处理？定制标签如何处理？）
+
+1.静态数据转化为代码，将排放到响应流中的数据。
+
+2.指令指令是用来控制Web容器转换并执行JSP页面；
+
+ 脚本元素插入到JSP页面的servlet类；
+
+表达式语言作为参数传递来调用JSP表达式解释器
+
+jsp:[set|get]Property被转换成方法来调用JavaBeans组件。
+
+jsp:[include|forward] 被转换成Java Servlet API的调用。
+
+jsp:plugin被转换成浏览器的特定标记来激活一个applet
+
+自定义标签调用标记处理程序实现自定义标签调用。
+
+6.有哪些常用的JSP指令？
+
+Page指令（session，import，extends，contentType，buffer，ThreadSafe，errorPage）；
+
+include指令；
+
+taglib指令
+
+7.脚本元素中创建和使用对象的方法有哪些？这些对象在翻译时如何进行处理？
+
+三种创建和使用脚本元素对象的方法：
+
+类实例和类变量 在声明中创建，在脚本和表达式中被使用
+局部变量 在脚本和表达式中被创建和使用
+作用域对象的属性 在脚本和表达式中被创建和使用
+8.JSP动作的作用是改善脚本、摆脱Java代码，有哪些常用动作？
+
+<jsp:include>
+
+<jsp:forward>
+
+<jsp:plugin>
+
+<jsp:useBean>
+
+<jsp:setProperty>
+
+<jsp:getProperty>
+
+9.Include动作和Include指令的区别？
+
+include指令：包括其他页面，编译时把其他页面的内容加进来，比include动作快
+
+include标准动作：使用RequestDispatcher，运行时把其他页面的内容加进来（包括到输出流中）
+
+ 
+
+10.Forward 动作 和 Redirect 动作的区别？
+
+HTTP重定向：response.sendRedirect(myNewURL);
+
+发送的请求信息又回送给客户机，让客户机再转发到另一个资源上，新的URL出现在Web浏览器中，需要在服务器和客户机之间增加一次通信
+
+forward标准动作：使用RequestDispatcher ，JSP的转发功能是在服务器本身上实现的
+
+11.JSP有四种作用域对象，分别是什么？
+
+页面域（page scope）
+
+请求域（request scope）
+
+会话域（Session scope）
+
+应用域（Application scope）
+
+ 
+
+ 
+
+JDBC
+1.两种建立数据库连接的方式？
+
+DriverManager机制和DataSource机制
+
+2.事务：哪些种Java事务类型？
+
+JDBC事务；JTA（Java Transaction API）事务，容器事务
+
+3.什么是JDBC事务？（简单解释）
+
+用Connection对象控制；
+
+提供了两种食物模式：自动提交和手动提交
+
+使用JDBC事务界定时，可以将多个SQL语句结合到一个事务中
+
+缺点：事务的范围局限于一个数据库链接，一个JDBC事务不能跨越多个数据库
+
+4.什么是JTA？
+
+JTA允许应用程序执行分布式事务处理——在两个或者是多个网络计算机资源上访问并且更新数据，这些数据可以分步在多个数据库上
+
+两阶段提交：事务管理器和资源管理器之间使用的协议是XA（资源和事务管理器之间的标准化接口）
+
+XA链接参与了JTA事务，XA链接不支持JDBC的自动提交功能
+
+ 
+
+ 
+
+MVC
+1.基于MVC模式的JavaEE Web应用构架。
+
+View层：Browser（HTML tags;JSP tags XML/XSL）
+
+Controller层:Servlet
+
+Model层:Bean/JavaBeans(InventorManager,InventorItem,ShipmentReceived)
+
+2.常用的MVC框架。使用框架的优点。
+
+Structs;Webwork;Spring MVC等
+
+优点： 一个良好的框架可以让开发人员减轻重新建立解决复杂问题方案的负担和精力；它可以被扩展以进行内部的定制化；并且有强大的用户社区来支持它。框架通常能很好的解决一个问题。
+
+3.基于JavaEE 做应用时，有哪些常用的设计模式？
+
+MVC模式；Front Controller模式；session fa?ade模式；Data Access Object模式
+
+ 
+
+ 
+
+消息服务JMS（Java Message Service）
+1.使用消息的应用场景
+
+智能的交换机，用于路由分布式应用中的应用程序组件和进程中的消息
+
+异步传递消息，大量数据插入数据库时需要一个安全的缓存，应付大量访问的交易系统
+
+协同多系统之间的处理效率
+
+2.两种消息应用：队列、主题，使用场景是什么？
+
+队列（点对点的消息处理机制）
+
+场景：web前端发送包含订货信息的消息，仓库管理系统接收这个消息，并且对订货进行适当的处理，即时有多个仓库管理系统，也不会同时处理同一个订单，顾客的订货信息应当持久保存。
+
+主题（发布/订阅消息处理机制）
+
+当客户购买过几次之后，一个消息就会发送给一个“常客”主题
+
+站点为这些常客发送一个“特惠待遇”的消息
+
+3.对于消息的消费者来说：同步、异步，应用场景是什么？
+
+对于同步消费者来说：如果消息没有到达，那么消息消费者将一直等待，不能做其他的事情
+
+应用场景：通过JMS facade更新数据库（来自网络，不知对错，一般情况下都是使用异步处理的）
+
+对于异步消费者来说：客户机在消息到达之前，可以做其他的事情
+
+应用场景：大量访问的交易系统等
+
+ 
+
+中间件
+1.中间件技术的类型。
+
+1.远程过程调用（RPC）
+
+2.远程数据访问
+
+3.分布式事务处理
+
+4.消息队列
+
+2.名词解释：RMI、JNDI
+
+RMI：Remote Method Invocation
+
+是用于分布式编程的，基于java的模型，使用RMI，java代码可以调用远程对象中的方法
+
+JNDI：Java Naming and Directory Interface
+
+为不同的目录提供一个共同的接口，JNDI 在 J2EE 应用程序中的主要角色就是提供间接层，这样组件就可以发现所需要的资源，而不用了解这些间接性
+
+ EJB
+1.最新的JavaEE规范中，有哪两种企业Bean？
+
+Session Bean；Message-driven Bean；
+
+2.会话Bean的三种类型。
+
+Stateful（状态bean）；
+
+有状态的会话 bean在方法调用时可保持对话状态，譬如客户的网上购物车。客户开始网上购物时，可以从数据库中检索客户的详细信息。客户往购物车里面添加商品或者从里面删除商品、下订单等时调用的其他方法也可以使用这些详细信息。不过，有状态的会话bean是暂时性的，因为出现会话终止、系统崩溃或者网络故障后，状态不复存在。客户端请求有状态的会话bean实例时，就为该客户端分配一个有状态的实例，并为该客户端保持该组件的状态。要指定容器在某个方法完成后删除有状态的会话bean实例，只要为该方法添加注释@Remove。 
+
+stateless（无状态bean）；
+
+无状态的会话 bean没有内部状态。它们不跟踪记录从一个方法调用传递到另一个方法调用的信息。因此，每次调用无状态的业务方法都独立于前一次调用，譬如计算税款或者运费。用某个应税值调用计算税款的方法时，对税款值进行计算并返回给调用方法，而不必保存调用者的内部状态供以后调用。因为这些bean并不保持状态，所以容器对它们进行管理就很简单。客户端请求无状态的bean实例时，可以从容器保持的无状态的会话bean 实例池当中接收一个实例。另外，因为无状态的会话 bean可以共享，所以容器可保持数量较少的实例为许多客户端提供服务。想指定Java Bean作为无状态的会话bean加以部署及管理，只需要为该bean添加注释@Stateless。
+
+singleton（单例bean）
+
+3.EJB的三种客户类型。
+
+（找不到答案，这里改为回答EJB3.0的三大类型）
+
+会话bean，实体bean，消息驱动bean
+
+4.客户可以以两种方式获得对企业Bean的引用，哪两种？
+
+1.依赖注入
+
+2.JNDI lookup
+
+5.企业Bean包括哪些内容？目录结构是什么？
+
+企业bean的类
+
+业务接口
+
+Helper 类
+
+目录结构见EJB.ppt的第27张
+
+JPA
+
+1.持久的概念。
+
+PPT解释：
+
+Java对象序列化：将对象序列化，应用于网络通信或者是简单的持久存储
+
+对象/关系型数据库映射：使用关系型数据库持久存储Java对象（利用JDBC）
+
+对象数据库：完整的对象被持久存储
+
+网络解释：
+
+就是对数据和程序状态的保持。大多数情况下特别是企业级开发应用时，数据持久化往往也就意味着将内存中的数据保存到磁盘上加以固化，而持久化的实现过程则大多通过各种关系型数据库来完成的。
+
+2.对象关系映射的概念。（ORM，Object-Relation Mapping）
+
+网络标准解释：
+
+是一种为了解决面向对象与关系数据库存在的互不匹配的现象的技术

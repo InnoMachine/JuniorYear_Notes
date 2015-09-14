@@ -1,0 +1,71 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1074" measuredH="640" mockupW="934" mockupH="600">
+  <controls>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Component" x="140" y="40" w="934" h="600" measuredW="934" measuredH="600" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22775%2C113%2C858%2C140%22%20href%3D%22Sign%2520page.bmml%22%20alt%3D%22Sign%20page%22%20id%3D%222%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%2288%2C147%2C173%2C174%22%20href%3D%22Clerk%2520page%2520edit%2520product.bmml%22%20alt%3D%22Clerk%20page%20edit%20product%22%20id%3D%223%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22173%2C147%2C208%2C174%22%20href%3D%22Clerk%2520page%2520sell.bmml%22%20alt%3D%22Clerk%20page%20sell%22%20id%3D%223%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22775%2C113%2C858%2C140%22%20href%3D%22Sign%2520page.bmml%22%20alt%3D%22Sign%20page%22%20id%3D%222%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%2288%2C147%2C173%2C174%22%20href%3D%22Clerk%2520page%2520edit%2520product.bmml%22%20alt%3D%22Clerk%20page%20edit%20product%22%20id%3D%223%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22173%2C147%2C208%2C174%22%20href%3D%22Clerk%2520page%2520sell.bmml%22%20alt%3D%22Clerk%20page%20sell%22%20id%3D%223%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22775%2C113%2C858%2C140%22%20href%3D%22Sign%2520page.bmml%22%20alt%3D%22Sign%20page%22%20id%3D%222%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%2288%2C147%2C173%2C174%22%20href%3D%22Clerk%2520page%2520edit%2520product.bmml%22%20alt%3D%22Clerk%20page%20edit%20product%22%20id%3D%223%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22775%2C113%2C858%2C140%22%20href%3D%22Sign%2520page.bmml%22%20alt%3D%22Sign%20page%22%20id%3D%222%22/%3E</map>
+        <override controlID="0" x="0" y="0" w="934" h="600"/>
+        <override controlID="1" x="50" y="106" w="-1" h="-1"/>
+        <override controlID="2" x="775" y="113" w="83" h="27">
+          <href>Sign%20page%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml</href>
+        </override>
+        <override controlID="3" x="1" y="147" w="912" h="425">
+          <hrefs>%2CClerk%20page%20edit%20product%26bm%3BClerk%20page%20edit%20product.bmml%26bm%3BClerk%20page%20edit%20product.bmml%26bm%3BClerk%20page%20edit%20product.bmml%2CClerk%20page%20sell%26bm%3BClerk%20page%20sell.bmml%26bm%3BClerk%20page%20sell.bmml%26bm%3BClerk%20page%20sell.bmml</hrefs>
+          <selectedIndex>0</selectedIndex>
+          <text>Clerk%20Info%2C%20Edit%20Product%2C%20Sell</text>
+        </override>
+        <src>./assets/symbols.bmml#Clerk page form</src>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::SubTitle" x="204" y="238" w="-1" h="-1" measuredW="441" measuredH="30" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>28</size>
+        <text>Dani%2C%20Welcome%20to%20Dessert%20House</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="__group__" x="371" y="322" w="84" h="108" measuredW="84" measuredH="108" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="84" measuredH="25" zOrder="0" locked="false" isInGroup="16">
+          <controlProperties>
+            <size>18</size>
+            <text>C0000000</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="42" w="-1" h="-1" measuredW="38" measuredH="25" zOrder="1" locked="false" isInGroup="16">
+          <controlProperties>
+            <size>18</size>
+            <text>Dani</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="0" y="83" w="-1" h="-1" measuredW="81" measuredH="25" zOrder="2" locked="false" isInGroup="16">
+          <controlProperties>
+            <size>18</size>
+            <text>XinJieKou</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="17" controlTypeID="__group__" x="233" y="322" w="101" h="108" measuredW="101" measuredH="108" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="35" y="0" w="-1" h="-1" measuredW="66" measuredH="25" zOrder="0" locked="false" isInGroup="17">
+          <controlProperties>
+            <size>18</size>
+            <text>ClerkID%3A</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="41" w="-1" h="-1" measuredW="101" measuredH="25" zOrder="1" locked="false" isInGroup="17">
+          <controlProperties>
+            <size>18</size>
+            <text>Clerk%20Name%3A</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="52" y="83" w="-1" h="-1" measuredW="49" measuredH="25" zOrder="2" locked="false" isInGroup="17">
+          <controlProperties>
+            <size>18</size>
+            <text>Store%3A</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

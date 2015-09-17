@@ -1,0 +1,5 @@
+http://jxzy.lzptc.edu.cn/ziyuan/94/zjdxjpkc/crs/sjjg/ppt/chinaese/ch8/ch8_5.htm
+
+路径压缩
+就是指在建立并查集的时候，由子节点遍历到集合根节点的过程中，将中间经过的点的上层节点通过递归的方法全部赋值为根节点
+从而减短在之后的搜索过程中减少递归层数

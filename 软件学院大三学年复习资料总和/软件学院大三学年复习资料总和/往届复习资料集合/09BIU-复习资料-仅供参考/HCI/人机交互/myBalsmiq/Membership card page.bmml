@@ -1,0 +1,75 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1261" measuredH="641" mockupW="1118" mockupH="600">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="143" y="41" w="934" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="193" y="147" w="-1" h="-1" measuredW="272" measuredH="43" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>0</color>
+        <size>40</size>
+        <text>Dessert%20House</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="918" y="154" w="83" h="27" measuredW="64" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <href>Sign%20page%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22775%2C113%2C858%2C140%22%20href%3D%22Sign%2520page.bmml%22%20alt%3D%22Sign%20page%22%20id%3D%224%22/%3E</map>
+        <text>LogOff</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TabBar" x="144" y="188" w="912" h="425" measuredW="383" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <hrefs>Member%20page%20after%20activate%26bm%3BMember%20page%20after%20activate.bmml%26bm%3BMember%20page%20after%20activate.bmml%26bm%3BMember%20page%20after%20activate.bmml%2COrder%20page%26bm%3BOrder%20page.bmml%26bm%3BOrder%20page.bmml%26bm%3BOrder%20page.bmml%2CMember%20purchase%20record%20page%26bm%3BMember%20purchase%20record%20page.bmml%26bm%3BMember%20purchase%20record%20page.bmml%26bm%3BMember%20purchase%20record%20page.bmml%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2221%2C147%2C82%2C174%22%20href%3D%22Member%2520page%2520after%2520activate.bmml%22%20alt%3D%22Member%20page%20after%20activate%22%20id%3D%225%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2282%2C147%2C129%2C174%22%20href%3D%22Order%2520page.bmml%22%20alt%3D%22Order%20page%22%20id%3D%225%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22129%2C147%2C242%2C174%22%20href%3D%22Member%2520purchase%2520record%2520page.bmml%22%20alt%3D%22Member%20purchase%20record%20page%22%20id%3D%225%22/%3E%0A</map>
+        <selectedIndex>3</selectedIndex>
+        <text>Member%2C%20Order%2C%20Purchase%20Record%2C%20Membership%20Card</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="200" y="242" w="-1" h="-1" measuredW="349" measuredH="24" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Your%20membership%20card%20value%20remains%200%20RMB</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="842" y="538" w="-1" h="-1" measuredW="136" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Membership%20card%20check%20record%20page%26bm%3BMembership%20card%20check%20record%20page.bmml%26bm%3BMembership%20card%20check%20record%20page.bmml%26bm%3BMembership%20card%20check%20record%20page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22699%2C497%2C835%2C524%22%20href%3D%22Membership%2520card%2520check%2520record%2520page.bmml%22%20alt%3D%22Membership%20card%20check%20record%20page%22%20id%3D%227%22/%3E</map>
+        <text>Check%20value%20record</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Image" x="200" y="257" w="401" h="323" measuredW="400" measuredH="331" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/img/card.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="724" y="538" w="-1" h="-1" measuredW="80" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Membership%20card%20page%20add%20value%26bm%3BMembership%20card%20page%20add%20value.bmml%26bm%3BMembership%20card%20page%20add%20value.bmml%26bm%3BMembership%20card%20page%20add%20value.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22581%2C497%2C661%2C524%22%20href%3D%22Membership%2520card%2520page%2520add%2520value.bmml%22%20alt%3D%22Membership%20card%20page%20add%20value%22%20id%3D%229%22/%3E</map>
+        <state>selected</state>
+        <text>Add%20Value</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="804" y="371" w="341" h="167" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::StickyNote" x="1152" y="322" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>%u4F1A%u5458%u70B9%u51FB%u5145%u503C</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

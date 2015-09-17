@@ -1,0 +1,246 @@
+可能出简答题的点：
+-Architecture patterns
+An architectural pattern is a set of design decisions that are applicable to a recurring design problem, and parameterized to account for different software development contexts in which that problem appears.
+
+-Domain-Specific Software Architectures(DSSA)
+It is an assemblage of software components
+·specialized for a particular type of task(domain).
+·generalized for effective use across that domain,, and
+·composed in a standardized structure(topology) effective for building successful applications
+-----------------------------------------------------------------
+-Design Strategy
+·Decomposition
+·Designing to ASRs
+·Generate and Test
+
+-ADD
+·Step1:Confirm there is sufficient requirements information
+·Step2:Choose an element of the system to decompose
+·Step3: Identify the ASRs for the chosen element
+·Step4:Choose a design concept that satisfies the ASRs
+        4.1:Identify design concerns
+        4.2:List alternative patterns/tactics for subordinate concerns
+        4.3:Select patterns/tactics from the list
+        4.4:Determine relationship between patterns/tactics and ASRs
+        4.5:Capture preliminary architectural views
+        4.6:Evaluate and resolve inconsistencies
+Step5:Instantiate architectural elements and allocate responsibilities
+Step6:Define interfaces for instantiated elements
+Step7:Verify and refine requiements and make them constrains for instantiated elements
+Step8:Repeat until all the ASRs have been satisfied
+-----------------------------------------------------------------
+-Why to document software architecture?
+·Communicating and socialising architecture design decisions
+·Helping understand and assess architecture design decisions
+·Refreshing designer's memories about certain decisions
+·Training people in designing architecture
+·Supporting geographically distributed teams
+
+-Style vs. Patterns
+·An Architectural Style is a "specialization of element and relation types, together with a set of constraints on how they can be used"
+·An Architectural pattern "expresses a fundamental structural organization schema for software systems"
+·An essential part of an architecture pattern is its focus on the problem and context as well as how to sovle the problem in the context
+·An architecture style focuses on the architecture approach, with more lightweight guidance on when a particular style may or may not be used
+·Architecture patterns:{problem, context}-->architecture approach
+·Architecture style: architecture approach
+·A style description does not generally include detailed problem/context information; architecture patterns do
+
+-Architectural Views(和上面的问题一起看)
+·A view is a representaion of a set of system elements and relations among them - not all of them, but those of particular
+·Views let us devide the system's entity into interesting and managable representations of the system.
+·Different views support different goals and users, and hightlight different elements and relations
+·Different views expose different quality attributes to different degrees.
+
+-Structural Views
+·Module Views
+·Component-connector Views
+·Allocation Views
+
+-Quality Views
+
+-Documenting Views
+
+-3-Step for Choosing Views
+·Step-1:Build a stakeholder/view table
+·Step-2:Combine views
+    2.1 Identify marginal views in the above table
+    2.2 Combine each marginal views with another view stronger constiuency by associating between elements in one view and elements in the other
+·Step-3:Prioritize and stage
+
+-Beyaond View
+·Documentation information
+·Architecture information
+
+-Documentation package = view+beyand
+-----------------------------------------------------------------
+-Why to evaluate architecture?
+·Large projects often delievered late and over-budget
+·Considerable rework often required late in project
+·Architecture evaluations help alleviate these problems
+·Lovate problems early when they are cheap to fix.
+·Disseminate architecture/design best practice
+·Provide management with better technical and project information
+·Identity areas where training could provide broad impac on commonly recurring problem areas
+·Improve interactions with COTS component suppliers
+
+-ATAM
+Phaze 0 :Partnership&Preparation
+Phaze 1:Evaluation
+Step1 Present the ATAM(向客户展示ATAM的主要流程)
+Step2 Present the business drivers(向客户展示主要功能需求、约束、主要质量属性、商业目标、面向的客户)
+Step3 Present the architecture(以适当的深度向客户讲解体系结构，如使用的操作系统、硬件、中间件，需要交互的其他系统)
+Step4 Identify architectural approaches(听取架构师的展示，学习了文档，了解了模式和战略)
+Step5 Generate Quality Attribute Utility Tree
+Step6 Analyze architectural approaches
+Phaze 2:Evaluation 2
+Step7:Brainstorm&Prioritize Scenarios
+Step8:Analyze architectural approaches
+Step9 Present results
+Phaze 3:Follow up
+
+-----------------------------------------------------------------
+--What is Software Product Line?
+·It is a set of software intensive systems sharing a common, managed set of features that the specific needs of a particular market segment or mission and that are developed from a common set of core assets in a prescribed way. 
+
+--Product = Core Asset + Custom Asset
+
+--What is Core Asset and What is Custom Asset?
+·Core Asset:
+ -Reused by most( or all) products in the SPL
+ -Embody domain knowledge/expertise
+ -Provide variatin points for variation features
+ -Implements requirements within the SPL scope
+·Custom Assets:
+ -Specific to a particular product
+ -Meet customer-specific requirements
+ -Can also implement requirements out of the SPL scope
+ -Integrate core asset required for the product
+ -Instantiate variation points provided by core assets
+
+-Why do SPL development?
+·Economies of Scale
+·Simplicity 
+· Turn Project Work into Product Features
+·Improve Product Quality
+·Improve Time-to-Market
+
+---Two benefits of SPL : Reusability and Modifiability 
+
+-Product Line Scope
+·It is a descroption of the products that will constitute the product line or that the product line is capable of including.
+
+-PLA and The Variation Points
+·List all allowed variation
+·Architectural interfaces for variation
+·Specifies mechanisms to instantiate variation points
+
+-Reuse
+·Find: ource Code Control Library/API
+·Understand:Read source code Library
+·Invoke:...
+
+-Variation
+·forms of variation
+  --include or omit elements
+  --Variable number of each elements
+  --Interface Satisfaction
+  --Parameterisation
+  --"Hoook"
+  --Reflection
+·software entity varied
+  --Architecture Level
+  --Design Level
+  --File Level
+·binding time
+  --Coding Time
+  --Compling Time
+  --Link Time
+  --Initialization Time
+  --Run Time
+
+-SPL Practice Areas
+·Software Engineering
+ --Architecture Definition
+ --Architecture Evaluation 
+ --Component Development
+ --COTS Utilization
+ --Mining Existing Assets
+ --Requirements Engineering
+ --Software System Integration
+ --Testing
+ --Understanding Relevant Domains
+·Technical Management
+ --Configuration Management
+ Data Collection, Metrics, and Tracking
+ --Make/Buy/Mine 
+·Organizational Management
+
+-SPLPattern
+Curriculum
+Essentials coverage
+Factory
+Product Parts
+Each Aeest
+Assembly Line
+Product Builder
+Cold Start
+
+--What is MDA?
+·an approach of IT system specification that seperates the specification of functionality from the specification of the implementation.
+
+--What is platform?
+·a set of subsystems and technologies that provide a coherent set of functionalities through interfaces and specified usage patterns.
+
+--Level of abstraction
+·CIM (computing independent model)
+·PIM(platform independent model)
+·PSM(platform specific model)
+
+--What is OMG standards
+·UML
+·MOF
+·XMI
+·QVT
+
+--Primary goals of MDA
+·Portability
+·Interoperability
+·Reusability
+
+--Service Find-Bind-Execute Paradigm
+
+--SOA & Web Service
+·SoA is a design principle
+·Web Service is an implementation technology
+·A service-oriented application can be built without using web service
+·Web Service brings platform-independent standards
+ Jini, Java RMI
+·Web Service allows better interoperability between heterogeneous technologies such as J2EE and .Net
+
+--Different layers of SOA
+·Presentation Layers
+·Process Layer ->BPEL
+·Service Layer
+·Business Layer
+·Persistent Layer
+
+--Enterprise Service Bus & SOA
+·A ESB is a middleware infrastructure that provides foundational servicesformorecomplex architectures via an event-driven and standards-based messaging engine.
+·ESB does not implement a SOA, but provides the features with which one may be implemented.
+·Most ESB providers now build ESBs to incorporate SOA principles and increase their sales.
+
+--Service-orients applications and Service-oriented infrastructure
+·Service-oriented applications
+  -Wrap applications as services
+  -Compose applications into workflows
+·Service-Oriented infrastructure
+  -Middleware that supports the computing of SOA
+  -Example technologies: IBM WebSphere Application Server,.Net J2EE Apach Axis, 
+
+--Top-down & Bottom-up
+·-Identify and describes messages and operations of services
+ -Implement Services
+  --Recommended for building a completely new service
+·-Expose existing components and procedures as service
+ -reuse components
+  --popular for integrating legacy systems

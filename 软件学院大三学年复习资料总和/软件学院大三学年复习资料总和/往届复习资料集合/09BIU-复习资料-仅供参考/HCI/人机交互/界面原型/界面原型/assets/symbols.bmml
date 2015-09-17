@@ -1,0 +1,144 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="994" measuredH="800" mockupW="934" mockupH="780">
+  <controls>
+    <control controlID="0" controlTypeID="__group__" x="60" y="20" w="934" h="600" measuredW="934" measuredH="600" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Page%20Frame</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="934" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+          <controlProperties>
+            <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+            <value>0</value>
+            <verticalScrollbar>true</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="2" y="73" w="912" h="497" measuredW="1600" measuredH="1200" zOrder="1" locked="false" isInGroup="0">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <src>../../../../../../%25E8%25BD%25AF%25E9%2599%25A2/%25E8%25BD%25AF%25E9%2599%25A2%25E8%25AF%25BE%25E7%25A8%258B/%25E5%25A4%25A7%25E4%25B8%2589%25E7%25AC%25AC%25E4%25B8%2589%25E5%25AD%25A6%25E6%259C%259F/%25E4%25BA%25BA%25E6%259C%25BA%25E4%25BA%25A4%25E4%25BA%2592/%25E4%25BD%259C%25E4%25B8%259A/%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B/img/background.jpg</src>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::LinkBar" x="734" y="106" w="-1" h="-1" measuredW="152" measuredH="19" zOrder="2" locked="false" isInGroup="0">
+          <controlProperties>
+            <color>16777215</color>
+            <text>Home%2C%20Contact%2C%20About</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="50" y="106" w="-1" h="-1" measuredW="263" measuredH="41" zOrder="3" locked="false" isInGroup="0">
+          <controlProperties>
+            <align>left</align>
+            <color>16777215</color>
+            <size>40</size>
+            <text>Dessert%20House</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="1" controlTypeID="__group__" x="60" y="80" w="934" h="600" measuredW="934" measuredH="600" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Member%20page%20form</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="934" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="1">
+          <controlProperties>
+            <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+            <value>0</value>
+            <verticalScrollbar>true</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Title" x="50" y="106" w="-1" h="-1" measuredW="263" measuredH="41" zOrder="1" locked="false" isInGroup="1">
+          <controlProperties>
+            <align>left</align>
+            <color>0</color>
+            <size>40</size>
+            <text>Dessert%20House</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="775" y="113" w="83" h="27" measuredW="59" measuredH="27" zOrder="2" locked="false" isInGroup="1">
+          <controlProperties>
+            <color>13369344</color>
+            <text>LogOff</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::TabBar" x="1" y="147" w="912" h="425" measuredW="378" measuredH="100" zOrder="3" locked="false" isInGroup="1">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <selectedIndex>0</selectedIndex>
+            <text>Member%2C%20Order%2C%20Purchase%20Record%2C%20Membership%20Card</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="2" controlTypeID="__group__" x="60" y="140" w="934" h="600" measuredW="934" measuredH="600" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Clerk%20page%20form</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="934" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="2">
+          <controlProperties>
+            <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+            <value>0</value>
+            <verticalScrollbar>true</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Title" x="50" y="106" w="-1" h="-1" measuredW="263" measuredH="41" zOrder="1" locked="false" isInGroup="2">
+          <controlProperties>
+            <align>left</align>
+            <color>0</color>
+            <size>40</size>
+            <text>Dessert%20House</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="775" y="113" w="83" h="27" measuredW="59" measuredH="27" zOrder="2" locked="false" isInGroup="2">
+          <controlProperties>
+            <color>13369344</color>
+            <text>LogOff</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::TabBar" x="1" y="147" w="912" h="425" measuredW="245" measuredH="100" zOrder="3" locked="false" isInGroup="2">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <selectedIndex>0</selectedIndex>
+            <text>Clerk%20Info%2C%20Edit%20Product%2C%20Sell</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="3" controlTypeID="__group__" x="60" y="200" w="934" h="600" measuredW="934" measuredH="600" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Manager%20page%20form</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="0" y="0" w="934" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="3">
+          <controlProperties>
+            <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+            <value>0</value>
+            <verticalScrollbar>true</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Title" x="50" y="106" w="-1" h="-1" measuredW="263" measuredH="41" zOrder="1" locked="false" isInGroup="3">
+          <controlProperties>
+            <align>left</align>
+            <color>0</color>
+            <size>40</size>
+            <text>Dessert%20House</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="775" y="113" w="83" h="27" measuredW="59" measuredH="27" zOrder="2" locked="false" isInGroup="3">
+          <controlProperties>
+            <color>13369344</color>
+            <text>LogOff</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::TabBar" x="1" y="147" w="912" h="425" measuredW="352" measuredH="100" zOrder="3" locked="false" isInGroup="3">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <selectedIndex>0</selectedIndex>
+            <text>Manager%20Info%2C%20Membership%20Status%2C%20Sale%20Status</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

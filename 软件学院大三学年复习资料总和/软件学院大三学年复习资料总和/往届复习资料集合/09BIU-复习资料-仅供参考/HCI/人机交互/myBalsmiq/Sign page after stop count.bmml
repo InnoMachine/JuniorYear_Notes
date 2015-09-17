@@ -1,0 +1,71 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1241" measuredH="638" mockupW="1140" mockupH="600">
+  <controls>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Component" x="307" y="38" w="934" h="600" measuredW="934" measuredH="600" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <override controlID="1">
+          <src>../%e7%95%8c%e9%9d%a2%e5%8e%9f%e5%9e%8b/%e7%95%8c%e9%9d%a2%e5%8e%9f%e5%9e%8b/img/background.jpg</src>
+        </override>
+        <src>../%e7%95%8c%e9%9d%a2%e5%8e%9f%e5%9e%8b/%e7%95%8c%e9%9d%a2%e5%8e%9f%e5%9e%8b/assets/symbols.bmml#Page%20Frame</src>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TitleWindow" x="415" y="214" w="338" h="295" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sign%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextInput" x="559" y="261" w="127" h="-1" measuredW="79" measuredH="26" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TextInput" x="559" y="301" w="127" h="-1" measuredW="79" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="468" y="268" w="-1" h="-1" measuredW="68" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>User%20Name</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="476" y="309" w="-1" h="-1" measuredW="56" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="507" y="343" w="-1" h="-1" measuredW="26" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Role</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="549" y="343" w="-1" h="-1" measuredW="166" measuredH="83" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20Administrator%20%28selected%29%0A%28%20%29%20Member%0A%28%20%29%20Clerk%0A%28%20%29%20Manager</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="549" y="441" w="71" h="27" measuredW="50" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sign</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Button" x="635" y="441" w="80" h="27" measuredW="73" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>9684093</color>
+        <href>Register%20input%20complete%20page%26bm%3BRegister%20input%20complete%20page.bmml%26bm%3BRegister%20input%20complete%20page.bmml%26bm%3BRegister%20input%20complete%20page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22534%2C403%2C614%2C430%22%20href%3D%22Register%2520input%2520complete%2520page.bmml%22%20alt%3D%22Register%20input%20complete%20page%22%20id%3D%2216%22/%3E</map>
+        <text>Register</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Arrow" x="241" y="354" w="396" h="91" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::StickyNote" x="101" y="325" w="140" h="123" measuredW="109" measuredH="123" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>%u7528%u6237%u70B9%u51FB%u201CRegister%u201D%u91CD%u65B0%u6CE8%u518C</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

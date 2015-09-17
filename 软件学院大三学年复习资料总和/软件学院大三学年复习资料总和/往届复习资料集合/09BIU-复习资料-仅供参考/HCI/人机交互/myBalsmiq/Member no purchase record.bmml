@@ -1,0 +1,36 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1120" measuredH="852" mockupW="934" mockupH="763">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="186" y="89" w="934" h="763" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Dessert%20House%0Ahttp%3A//www.desserthouse.com</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="230" y="182" w="-1" h="-1" measuredW="272" measuredH="43" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>0</color>
+        <size>40</size>
+        <text>Dessert%20House</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="955" y="189" w="83" h="27" measuredW="64" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <href>Sign%20page%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml%26bm%3BSign%20page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22769%2C100%2C852%2C127%22%20href%3D%22Sign%2520page.bmml%22%20alt%3D%22Sign%20page%22%20id%3D%224%22/%3E</map>
+        <text>LogOff</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TabBar" x="186" y="231" w="912" h="425" measuredW="383" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <hrefs>Member%20page%20after%20activate%26bm%3BMember%20page%20after%20activate.bmml%26bm%3BMember%20page%20after%20activate.bmml%26bm%3BMember%20page%20after%20activate.bmml%2COrder%20page%26bm%3BOrder%20page.bmml%26bm%3BOrder%20page.bmml%26bm%3BOrder%20page.bmml%2C%2CMembership%20card%20not%20activate%20page%26bm%3BMembership%20card%20not%20activate%20page.bmml%26bm%3BMembership%20card%20not%20activate%20page.bmml%26bm%3BMembership%20card%20not%20activate%20page.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2220%2C142%2C81%2C169%22%20href%3D%22Member%2520page%2520after%2520activate.bmml%22%20alt%3D%22Member%20page%20after%20activate%22%20id%3D%225%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2281%2C142%2C128%2C169%22%20href%3D%22Order%2520page.bmml%22%20alt%3D%22Order%20page%22%20id%3D%225%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22241%2C142%2C357%2C169%22%20href%3D%22Membership%2520card%2520not%2520activate%2520page.bmml%22%20alt%3D%22Membership%20card%20not%20activate%20page%22%20id%3D%225%22/%3E%0A</map>
+        <selectedIndex>2</selectedIndex>
+        <text>Member%2C%20Order%2C%20Purchase%20Record%2C%20Membership%20Card</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
